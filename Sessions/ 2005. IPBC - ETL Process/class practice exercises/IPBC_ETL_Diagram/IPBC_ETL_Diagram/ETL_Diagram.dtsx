@@ -1,0 +1,2966 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2019 11:53:01 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-PF3DBQTQ"
+  DTS:CreatorName="LAPTOP-PF3DBQTQ\Ashok"
+  DTS:DTSID="{741B33D0-9468-41B1-906F-474F812AF31B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ETL_Diagram"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{76317C44-E62A-4F05-90C8-606EA224C2F1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3CDFFDAE-6BCE-4903-B989-CCF19A8B6AB8}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Sessions\ 2005. IPBC - ETL Process\class practice exercises\ETL_Diagram.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3153BE39-E556-4A76-904F-61FFD4433CF7}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Sessions\ 2005. IPBC - ETL Process\class practice exercises\ETL_Diagram_ADF_Section.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D107EA53-6128-4D86-AB8D-F0EE0156329A}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Sessions\ 2005. IPBC - ETL Process\class practice exercises\ETL_Diagram_ADF_Course.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{5C709E31-E8DB-45AD-A558-645C67F5A6D4}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Sessions\ 2005. IPBC - ETL Process\class practice exercises\ETL_Diagram_ADF_Path.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{62B2FD96-848D-485A-8DA2-F655E66DA9BB}"
+      DTS:ObjectName="LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-PF3DBQTQ\CB2016SQLSERVER;Initial Catalog=Curriculum;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BE9736CB-A22C-42F5-B90F-02DD5F5EED4E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExlFilepath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Sessions\ 2005. IPBC - ETL Process\class practice exercises</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\load exl AdoCourse to sql"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{d668b2bb-c0c6-45a8-8602-94e90552f708}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load exl AdoCourse to sql"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\load exl AdoCourse to sql\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseID]"
+                      cachedDataType="r8"
+                      cachedName="CourseID"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[Insertdate]"
+                      cachedDataType="date"
+                      cachedName="Insertdate"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CourseName"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathID]"
+                      cachedDataType="r8"
+                      cachedName="PathID"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseOrder]"
+                      cachedDataType="r8"
+                      cachedName="CourseOrder"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseOrder]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseDesc]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CourseDesc"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseActive]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CourseActive"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseActive]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]"
+                      name="Copy of CourseID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]"
+                      name="Copy of Insertdate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseName]"
+                      name="Copy of CourseName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]"
+                      name="Copy of PathID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseOrder]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseOrder]"
+                      name="Copy of CourseOrder"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseOrder]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseDesc]"
+                      name="Copy of CourseDesc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseDesc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseActive]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseActive]"
+                      name="Copy of CourseActive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseActive]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoCourse to sql\ETL_Diagram exl"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="ETL_Diagram exl"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">ADF_Course$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseID]"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]"
+                      name="CourseID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[Insertdate]"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]"
+                      name="Insertdate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseName]"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseName]"
+                      name="CourseName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathID]"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]"
+                      name="PathID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseOrder]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseOrder]"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseOrder]"
+                      name="CourseOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseDesc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseDesc]"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseDesc]"
+                      name="CourseDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseActive]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseActive]"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseActive]"
+                      name="CourseActive"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseID]"
+                      dataType="r8"
+                      name="CourseID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[Insertdate]"
+                      dataType="date"
+                      name="Insertdate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseName]"
+                      dataType="wstr"
+                      length="255"
+                      name="CourseName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathID]"
+                      dataType="r8"
+                      name="PathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseOrder]"
+                      dataType="r8"
+                      name="CourseOrder" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseDesc]"
+                      dataType="wstr"
+                      length="255"
+                      name="CourseDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseActive]"
+                      dataType="wstr"
+                      length="255"
+                      name="CourseActive" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseID]"
+                      name="CourseID" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseName]"
+                      name="CourseName" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathID]"
+                      name="PathID" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseOrder]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseOrder]"
+                      name="CourseOrder" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseDesc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseDesc]"
+                      name="CourseDesc" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseActive]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseActive]"
+                      name="CourseActive" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[Insertdate]"
+                      dataType="date"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[Insertdate]"
+                      name="Insertdate" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoCourse to sql\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ADF_Course]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoCourse to sql\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of CourseID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseID]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Insertdate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Copy of Insertdate"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insertdate]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of CourseName"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of PathID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathID]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseOrder]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of CourseOrder"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseOrder]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseOrder]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of CourseDesc"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseDesc]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseActive]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of CourseActive"
+                      externalMetadataColumnId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseActive]"
+                      lineageId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseActive]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseID]"
+                      dataType="i4"
+                      name="CourseID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insertdate]"
+                      dataType="dbTimeStamp"
+                      name="Insertdate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CourseName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathID]"
+                      dataType="i4"
+                      name="PathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseOrder]"
+                      dataType="i4"
+                      name="CourseOrder" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CourseDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseActive]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="CourseActive" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoCourse to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoCourse to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoCourse to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\load exl AdoCourse to sql.Paths[Data Conversion Output]"
+              endId="Package\load exl AdoCourse to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\load exl AdoCourse to sql\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\load exl AdoCourse to sql.Paths[Excel Source Output]"
+              endId="Package\load exl AdoCourse to sql\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\load exl AdoCourse to sql\ETL_Diagram exl.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\load exl AdoPath to sql"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{02e5bc55-3dcb-495e-ac47-a9ab2edb6e54}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load exl AdoPath to sql"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\load exl AdoPath to sql\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathID]"
+                      cachedDataType="r8"
+                      cachedName="PathID"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PathName"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathDesc]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PathDesc"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathActive]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PathActive"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathActive]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[InsertDate]"
+                      cachedDataType="date"
+                      cachedName="InsertDate"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[InsertDate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathOrderID]"
+                      cachedDataType="r8"
+                      cachedName="PathOrderID"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathOrderID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PrePath]"
+                      cachedDataType="r8"
+                      cachedName="PrePath"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePath]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PrePathID]"
+                      cachedDataType="r8"
+                      cachedName="PrePathID"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathLongDesc]"
+                      cachedDataType="nText"
+                      cachedName="PathLongDesc"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLongDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathLength]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PathLength"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLength]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathCost]"
+                      cachedDataType="cy"
+                      cachedName="PathCost"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathCost]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input].Columns[PathNeededMaterials]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PathNeededMaterials"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathNeededMaterials]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]"
+                      name="Copy of PathID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathName]"
+                      name="Copy of PathName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathDesc]"
+                      name="Copy of PathDesc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathDesc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathActive]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathActive]"
+                      name="Copy of PathActive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathActive]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InsertDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InsertDate]"
+                      name="Copy of InsertDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[InsertDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathOrderID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathOrderID]"
+                      name="Copy of PathOrderID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathOrderID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePath]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePath]"
+                      name="Copy of PrePath"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePath]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePathID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePathID]"
+                      name="Copy of PrePathID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePathID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLongDesc]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLongDesc]"
+                      name="Copy of PathLongDesc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLongDesc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLength]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLength]"
+                      name="Copy of PathLength"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLength]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathCost]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathCost]"
+                      name="Copy of PathCost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathCost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathNeededMaterials]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathNeededMaterials]"
+                      name="Copy of PathNeededMaterials"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathNeededMaterials]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoPath to sql\ETL_Diagram exl"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="ETL_Diagram exl"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">ADF_Path$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathID]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathID]"
+                      name="PathID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathName]"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathName]"
+                      name="PathName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathDesc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathDesc]"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathDesc]"
+                      name="PathDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathActive]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathActive]"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathActive]"
+                      name="PathActive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[InsertDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[InsertDate]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[InsertDate]"
+                      name="InsertDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathOrderID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathOrderID]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathOrderID]"
+                      name="PathOrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePath]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PrePath]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePath]"
+                      name="PrePath"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePathID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PrePathID]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PrePathID]"
+                      name="PrePathID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLongDesc]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathLongDesc]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLongDesc]"
+                      name="PathLongDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLength]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathLength]"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathLength]"
+                      name="PathLength"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathCost]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathCost]"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathCost]"
+                      name="PathCost"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathNeededMaterials]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathNeededMaterials]"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[PathNeededMaterials]"
+                      name="PathNeededMaterials"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathID]"
+                      dataType="r8"
+                      name="PathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathName]"
+                      dataType="wstr"
+                      length="255"
+                      name="PathName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathDesc]"
+                      dataType="wstr"
+                      length="255"
+                      name="PathDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathActive]"
+                      dataType="wstr"
+                      length="255"
+                      name="PathActive" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[InsertDate]"
+                      dataType="date"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathOrderID]"
+                      dataType="r8"
+                      name="PathOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PrePath]"
+                      dataType="r8"
+                      name="PrePath" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PrePathID]"
+                      dataType="r8"
+                      name="PrePathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathLongDesc]"
+                      dataType="nText"
+                      name="PathLongDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathLength]"
+                      dataType="wstr"
+                      length="255"
+                      name="PathLength" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathCost]"
+                      dataType="cy"
+                      name="PathCost" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[PathNeededMaterials]"
+                      dataType="wstr"
+                      length="255"
+                      name="PathNeededMaterials" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathID]"
+                      name="PathID" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathName]"
+                      name="PathName" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathDesc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathDesc]"
+                      name="PathDesc" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathActive]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathActive]"
+                      name="PathActive" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[InsertDate]"
+                      dataType="date"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[InsertDate]"
+                      name="InsertDate" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathOrderID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathOrderID]"
+                      name="PathOrderID" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PrePath]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PrePath]"
+                      name="PrePath" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PrePathID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PrePathID]"
+                      name="PrePathID" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathLongDesc]"
+                      dataType="nText"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathLongDesc]"
+                      name="PathLongDesc" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathLength]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathLength]"
+                      name="PathLength" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathCost]"
+                      dataType="cy"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathCost]"
+                      name="PathCost" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathNeededMaterials]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[PathNeededMaterials]"
+                      name="PathNeededMaterials" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoPath to sql\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ADF_Path]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoPath to sql\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of PathID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathID]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PathName"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathName]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PathDesc"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathDesc]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathActive]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PathActive"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathActive]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathActive]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of InsertDate]"
+                      cachedDataType="date"
+                      cachedName="Copy of InsertDate"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDate]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of InsertDate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathOrderID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of PathOrderID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathOrderID]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathOrderID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PrePath]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of PrePath"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrePath]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePath]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PrePathID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of PrePathID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrePathID]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PrePathID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathLongDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Copy of PathLongDesc"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathLongDesc]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLongDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathLength]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PathLength"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathLength]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathLength]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathCost]"
+                      cachedDataType="cy"
+                      cachedName="Copy of PathCost"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathCost]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathCost]" />
+                    <inputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PathNeededMaterials]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PathNeededMaterials"
+                      externalMetadataColumnId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathNeededMaterials]"
+                      lineageId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PathNeededMaterials]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathID]"
+                      dataType="i4"
+                      name="PathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PathName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PathDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathActive]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PathActive" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathOrderID]"
+                      dataType="i4"
+                      name="PathOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrePath]"
+                      dataType="i4"
+                      name="PrePath" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PrePathID]"
+                      dataType="i4"
+                      name="PrePathID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathLongDesc]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PathLongDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathLength]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PathLength" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathCost]"
+                      dataType="cy"
+                      name="PathCost" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PathNeededMaterials]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="PathNeededMaterials" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoPath to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoPath to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoPath to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\load exl AdoPath to sql.Paths[Data Conversion Output]"
+              endId="Package\load exl AdoPath to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\load exl AdoPath to sql\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\load exl AdoPath to sql.Paths[Excel Source Output]"
+              endId="Package\load exl AdoPath to sql\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\load exl AdoPath to sql\ETL_Diagram exl.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\load exl AdoSection to sql"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6ECD92CB-90B8-4523-89F8-B98FB9602564}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load exl AdoSection to sql"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\load exl AdoSection to sql\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[CourseID]"
+                      cachedDataType="r8"
+                      cachedName="CourseID"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[Insertdate]"
+                      cachedDataType="date"
+                      cachedName="Insertdate"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[SectionID]"
+                      cachedDataType="r8"
+                      cachedName="SectionID"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[SectionName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SectionName"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[SectionOrder]"
+                      cachedDataType="r8"
+                      cachedName="SectionOrder"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionOrder]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[SectionDesc]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SectionDesc"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[RoleID]"
+                      cachedDataType="r8"
+                      cachedName="RoleID"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[RoleID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[SectionActive]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SectionActive"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionActive]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input].Columns[EventCount]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EventCount"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[EventCount]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]"
+                      name="Copy of CourseID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]"
+                      name="Copy of Insertdate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionID]"
+                      name="Copy of SectionID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionName]"
+                      name="Copy of SectionName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionOrder]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionOrder]"
+                      name="Copy of SectionOrder"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionOrder]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionDesc]"
+                      name="Copy of SectionDesc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionDesc]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RoleID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RoleID]"
+                      name="Copy of RoleID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[RoleID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionActive]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionActive]"
+                      name="Copy of SectionActive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionActive]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EventCount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EventCount]"
+                      name="Copy of EventCount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[EventCount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoSection to sql\ETL_Diagram exl"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="ETL_Diagram exl"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">ADF_Section$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseID]"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[CourseID]"
+                      name="CourseID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[Insertdate]"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[Insertdate]"
+                      name="Insertdate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionID]"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionID]"
+                      name="SectionID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionName]"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionName]"
+                      name="SectionName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionOrder]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionOrder]"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionOrder]"
+                      name="SectionOrder"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionDesc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionDesc]"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionDesc]"
+                      name="SectionDesc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[RoleID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[RoleID]"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[RoleID]"
+                      name="RoleID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionActive]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionActive]"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[SectionActive]"
+                      name="SectionActive"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[EventCount]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[EventCount]"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].Columns[EventCount]"
+                      name="EventCount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[CourseID]"
+                      dataType="r8"
+                      name="CourseID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[Insertdate]"
+                      dataType="date"
+                      name="Insertdate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionID]"
+                      dataType="r8"
+                      name="SectionID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionName]"
+                      dataType="wstr"
+                      length="255"
+                      name="SectionName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionOrder]"
+                      dataType="r8"
+                      name="SectionOrder" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionDesc]"
+                      dataType="wstr"
+                      length="255"
+                      name="SectionDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[RoleID]"
+                      dataType="r8"
+                      name="RoleID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[SectionActive]"
+                      dataType="wstr"
+                      length="255"
+                      name="SectionActive" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output].ExternalColumns[EventCount]"
+                      dataType="wstr"
+                      length="255"
+                      name="EventCount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionID]"
+                      name="SectionID" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionName]"
+                      name="SectionName" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[CourseID]"
+                      name="CourseID" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionOrder]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionOrder]"
+                      name="SectionOrder" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionDesc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionDesc]"
+                      name="SectionDesc" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[RoleID]"
+                      dataType="r8"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[RoleID]"
+                      name="RoleID" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionActive]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[SectionActive]"
+                      name="SectionActive" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[Insertdate]"
+                      dataType="date"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[Insertdate]"
+                      name="Insertdate" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[EventCount]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[EventCount]"
+                      name="EventCount" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\load exl AdoSection to sql\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[ADF_Section]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\load exl AdoSection to sql\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.Curriculum]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CourseID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of CourseID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseID]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CourseID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Insertdate]"
+                      cachedDataType="date"
+                      cachedName="Copy of Insertdate"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insertdate]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Insertdate]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SectionID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of SectionID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionID]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SectionName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of SectionName"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionName]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionName]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SectionOrder]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of SectionOrder"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionOrder]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionOrder]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SectionDesc]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of SectionDesc"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionDesc]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionDesc]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of RoleID]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of RoleID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RoleID]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RoleID]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SectionActive]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of SectionActive"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionActive]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SectionActive]" />
+                    <inputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of EventCount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of EventCount"
+                      externalMetadataColumnId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EventCount]"
+                      lineageId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of EventCount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseID]"
+                      dataType="i4"
+                      name="CourseID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Insertdate]"
+                      dataType="dbTimeStamp"
+                      name="Insertdate" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionID]"
+                      dataType="i4"
+                      name="SectionID" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SectionName" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionOrder]"
+                      dataType="numeric"
+                      name="SectionOrder"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionDesc]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SectionDesc" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RoleID]"
+                      dataType="numeric"
+                      name="RoleID"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SectionActive]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="SectionActive" />
+                    <externalMetadataColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EventCount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="EventCount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\load exl AdoSection to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\load exl AdoSection to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\load exl AdoSection to sql\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\load exl AdoSection to sql.Paths[Data Conversion Output]"
+              endId="Package\load exl AdoSection to sql\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\load exl AdoSection to sql\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\load exl AdoSection to sql.Paths[Excel Source Output]"
+              endId="Package\load exl AdoSection to sql\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\load exl AdoSection to sql\ETL_Diagram exl.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sql cleartbls"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1DD97E53-CC6A-40ED-BBE6-A2F685C82923}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sql cleartbls"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{62B2FD96-848D-485A-8DA2-F655E66DA9BB}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="truncate table [dbo].[ADF_Path]&#xA;truncate table [dbo].[ADF_Course]&#xA;truncate table [dbo].[ADF_Section]&#xA;&#xA;drop table [dbo].[ADF_Document]&#xA;drop table [dbo].[ADF_Event]&#xA;drop table [dbo].[ADF_EventType]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sql sp to create-load 3 tbls"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7B27E8F8-2775-451A-8107-15CDC117E1B6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sql sp to create-load 3 tbls"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{62B2FD96-848D-485A-8DA2-F655E66DA9BB}"
+          SQLTask:SqlStatementSource="Exec adfTablesFromOnline" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8B768CCA-6826-4560-B52E-4C99FCF2178D}"
+      DTS:From="Package\load exl AdoSection to sql"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\load exl AdoCourse to sql" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA700DF5-2F11-4639-B871-0ADAE432951E}"
+      DTS:From="Package\load exl AdoCourse to sql"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\load exl AdoPath to sql" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{4D9CD5B9-608B-4F5C-8D1D-747B709E4147}"
+      DTS:From="Package\load exl AdoPath to sql"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\sql sp to create-load 3 tbls" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{D86E1891-B6F1-48E9-B29F-929D0AA9D1C8}"
+      DTS:From="Package\Sql cleartbls"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\load exl AdoSection to sql" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\load exl AdoSection to sql"
+          TopLeft="187.428574620461,119.294119320114" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\load exl AdoCourse to sql"
+          TopLeft="185.714288876981,194.541179198955" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\load exl AdoPath to sql"
+          TopLeft="187.428574620461,275.952943621705" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="285.771431748721,160.894119320114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.6470598788409"
+              Start="0,0"
+              End="0,26.1470598788409">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1470598788409" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="282.571431748721,236.141179198955">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.8117644227501"
+              Start="0,0"
+              End="0,32.3117644227501">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3117644227501" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Sql cleartbls"
+          TopLeft="216.000003678458,41.2705884326288" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="285.31428914946,82.8705884326288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.423530887485"
+              Start="0,0"
+              End="0,28.923530887485">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.923530887485" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="203.2,41.6"
+          Id="Package\sql sp to create-load 3 tbls"
+          TopLeft="182.857145971181,357.882357960341" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="282.542860295821,317.552943621705">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.3294143386365"
+              Start="0,0"
+              End="0,32.8294143386365">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.8294143386365" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\load exl AdoSection to sql">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\load exl AdoSection to sql\ETL_Diagram exl"
+          TopLeft="258.285718684294,41.6000005834243" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\load exl AdoSection to sql\Data Conversion"
+          TopLeft="266.285718820533,118.07058989119" />
+        <EdgeLayout
+          Id="Package\load exl AdoSection to sql.Paths[Excel Source Output]"
+          TopLeft="340.485718752413,83.2000005834243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.8705893077652"
+              Start="0,0"
+              End="0,27.3705893077652">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.3705893077652" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\load exl AdoSection to sql\OLE DB Destination"
+          TopLeft="259.428575846614,219.623532491902" />
+        <EdgeLayout
+          Id="Package\load exl AdoSection to sql.Paths[Data Conversion Output]"
+          TopLeft="344.257147333573,159.67058989119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9529426007122"
+              Start="0,0"
+              End="0,52.4529426007122">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4529426007122" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoSection to sql\ETL_Diagram exl">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoSection to sql\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\load exl AdoCourse to sql">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\load exl AdoCourse to sql\OLE DB Destination"
+          TopLeft="259.428575846614,219.623532491902" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\load exl AdoCourse to sql\ETL_Diagram exl"
+          TopLeft="258.285718684294,41.6000005834243" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\load exl AdoCourse to sql\Data Conversion"
+          TopLeft="260.8,139.2" />
+        <EdgeLayout
+          Id="Package\load exl AdoCourse to sql.Paths[Excel Source Output]"
+          TopLeft="337.742859342147,83.2000005834243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.9999994165757"
+              Start="0,0"
+              End="0,48.4999994165757">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.4999994165757" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\load exl AdoCourse to sql.Paths[Data Conversion Output]"
+          TopLeft="341.514287923307,180.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.823532491902"
+              Start="0,0"
+              End="0,31.323532491902">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.323532491902" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoCourse to sql\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoCourse to sql\ETL_Diagram exl">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\load exl AdoPath to sql">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\load exl AdoPath to sql\OLE DB Destination"
+          TopLeft="259.428575846614,219.623532491902" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\load exl AdoPath to sql\ETL_Diagram exl"
+          TopLeft="258.285718684294,41.6000005834243" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\load exl AdoPath to sql\Data Conversion"
+          TopLeft="261.6,127.2" />
+        <EdgeLayout
+          Id="Package\load exl AdoPath to sql.Paths[Excel Source Output]"
+          TopLeft="338.142859342147,83.2000005834243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.9999994165757"
+              Start="0,0"
+              End="0,36.4999994165757">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.4999994165757" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\load exl AdoPath to sql.Paths[Data Conversion Output]"
+          TopLeft="341.914287923307,168.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.823532491902"
+              Start="0,0"
+              End="0,43.323532491902">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.323532491902" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoPath to sql\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\load exl AdoPath to sql\ETL_Diagram exl">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
