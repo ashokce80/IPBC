@@ -50,16 +50,18 @@ Order by		ActiveCourseCount desc
 
 --4. Create a View that outlines the whole curriculum in the correct order.
 Go
-Create View [CurriculumOutline]
+Alter View [CurriculumOutline]
 as
-Select		S.CourseID, C.CourseName, C.CourseDesc, S.SectionID, S.SectionName, S.SectionOrder,						S.SectionDesc
+Select		S.CourseID, C.CourseName, C.CourseDesc, S.SectionID, S.SectionName, S.SectionOrder,S.SectionDesc,	C.CourseActive,					  S.SectionActive					
 From		[dbo].[ADF_Section] as S
 Inner join	[dbo].[ADF_Course] as C
 On			S.CourseID = C.CourseID
+
 Go
 
 Select		*
 From		[CurriculumOutline]
+
 
 --5. How many of each Event Type’s are included in the Active Curriculum.
 
