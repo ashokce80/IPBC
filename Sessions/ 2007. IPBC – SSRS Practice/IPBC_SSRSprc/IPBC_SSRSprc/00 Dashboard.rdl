@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="CurriculamDB">
+      <DataSourceReference>CurriculamDB</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>0e17685c-30df-4e0c-9138-d85f8158085d</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Main">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PathName">
+            <Value>=Parameters!PathName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@CourseName">
+            <Value>=Parameters!CourseName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SectionName">
+            <Value>=Parameters!SectionName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EventName">
+            <Value>=Parameters!EventName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT P.PathID, P.PathName, P.PathDesc, P.PathActive, C.CourseID, C.CourseName, C.CourseDesc, C.CourseActive, S.SectionID, S.SectionName, S.SectionDesc, S.SectionActive, E.EventID, ISNULL(E.EventName, 'No Name') AS EventName, E.EventActive
+FROM   ADF_Event AS E LEFT OUTER JOIN
+             ADF_Section AS S ON E.SectionID = S.SectionID LEFT OUTER JOIN
+             ADF_Course AS C ON C.CourseID = S.CourseID LEFT OUTER JOIN
+             ADF_Path AS P ON P.PathID = C.PathID
+WHERE (P.PathID IS NOT NULL)
+And       P.PathID in (@PathName)
+And       C.CourseID in (@CourseName)
+And    S.SectionID in (@SectionName)
+And    E.EventID in (@EventName)
+ORDER BY P.PathID, C.CourseID, S.SectionID, E.EventID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PathName">
+          <DataField>PathName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathDesc">
+          <DataField>PathDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathActive">
+          <DataField>PathActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseName">
+          <DataField>CourseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseDesc">
+          <DataField>CourseDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseActive">
+          <DataField>CourseActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionName">
+          <DataField>SectionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionDesc">
+          <DataField>SectionDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EventName">
+          <DataField>EventName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionActive">
+          <DataField>SectionActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventActive">
+          <DataField>EventActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!EventID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!EventName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="PathNameParm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <CommandText>SELECT PathID, PathName
+FROM   ADF_Path AS P</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PathName">
+          <DataField>PathName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="CourseName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PathName">
+            <Value>=Parameters!PathName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT CourseID, CourseName, PathID
+FROM   ADF_Course
+WHERE (PathID IN (@PathName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseName">
+          <DataField>CourseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!PathID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!PathName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="SectionName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@CourseName">
+            <Value>=Parameters!CourseName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT SectionID, SectionName, CourseID
+FROM   ADF_Section
+WHERE (CourseID IN (@CourseName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SectionName">
+          <DataField>SectionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!CourseID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!CourseName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="EventName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SectionName">
+            <Value>=Parameters!SectionName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT EventID, SectionID
+FROM   ADF_Event
+WHERE (SectionID IN (@SectionName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!SectionID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!SectionName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Textbox55">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>SSRS Dashboard</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox55</rd:DefaultName>
+            <Top>0.04944in</Top>
+            <Left>0.805in</Left>
+            <Height>0.25in</Height>
+            <Width>1.39167in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>Brown</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Subreport Name="Subreport2">
+            <ReportName>3 CurrMatrix</ReportName>
+            <Parameters>
+              <Parameter Name="PathName">
+                <Value>=Parameters!PathName.Value</Value>
+              </Parameter>
+              <Parameter Name="CourseName">
+                <Value>=Parameters!CourseName.Value</Value>
+              </Parameter>
+              <Parameter Name="SectionName">
+                <Value>=Parameters!SectionName.Value</Value>
+              </Parameter>
+              <Parameter Name="EventName">
+                <Value>=Parameters!EventName.Value</Value>
+              </Parameter>
+            </Parameters>
+            <Top>2.11056in</Top>
+            <Left>0.68in</Left>
+            <Height>0.75in</Height>
+            <Width>1.05in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport3">
+            <ReportName>1 CurrGuage</ReportName>
+            <Top>0.48in</Top>
+            <Left>0.68in</Left>
+            <Height>0.74167in</Height>
+            <Width>1.05in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport4">
+            <ReportName>2 CurrCharts</ReportName>
+            <Top>1.29944in</Top>
+            <Left>0.68in</Left>
+            <Height>0.74167in</Height>
+            <Width>1.05in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>logo</Value>
+            <Sizing>Fit</Sizing>
+            <Left>0.125in</Left>
+            <Height>0.5in</Height>
+            <Width>0.65222in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+        </ReportItems>
+        <Height>2.905in</Height>
+        <Style />
+      </Body>
+      <Width>3.47167in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PathName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>PathNameParm</DataSetName>
+          <ValueField>PathID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Path Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>PathNameParm</DataSetName>
+          <ValueField>PathID</ValueField>
+          <LabelField>PathName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="CourseName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>CourseName_Parm</DataSetName>
+          <ValueField>CourseID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Course Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>CourseName_Parm</DataSetName>
+          <ValueField>CourseID</ValueField>
+          <LabelField>CourseName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SectionName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>SectionName_Parm</DataSetName>
+          <ValueField>SectionID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Section Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SectionName_Parm</DataSetName>
+          <ValueField>SectionID</ValueField>
+          <LabelField>SectionName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="EventName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>EventName_Parm</DataSetName>
+          <ValueField>EventID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Event Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>EventName_Parm</DataSetName>
+          <ValueField>EventID</ValueField>
+          <LabelField>EventID</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>PathName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>CourseName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>SectionName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>EventName</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>66b04316-a625-4083-939f-f5b4f2c172a4</rd:ReportID>
+</Report>

@@ -52,7 +52,10 @@
     <DataSource Include="CurriculamDB.rds" />
   </ItemGroup>
   <ItemGroup>
-    <Report Include="Curriculam.rdl" />
+    <Report Include="00 Dashboard.rdl" />
+    <Report Include="1 CurrGuage.rdl" />
+    <Report Include="2 CurrCharts.rdl" />
+    <Report Include="3 CurrMatrix.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

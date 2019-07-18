@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="CurriculamDB">
+      <DataSourceReference>CurriculamDB</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>0e17685c-30df-4e0c-9138-d85f8158085d</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Main">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PathName">
+            <Value>=Parameters!PathName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@CourseName">
+            <Value>=Parameters!CourseName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SectionName">
+            <Value>=Parameters!SectionName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@EventName">
+            <Value>=Parameters!EventName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT P.PathID, P.PathName, P.PathDesc, P.PathActive, C.CourseID, C.CourseName, C.CourseDesc, C.CourseActive, S.SectionID, S.SectionName, S.SectionDesc, S.SectionActive, E.EventID, ISNULL(E.EventName, 'No Name') AS EventName, E.EventActive
+FROM   ADF_Event AS E LEFT OUTER JOIN
+             ADF_Section AS S ON E.SectionID = S.SectionID LEFT OUTER JOIN
+             ADF_Course AS C ON C.CourseID = S.CourseID LEFT OUTER JOIN
+             ADF_Path AS P ON P.PathID = C.PathID
+WHERE (P.PathID IS NOT NULL)
+And       P.PathID in (@PathName)
+And       C.CourseID in (@CourseName)
+And    S.SectionID in (@SectionName)
+And    E.EventID in (@EventName)
+ORDER BY P.PathID, C.CourseID, S.SectionID, E.EventID</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PathName">
+          <DataField>PathName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathDesc">
+          <DataField>PathDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathActive">
+          <DataField>PathActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseName">
+          <DataField>CourseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseDesc">
+          <DataField>CourseDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseActive">
+          <DataField>CourseActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionName">
+          <DataField>SectionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionDesc">
+          <DataField>SectionDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EventName">
+          <DataField>EventName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SectionActive">
+          <DataField>SectionActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EventActive">
+          <DataField>EventActive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!EventID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!EventName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="PathNameParm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <CommandText>SELECT PathID, PathName
+FROM   ADF_Path AS P</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PathName">
+          <DataField>PathName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="CourseName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@PathName">
+            <Value>=Parameters!PathName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT CourseID, CourseName, PathID
+FROM   ADF_Course
+WHERE (PathID IN (@PathName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CourseName">
+          <DataField>CourseName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PathID">
+          <DataField>PathID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!PathID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!PathName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="SectionName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@CourseName">
+            <Value>=Parameters!CourseName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT SectionID, SectionName, CourseID
+FROM   ADF_Section
+WHERE (CourseID IN (@CourseName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SectionName">
+          <DataField>SectionName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseID">
+          <DataField>CourseID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!CourseID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!CourseName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+    <DataSet Name="EventName_Parm">
+      <Query>
+        <DataSourceName>CurriculamDB</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@SectionName">
+            <Value>=Parameters!SectionName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT EventID, SectionID
+FROM   ADF_Event
+WHERE (SectionID IN (@SectionName))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="EventID">
+          <DataField>EventID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SectionID">
+          <DataField>SectionID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!SectionID.Value</FilterExpression>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!SectionName.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Textbox55">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Curriculum Manager (Matrix)</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox55</rd:DefaultName>
+            <Top>0.04944in</Top>
+            <Left>0.18in</Left>
+            <Height>0.25in</Height>
+            <Width>2.49167in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Subreport Name="Subreport5">
+            <ReportName>3 CurrMatrix</ReportName>
+            <Top>0.555in</Top>
+            <Left>0.18in</Left>
+            <Height>3in</Height>
+            <Width>3in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
+        </ReportItems>
+        <Height>4.29667in</Height>
+        <Style />
+      </Body>
+      <Width>5.21333in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="PathName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>PathNameParm</DataSetName>
+          <ValueField>PathID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Path Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>PathNameParm</DataSetName>
+          <ValueField>PathID</ValueField>
+          <LabelField>PathName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="CourseName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>CourseName_Parm</DataSetName>
+          <ValueField>CourseID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Course Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>CourseName_Parm</DataSetName>
+          <ValueField>CourseID</ValueField>
+          <LabelField>CourseName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="SectionName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>SectionName_Parm</DataSetName>
+          <ValueField>SectionID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Section Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>SectionName_Parm</DataSetName>
+          <ValueField>SectionID</ValueField>
+          <LabelField>SectionName</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="EventName">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>EventName_Parm</DataSetName>
+          <ValueField>EventID</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Event Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>EventName_Parm</DataSetName>
+          <ValueField>EventID</ValueField>
+          <LabelField>EventID</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>PathName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>CourseName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>SectionName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>EventName</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>66b04316-a625-4083-939f-f5b4f2c172a4</rd:ReportID>
+</Report>

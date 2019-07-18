@@ -52,11 +52,12 @@ Order by		ActiveCourseCount desc
 Go
 Alter View [CurriculumOutline]
 as
-Select		S.CourseID, C.CourseName, C.CourseDesc, S.SectionID, S.SectionName, S.SectionOrder,S.SectionDesc,	C.CourseActive,					  S.SectionActive					
+Select		S.CourseID, C.CourseName, C.CourseDesc, S.SectionID, S.SectionName, S.SectionOrder,S.SectionDesc,C.CourseActive,					  S.SectionActive, E.EventActive					
 From		[dbo].[ADF_Section] as S
 Inner join	[dbo].[ADF_Course] as C
 On			S.CourseID = C.CourseID
-
+Inner join	[dbo].[ADF_Event] as E
+On			E.SectionID = S.SectionID
 Go
 
 Select		*
