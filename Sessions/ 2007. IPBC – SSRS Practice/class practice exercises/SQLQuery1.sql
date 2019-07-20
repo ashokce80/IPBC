@@ -208,22 +208,23 @@ Order by	CourseID
 --Curriculum Manager (Matrix) – This will display a matrix with Drilldowns for every group on the following …
 
 
-Select 		*
+Select 		*P.PathID,P.PathName
 From		[dbo].[ADF_Path]
 
-Select 		*
+Select 		*C.CourseID,C.CourseName,C.PathID,
 From		[dbo].[ADF_Course] 
 
-Select 		*
-From		[dbo].[ADF_Section] 
+Select 		S.SectionID,S.SectionName,S.CourseID
+From		[dbo].[ADF_Section] S
 
-Select		*
+Select		 EventID,SectionID
 From		[dbo].[ADF_Event]
+Where		SectionID = 1000
 
-Select		P.PathID,P.PathName, P.PathDesc
-			,C.CourseID,C.CourseName,c.CourseDesc
-			,S.SectionID,S.SectionName,S.SectionDesc
-			,E.EventID,ISNULL(E.EventName,'No Name') as EventName
+Select		P.PathID,P.PathName, P.PathDesc, p.PathActive
+			,C.CourseID,C.CourseName,c.CourseDesc, C.CourseActive
+			,S.SectionID,S.SectionName,S.SectionDesc, S.SectionActive
+			,E.EventID,ISNULL(E.EventName,'No Name') as EventName, E.EventActive
 From		[dbo].[ADF_Event] E
 left join	[dbo].[ADF_Section] S 
 On			E.SectionID = S.SectionID
@@ -234,3 +235,4 @@ on			P.PathID = C.PathID
 Where		P.PathID is not null
 Order by	P.PathID,C.CourseID,S.SectionID,E.EventID
 
+Insert ADF_Path	
