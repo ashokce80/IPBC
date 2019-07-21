@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Borrower>
+<BorrowerFirstName>Chaitu</BorrowerFirstName>
+<BorrowerLastName>s</BorrowerLastName>
+<BorrowerEmail>a@b.com</BorrowerEmail>
+<SSN>67656473</SSN>
+<HomePhone>2103654221</HomePhone>
+<CellPhone>2145689563</CellPhone>
+<MaritalStatus>Not Married</MaritalStatus>
+<DateofBirth>03/06/91</DateofBirth>
+<CurrentCityStreetAddress>7777 Macallum Blvd</CurrentCityStreetAddress>
+<State>TX</State>
+<Zip>254123</Zip>
+<YearsAtThisAdress>1</YearsAtThisAdress>
+<MonthlyIncome>10000</MonthlyIncome>
+<Bonuses>500</Bonuses>
+<Commission>100</Commission>
+<RentorOwn>Rent</RentorOwn>
+<PurposeofLoan>Education</PurposeofLoan>
+<PropertyUsage>Land</PropertyUsage>
+<LoanAmount>10000</LoanAmount>
+<PurchasePrice>10000</PurchasePrice>
+<NumberofUnits>1</NumberofUnits>
+<PropertyCity>Ricardson</PropertyCity>
+<PropertyState>TX</PropertyState>
+<PropertyZip>257841</PropertyZip>
+<Sex>Male</Sex>
+<Ethnicity>Asian</Ethnicity>
+<Race>Indian</Race>
+<Co-BorrowerFirstName>NULL</Co-BorrowerFirstName>
+<Co-BorrowerLastName>NULL</Co-BorrowerLastName>
+<Co-BorrowerEmail>NULL</Co-BorrowerEmail>
+<CreditCardAuthorization>Agree</CreditCardAuthorization>
+<Checking>5000</Checking>
+<Savings>6000</Savings>
+<RetirementFund>10000</RetirementFund>
+<MutualFund>5000</MutualFund>
+<Refferal>NULL</Refferal>
+<RealEstateAgentName>NULL</RealEstateAgentName>
+<RealEstateAgentPhone>NULL</RealEstateAgentPhone>
+<RealEstateAgentEmail>NULL</RealEstateAgentEmail>
+</Borrower>
+
+				
+
+

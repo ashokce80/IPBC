@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>Mortgage</DataSourceReference>
+      <CommandText>SELECT 'Marital Status' AS DemoCategory
+UNION
+SELECT 'Age' AS Expr1
+UNION
+SELECT 'Race' AS Expr1
+UNION
+SELECT 'Sex' AS Expr1</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="DemoCategory">
+        <DataField>DemoCategory</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

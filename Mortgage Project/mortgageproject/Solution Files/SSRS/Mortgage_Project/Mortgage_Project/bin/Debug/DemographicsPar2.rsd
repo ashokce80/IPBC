@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>Mortgage</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@ReportDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@Demographics1">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT DISTINCT 
+                  'Age' DemographicGroup, CASE WHEN DATEDIFF(YY, DOB, @ReportDate) &lt; 25 THEN '&lt;=25' WHEN DATEDIFF(YY, DOB, @ReportDate) BETWEEN 25 AND 
+                  35 THEN '26-35' WHEN DATEDIFF(YY, DOB, @ReportDate) BETWEEN 36 AND 45 THEN '36-45' WHEN DATEDIFF(YY, DOB, @ReportDate) &gt; 45 THEN '46+' END Label, 
+                  CASE WHEN DATEDIFF(YY, DOB, @ReportDate) &lt; 25 THEN 1 WHEN DATEDIFF(YY, DOB, @ReportDate) BETWEEN 25 AND 35 THEN 2 WHEN DATEDIFF(YY, DOB, 
+                  @ReportDate) BETWEEN 36 AND 45 THEN 3 WHEN DATEDIFF(YY, DOB, @ReportDate) &gt; 45 THEN 4 END GroupOrder
+INTO        #Demo2
+FROM     [dbo].[Dim_Borrower]
+UNION
+SELECT DISTINCT 'Marital Status', MaritalStatus, 1
+FROM     [dbo].[Dim_Borrower]
+UNION
+SELECT DISTINCT 'Race', Race, 1
+FROM     [dbo].[Dim_Borrower]
+UNION
+SELECT DISTINCT 'Sex', Sex, 1
+FROM     [dbo].[Dim_Borrower]
+
+                      SELECT   *,DemographicGroup + ' - ' + Label RealLabel
+                      FROM     #Demo2
+                      WHERE  DemographicGroup IN (@Demographics1)
+                      ORDER BY DemographicGroup, GroupOrder</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="DemographicGroup">
+        <DataField>DemographicGroup</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Label">
+        <DataField>Label</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="GroupOrder">
+        <DataField>GroupOrder</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="RealLabel">
+        <DataField>RealLabel</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

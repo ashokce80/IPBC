@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Mortgage">
+      <DataSourceReference>Mortgage</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>bca60139-d4ec-4f75-978c-ffa6e32e8275</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="LoansProcessed_ToDate">
+      <Query>
+        <DataSourceName>Mortgage</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ReportDate">
+            <Value>=Parameters!ReportDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@LoanAmount">
+            <Value>=Parameters!LoanAmount.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@LoanPurpose">
+            <Value>=Parameters!LoanPurpose.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PropertyUsage">
+            <Value>=Parameters!PropertyUsage.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Demographics2">
+            <Value>=Parameters!Demographics2.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>proc_LoansProcessed_ToDate</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="Loan_ID">
+          <DataField>Loan_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="OldLoan_ID">
+          <DataField>OldLoan_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Property_ID">
+          <DataField>Property_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Purpose_of_Loan">
+          <DataField>Purpose of Loan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreditCardAuthorization">
+          <DataField>CreditCardAuthorization</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Refferal">
+          <DataField>Refferal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Co_Borrower_SSN">
+          <DataField>Co-Borrower SSN</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Rent_or_Own">
+          <DataField>Rent or Own</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoanDate">
+          <DataField>LoanDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ToDate">
+          <DataField>ToDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MaritalStatus">
+          <DataField>MaritalStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Property_Usage">
+          <DataField>Property Usage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ToDateOrder">
+          <DataField>ToDateOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Sex">
+          <DataField>Sex</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Race">
+          <DataField>Race</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BorrowerName">
+          <DataField>BorrowerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MonthlyIncome">
+          <DataField>MonthlyIncome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoanAmount">
+          <DataField>LoanAmount</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FormatedReportMonth">
+          <DataField>FormatedReportMonth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoanAmountGroup">
+          <DataField>LoanAmountGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Purchase_Price">
+          <DataField>Purchase Price</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LoanAmountGroupOrder">
+          <DataField>LoanAmountGroupOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Age">
+          <DataField>Age</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AgeGroup">
+          <DataField>AgeGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AgeGroupOrder">
+          <DataField>AgeGroupOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ReportDatePar">
+      <SharedDataSet>
+        <SharedDataSetReference>ReportDatePar</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="LoanDate">
+          <DataField>LoanDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="LoanAmountPar">
+      <SharedDataSet>
+        <SharedDataSetReference>LoanAmountPar</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="LoanAmountGroup">
+          <DataField>LoanAmountGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoanAmountGroupOrder">
+          <DataField>LoanAmountGroupOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="LoanPurposePar">
+      <SharedDataSet>
+        <SharedDataSetReference>LoanPurposePar</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Purpose_of_Loan">
+          <DataField>Purpose_of_Loan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="PropertyUsagePar">
+      <SharedDataSet>
+        <SharedDataSetReference>PropertyUsagePar</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="Property_Usage">
+          <DataField>Property_Usage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DemographicPar1">
+      <SharedDataSet>
+        <SharedDataSetReference>DemographicsPar1</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="DemoCategory">
+          <DataField>DemoCategory</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DemographicsPar2">
+      <SharedDataSet>
+        <SharedDataSetReference>DemographicsPar2</SharedDataSetReference>
+        <QueryParameters>
+          <QueryParameter Name="@ReportDate">
+            <Value>=Parameters!ReportDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Demographics1">
+            <Value>=Parameters!Demographics1.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="DemographicGroup">
+          <DataField>DemographicGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Label">
+          <DataField>Label</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GroupOrder">
+          <DataField>GroupOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RealLabel">
+          <DataField>RealLabel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Tablix Name="Tablix1">
+                <TablixCorner>
+                  <TablixCornerRows>
+                    <TablixCornerRow>
+                      <TablixCornerCell>
+                        <CellContents>
+                          <Textbox Name="Textbox8">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>To Date</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox8</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>Gold</BackgroundColor>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixCornerCell>
+                      <TablixCornerCell>
+                        <CellContents>
+                          <Textbox Name="Textbox9">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Report Month</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox9</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>Gold</BackgroundColor>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixCornerCell>
+                      <TablixCornerCell>
+                        <CellContents>
+                          <Textbox Name="Textbox13">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Name (LoanID)</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox13</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>Gold</BackgroundColor>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixCornerCell>
+                    </TablixCornerRow>
+                  </TablixCornerRows>
+                </TablixCorner>
+                <TablixBody>
+                  <TablixColumns>
+                    <TablixColumn>
+                      <Width>0.51667in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>0.86667in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>1.00833in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>0.83333in</Width>
+                    </TablixColumn>
+                    <TablixColumn>
+                      <Width>0.32417in</Width>
+                    </TablixColumn>
+                  </TablixColumns>
+                  <TablixRows>
+                    <TablixRow>
+                      <Height>0.25in</Height>
+                      <TablixCells>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Loan_ID">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Count(Fields!Loan_ID.Value)</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Loan_ID</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="LoanAmount">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Sum(Fields!LoanAmount.Value)</Value>
+                                      <Style>
+                                        <Format>'$'#,0;('$'#,0)</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>LoanAmount</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="Purchase_Price">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Sum(Fields!Purchase_Price.Value)</Value>
+                                      <Style>
+                                        <Format>'$'#,0;('$'#,0)</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>Purchase_Price</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Textbox Name="MonthlyIncome">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=CINT(Fields!MonthlyIncome.Value)</Value>
+                                      <Style>
+                                        <Format>'$'#,0;('$'#,0)</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>MonthlyIncome</rd:DefaultName>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>Solid</Style>
+                                </Border>
+                                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                              </Style>
+                            </Textbox>
+                          </CellContents>
+                        </TablixCell>
+                        <TablixCell>
+                          <CellContents>
+                            <Image Name="Image1">
+                              <Source>Embedded</Source>
+                              <Value>=switch(SUM(CINT(Fields!MonthlyIncome.Value)) / SUM(Fields!LoanAmount.Value) &gt;= .1  , "Arrow_Red_15",
+	 SUM(CINT(Fields!MonthlyIncome.Value))  / SUM(Fields!LoanAmount.Value) &gt;= .07 AND
+	 SUM(CINT(Fields!MonthlyIncome.Value)) / SUM(Fields!LoanAmount.Value) &lt;  .1  , "Arrow_Yellow_15",
+	 SUM(CINT(Fields!MonthlyIncome.Value)) / SUM(Fields!LoanAmount.Value) &lt;  .07 , "Arrow_Green_15")</Value>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Image>
+                          </CellContents>
+                        </TablixCell>
+                      </TablixCells>
+                    </TablixRow>
+                  </TablixRows>
+                </TablixBody>
+                <TablixColumnHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="ColumnGroup">
+                        <GroupExpressions>
+                          <GroupExpression />
+                        </GroupExpressions>
+                      </Group>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox4">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Total Loans</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox4</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Gold</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember />
+                          </TablixMembers>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox26">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Loan Amount</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox26</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Gold</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember />
+                          </TablixMembers>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox27">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Purchase Price</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox27</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Gold</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember />
+                          </TablixMembers>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox32">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>Monthly Income</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox32</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Gold</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.25in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox34">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value EvaluationMode="Constant">Risk</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox34</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>Gold</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixColumnHierarchy>
+                <TablixRowHierarchy>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="ToDate">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!ToDate.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!ToDateOrder.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixHeader>
+                        <Size>1in</Size>
+                        <CellContents>
+                          <Textbox Name="ToDate">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!ToDate.Value</Value>
+                                    <Style />
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>ToDate</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <BackgroundColor>WhiteSmoke</BackgroundColor>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="FormatedReportMonth">
+                            <GroupExpressions>
+                              <GroupExpression>=Fields!FormatedReportMonth.Value</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <SortExpressions>
+                            <SortExpression>
+                              <Value>=Fields!LoanDate.Value</Value>
+                              <Direction>Descending</Direction>
+                            </SortExpression>
+                          </SortExpressions>
+                          <TablixHeader>
+                            <Size>1in</Size>
+                            <CellContents>
+                              <Textbox Name="FormatedReportMonth">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>=Fields!FormatedReportMonth.Value</Value>
+                                        <Style />
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>FormatedReportMonth</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <Group Name="BorrowerName">
+                                <GroupExpressions>
+                                  <GroupExpression>=Fields!BorrowerName.Value</GroupExpression>
+                                </GroupExpressions>
+                              </Group>
+                              <SortExpressions>
+                                <SortExpression>
+                                  <Value>=Fields!BorrowerName.Value</Value>
+                                </SortExpression>
+                              </SortExpressions>
+                              <TablixHeader>
+                                <Size>1.54167in</Size>
+                                <CellContents>
+                                  <Textbox Name="BorrowerName">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=Fields!BorrowerName.Value &amp; " (" &amp; Fields!Loan_ID.Value &amp; ")"</Value>
+                                            <Style />
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>BorrowerName</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember />
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                          <Visibility>
+                            <Hidden>true</Hidden>
+                            <ToggleItem>ToDate</ToggleItem>
+                          </Visibility>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixRowHierarchy>
+                <DataSetName>LoansProcessed_ToDate</DataSetName>
+                <Top>0.34667in</Top>
+                <Left>0.08in</Left>
+                <Height>0.5in</Height>
+                <Width>7.09084in</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Tablix>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>0.98333in</Top>
+            <Height>6.05in</Height>
+            <Width>7.30417in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Rectangle>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Loans To Date</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.75in</Top>
+            <Left>1.1625in</Left>
+            <Height>0.25in</Height>
+            <Width>1.15833in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <TopBorder>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Mortgage Loans Dashboard</Value>
+                    <Style>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Left>0.00417in</Left>
+            <Height>0.43333in</Height>
+            <Width>7.3in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Loan Overview</Value>
+                    <Style>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <ActionInfo>
+              <Actions>
+                <Action>
+                  <Drillthrough>
+                    <ReportName>LoanDashboardOverview</ReportName>
+                    <Parameters>
+                      <Parameter Name="ReportDate">
+                        <Value>=Parameters!ReportDate.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanAmount">
+                        <Value>=Parameters!LoanAmount.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanPurpose">
+                        <Value>=Parameters!LoanPurpose.Value</Value>
+                      </Parameter>
+                      <Parameter Name="PropertyUsage">
+                        <Value>=Parameters!PropertyUsage.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics1">
+                        <Value>=Parameters!Demographics1.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics2">
+                        <Value>=Parameters!Demographics2.Value</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Drillthrough>
+                </Action>
+              </Actions>
+            </ActionInfo>
+            <Top>0.75in</Top>
+            <Left>0.00417in</Left>
+            <Height>0.25in</Height>
+            <Width>1.15833in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <TopBorder>
+                <Style>Solid</Style>
+              </TopBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+              </RightBorder>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Demographics</Value>
+                    <Style>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <ActionInfo>
+              <Actions>
+                <Action>
+                  <Drillthrough>
+                    <ReportName>LoanDashboardDemographics</ReportName>
+                    <Parameters>
+                      <Parameter Name="ReportDate">
+                        <Value>=Parameters!ReportDate.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanAmount">
+                        <Value>=Parameters!LoanAmount.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanPurpose">
+                        <Value>=Parameters!LoanPurpose.Value</Value>
+                      </Parameter>
+                      <Parameter Name="PropertyUsage">
+                        <Value>=Parameters!PropertyUsage.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics1">
+                        <Value>=Parameters!Demographics1.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics2">
+                        <Value>=Parameters!Demographics2.Value</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Drillthrough>
+                </Action>
+              </Actions>
+            </ActionInfo>
+            <Top>0.75in</Top>
+            <Left>2.32083in</Left>
+            <Height>0.25in</Height>
+            <Width>1.15833in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <TopBorder>
+                <Style>Solid</Style>
+              </TopBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+              </RightBorder>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>7.03333in</Height>
+        <Style />
+      </Body>
+      <Width>7.30417in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ReportDatePar</DataSetName>
+          <ValueField>LoanDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Report Date</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ReportDatePar</DataSetName>
+          <ValueField>LoanDate</ValueField>
+          <LabelField>LoanDate</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="LoanAmount">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>LoanAmountPar</DataSetName>
+          <ValueField>LoanAmountGroup</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Loan Amount</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>LoanAmountPar</DataSetName>
+          <ValueField>LoanAmountGroup</ValueField>
+          <LabelField>LoanAmountGroup</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="LoanPurpose">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>LoanPurposePar</DataSetName>
+          <ValueField>Purpose_of_Loan</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Loan Purpose</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>LoanPurposePar</DataSetName>
+          <ValueField>Purpose_of_Loan</ValueField>
+          <LabelField>Purpose_of_Loan</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="PropertyUsage">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>PropertyUsagePar</DataSetName>
+          <ValueField>Property_Usage</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Property Usage</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>PropertyUsagePar</DataSetName>
+          <ValueField>Property_Usage</ValueField>
+          <LabelField>Property_Usage</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="Demographics1">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>DemographicPar1</DataSetName>
+          <ValueField>DemoCategory</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Demographics Group</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DemographicPar1</DataSetName>
+          <ValueField>DemoCategory</ValueField>
+          <LabelField>DemoCategory</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="Demographics2">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>DemographicsPar2</DataSetName>
+          <ValueField>Label</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Demographics Details</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DemographicsPar2</DataSetName>
+          <ValueField>Label</ValueField>
+          <LabelField>RealLabel</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Arrow_Green_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAACOklEQVQ4T2P4jxvoMjQxXGJAAuhKGbDo9QaKebPWMq0QmsD5n6eGzR2mHySOrB5dcyZUIaPBUvEf+svE/zM1M+7HZTuy5jaYItnpfOWee1X+++xW/8/QyvCfuYoxDMl2uOVwzXDTOxi4tBaL/nHepfg/6bTxf4Z2hv+MDQwX8Gk+BJOUn8cX6LBD/r/ddrn/BVdt/jN0MIAxYzWDKUgN0NpDMKvBNiPbqr1c5L/VVpn/lluk/5fddvzP0AXU3AnEtQxP0G1H1xxktlnqv+kmyf8mQAzW3A3UCDIAhOsZmKC2gy1H0ay9WuS14Qbx//pArLdeDKK5B6gJZkAdwx2oZjlUzV0MudprRf9rrxX5r7VG+L8mEJfdcf7P0AvUDDOgg+Efcy+DCMx2kM1RII7sEt7r6kANaquF/qusEvyvDMRNL/z/M/QDNfcBMcyQFoZ1cM0gBtMkxgLllQL/FVfw/1cAYud92v8Trzj/b3zu9z/opOV/qYVCEENABoBCvp5BFWhpBQPDbAZG3tlsT2WX8f532KX33/uo/v/82x7/+z8l/q956Pm/90Psf9/DBsDQV/svMlsAYkA7w2RwyDNNZ/Ax3qz832aP8v+Ke1H/e97H/G9+GfC/4Znv/9rHXv+rHrj/L7/r8r/laeh/F6DhCksE/3NN4vjP0MigBdJ8P+l88KPmtyGPGl4FPqp97veo+on3o4qHno8K7ji/yb3p8Dbrmu3bjMvWb9MvWr5MPmfyUm6R1EtgjusBAFHVz59/6wD4AAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Arrow_Red_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAAB/klEQVQ4T4WQTUgUYRjHX3dmR6IuRWy7lm3q5leJmdEHlUEWZJc61MU65KGCNPqwEoIIOkTgpUMRhSAVDQtBCF20WiH7AKUkUivacGvLSkkkEOqwzq/nXZllt3bpgWdeeGd+v//zjBoo8EQGC43I66AZeVNk9kZDRn+s1OyPl0tXeMNjKyx7vMqyJ6st+2eNZU+vsezfa/PtmVWqST0LGOGpxlqc9v1w+QBcOQjXj0DnMbjdCuE2uHcO7l+A7ovwsB1ntUK59WW54nuZ4tfVFrghfe0wdMh58wTcOQ13z8JAJ9QvgFrFdJUaScFPfJ4eLfgmgolyRaL7EnSdh1sn4UUHNFUnId0Zqa7hU4kiXTC50iOwJG+TtC3zYIOVhCfKVEwzSM0+pJ4WmA8+iuCzTPC1VDEuE9BaDzsDs4I6Eaz3pnbNgLXgQ5EiJoJ4SDEmApo3we4gNPhl3/n6/oebmoLd9D6/2ZUuoHkj7A3BrqUiWMSoX+XlhPWLd0FFVCYYLZbkFkneVwl7SoiGzOSuWWE3vXeh0fdWBO+XCXy0Tv50DU5jRcau+tuMsV1Ym4cLFVrgHN8Kh9YxVGzF/079B06l+7wvh0TgnNouo2/OmpoT1imvFitmzuzgecBIpO/pjpwVdtMf+cyeRFsDkbkqLx34L+wKHi+ZM5UL1Pd/AMpLIJTuoS2PAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Arrow_Yellow_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAAB30lEQVQ4T5XS30tTYRgH8O/E0gWRYnQVDYIlQXonQgZedNlV/0T0JwjSD1KXzYRAL40QLC+sSOdq6vHHLCcJ6o6cOTdwKs2JTM2lcyoevz0v22iGxnrh4fDA+3m+D5wX+M/T34zqoRZ0a07M5k19bQWXvzTi41AzONddwuj49fxw72MsDz4HR1rA0ZdguAfcnfpHsrsBFVJfFVJpw840nHff5E64krszp2DNaSn3OPBKVuSAIw21F+nUsVZwRbtErpQwqefgpffnrH1P0OF6CmahSlWJWRjstzFhXCEjYNLI4A/18Ao8cD8DPzeAnqZMqsKSOiqpE+0WxheqyM0bkgzuBQUnDJsnrt9maqGMXCwlQxfJwAVy7jyP9QIp8MiQClppblWTW3YyKjicSSZZ0fcI9+PeognTKCb9hTyetvBoStB38MAHpr6Bh5FbNNdt5Jr0i3+weN5TP93bigeht4iZgg4nBUopmBwHd8akD8rwDStTyyexGqCOY74DlkAnakPvYObCxIhat4pmooapH6djNaBLbeFrQ6GUfWMAq9vD4E8N3ByUB+IH92Nn4+wW2e81/TUexlwIxD3gL38p99bs6ef5980z+jvqrv4GdyM9cEU/5Z+cO69ODZlsx9XfX3zdusV4nE4AAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>09beb779-43d8-46f9-945a-bbc84915e67c</rd:ReportID>
+</Report>

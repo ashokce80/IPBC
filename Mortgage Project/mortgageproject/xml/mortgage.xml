@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mortage>
+<Borrowers>
+<Borrower>
+	<SSN>67656473</SSN>
+	<BorrowerFirstName>Chaitu</BorrowerFirstName>
+	<BorrowerLastName>s</BorrowerLastName>
+	<BorrowerEmail>a@b.com</BorrowerEmail>
+	<HomePhone>2103654221</HomePhone>
+	<CellPhone>2145689563</CellPhone>
+	<MaritalStatus>Not Married</MaritalStatus>
+	<DateofBirth>03/06/91</DateofBirth>
+	<CurrentCityStreetAddress>7777 Macallum Blvd</CurrentCityStreetAddress>
+	<city>Plano</city>
+	<State>TX</State>
+	<Zip>254123</Zip>
+	<YearsAtThisAdress>1</YearsAtThisAdress>
+	<Sex>Male</Sex>
+	<Ethnicity>Asian</Ethnicity>
+	<Race>Indian</Race>
+</Borrower>
+<CoBorrower>
+	<SSN>67656475</SSN>
+	<BorrowerFirstName>Sri</BorrowerFirstName>
+	<BorrowerLastName>G</BorrowerLastName>
+	<BorrowerEmail>c@b.com</BorrowerEmail>
+	<HomePhone>21036542267</HomePhone>
+	<CellPhone>21456895687</CellPhone>
+	<MaritalStatus>Not Married</MaritalStatus>
+	<DateofBirth>03/06/86</DateofBirth>
+	<CurrentCityStreetAddress>8970 Park</CurrentCityStreetAddress>
+	<State>TX</State>
+	<Zip>254127</Zip>
+	<YearsAtThisAdress>1</YearsAtThisAdress>
+	<Sex>Male</Sex>
+	<Ethnicity>Asian</Ethnicity>
+	<Race>Indian</Race>
+</CoBorrower>	
+</Borrowers>
+<financial_detail>
+	<SSN>67656473</SSN>
+	<MonthlyIncome>10000</MonthlyIncome>
+	<Bonuses>500</Bonuses>
+	<Commission>100</Commission>
+	<OtherIncome>200</OtherIncome>
+	<RentorOwn>Rent</RentorOwn>
+	<Checking>5000</Checking>
+	<Savings>6000</Savings>
+	<RetirementFund>10000</RetirementFund>
+	<MutualFund>5000</MutualFund>
+</financial_detail>
+<Loan_detail>
+	<Loan_ID>1239</Loan_ID>
+	<SSN>67656473</SSN>
+	<property_ID>333</property_ID>
+	<PurposeofLoan>Education</PurposeofLoan>
+	<LoanAmount>10000</LoanAmount>
+	<PurchasePrice>10000</PurchasePrice>
+	<NumberofUnits>1</NumberofUnits>
+	<CreditCardAuthorization>Agree</CreditCardAuthorization>
+	<Refferal>NULL</Refferal>
+	<CoBorrowerSSN>67656473</CoBorrowerSSN>
+</Loan_detail>
+<property_detail>
+	<SSN>67656473</SSN>
+	<propertyID>333</propertyID>
+	<PropertyUsage>Land</PropertyUsage>
+	<PropertyCity>Ricardson</PropertyCity>
+	<PropertyState>TX</PropertyState>
+	<PropertyZip>257841</PropertyZip>
+	<RealEstateAgentName>NULL</RealEstateAgentName>
+	<RealEstateAgentPhone>NULL</RealEstateAgentPhone>
+	<RealEstateAgentEmail>NULL</RealEstateAgentEmail>
+</property_detail>
+</mortage>

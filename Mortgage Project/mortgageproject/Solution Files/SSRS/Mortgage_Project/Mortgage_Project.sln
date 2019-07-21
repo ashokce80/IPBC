@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Mortgage_Project", "Mortgage_Project\Mortgage_Project.rptproj", "{D29211B3-274B-4C30-985A-556B7A566DFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Debug|Default.ActiveCfg = Debug
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Debug|Default.Build.0 = DebugLocal
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Debug|Default.Deploy.0 = DebugLocal
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.DebugLocal|Default.Build.0 = DebugLocal
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Release|Default.ActiveCfg = Release
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Release|Default.Build.0 = Release
+		{D29211B3-274B-4C30-985A-556B7A566DFA}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

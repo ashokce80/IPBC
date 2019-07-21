@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Mortgage Loans Dashboard</Value>
+                <Style>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Left>0.00417in</Left>
+        <Height>0.43333in</Height>
+        <Width>7.3in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <GaugePanel Name="GaugePanel2">
+        <RadialGauges>
+          <RadialGauge Name="RadialGauge1">
+            <PivotY>75</PivotY>
+            <GaugeScales>
+              <RadialScale Name="RadialScale1">
+                <Radius>54</Radius>
+                <StartAngle>90</StartAngle>
+                <SweepAngle>180</SweepAngle>
+                <GaugePointers>
+                  <RadialPointer Name="RadialPointer1">
+                    <PointerCap>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                        <BackgroundGradientEndColor>DimGray</BackgroundGradientEndColor>
+                        <BackgroundHatchType>None</BackgroundHatchType>
+                      </Style>
+                      <CapImage>
+                        <OffsetX>0pt</OffsetX>
+                        <OffsetY>0pt</OffsetY>
+                        <Source>External</Source>
+                        <Value />
+                      </CapImage>
+                      <OnTop>true</OnTop>
+                      <CapStyle>RoundedWithWideIndentation</CapStyle>
+                      <Width>33</Width>
+                    </PointerCap>
+                    <NeedleStyle>Tapered</NeedleStyle>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <BackgroundColor>White</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Orange</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>1pt</ShadowOffset>
+                    </Style>
+                    <GaugeInputValue>
+                      <Value>=Sum(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value)</Value>
+                      <Multiplier>1</Multiplier>
+                    </GaugeInputValue>
+                    <PointerImage>
+                      <OffsetX>0pt</OffsetX>
+                      <OffsetY>0pt</OffsetY>
+                      <Source>External</Source>
+                      <Value />
+                    </PointerImage>
+                    <MarkerLength>25</MarkerLength>
+                    <MarkerStyle>Wedge</MarkerStyle>
+                    <Placement>Inside</Placement>
+                    <Width>15</Width>
+                  </RadialPointer>
+                </GaugePointers>
+                <ScaleRanges>
+                  <ScaleRange Name="RadialRange1">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Red</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Yellow</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>1</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>50</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                  <ScaleRange Name="RadialRange2">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Yellow</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Yellow</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>50</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>75</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                  <ScaleRange Name="RadialRange3">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Yellow</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Green</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>75</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>100</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                </ScaleRanges>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>CornflowerBlue</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
+                  <BackgroundHatchType>None</BackgroundHatchType>
+                  <ShadowOffset>0pt</ShadowOffset>
+                </Style>
+                <Interval>NaN</Interval>
+                <IntervalOffset>NaN</IntervalOffset>
+                <MaximumValue>
+                  <Value>100</Value>
+                  <Multiplier>1</Multiplier>
+                </MaximumValue>
+                <MinimumValue>
+                  <Value>0</Value>
+                  <Multiplier>1</Multiplier>
+                </MinimumValue>
+                <GaugeMajorTickMarks>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>None</Style>
+                    </Border>
+                    <BackgroundColor>DimGray</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>18</Length>
+                  <Width>2</Width>
+                </GaugeMajorTickMarks>
+                <GaugeMinorTickMarks>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>None</Style>
+                    </Border>
+                    <BackgroundColor>DimGray</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>8</Length>
+                  <Width>1</Width>
+                </GaugeMinorTickMarks>
+                <MaximumPin>
+                  <PinLabel>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                    <DistanceFromScale>0</DistanceFromScale>
+                  </PinLabel>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>6</Length>
+                  <Width>6</Width>
+                  <Shape>Circle</Shape>
+                </MaximumPin>
+                <MinimumPin>
+                  <PinLabel>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                    <DistanceFromScale>0</DistanceFromScale>
+                  </PinLabel>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>6</Length>
+                  <Width>6</Width>
+                  <Shape>Circle</Shape>
+                </MinimumPin>
+                <ScaleLabels>
+                  <Style>
+                    <FontSize>14pt</FontSize>
+                    <Color>#404040</Color>
+                  </Style>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <DistanceFromScale>0</DistanceFromScale>
+                  <RotateLabels>true</RotateLabels>
+                  <ShowEndLabels>true</ShowEndLabels>
+                  <UseFontPercent>true</UseFontPercent>
+                </ScaleLabels>
+                <Width>0</Width>
+              </RadialScale>
+            </GaugeScales>
+            <BackFrame>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
+                <BackgroundHatchType>None</BackgroundHatchType>
+                <ShadowOffset>0pt</ShadowOffset>
+              </Style>
+              <FrameStyle>Edged</FrameStyle>
+              <FrameShape>CustomSemiCircularN1</FrameShape>
+              <FrameBackground>
+                <Style>
+                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                  <BackgroundHatchType>None</BackgroundHatchType>
+                </Style>
+              </FrameBackground>
+              <FrameImage>
+                <Source>External</Source>
+                <Value />
+              </FrameImage>
+            </BackFrame>
+            <ClipContent>true</ClipContent>
+            <TopImage>
+              <Source>External</Source>
+              <Value />
+            </TopImage>
+            <AspectRatio>1.48</AspectRatio>
+            <Height>100</Height>
+            <Width>100</Width>
+          </RadialGauge>
+        </RadialGauges>
+        <GaugeLabels>
+          <GaugeLabel Name="GaugeLabel1">
+            <Text>=Round(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value,0) &amp; "%"</Text>
+            <TextShadowOffset>0pt</TextShadowOffset>
+            <UseFontPercent>true</UseFontPercent>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>#00ffffff</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+              <FontSize>15pt</FontSize>
+              <FontWeight>Bold</FontWeight>
+              <Color>#404040</Color>
+              <ShadowOffset>0pt</ShadowOffset>
+            </Style>
+            <Top>54.0880470275879</Top>
+            <Left>39.3081741333008</Left>
+            <Height>9</Height>
+            <Width>21</Width>
+            <ParentItem>RadialGauges.RadialGauge1</ParentItem>
+          </GaugeLabel>
+        </GaugeLabels>
+        <AutoLayout>true</AutoLayout>
+        <BackFrame>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Gainsboro</BackgroundColor>
+            <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+            <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+            <BackgroundHatchType>None</BackgroundHatchType>
+            <ShadowOffset>0pt</ShadowOffset>
+          </Style>
+          <FrameBackground>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+              <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+              <BackgroundHatchType>None</BackgroundHatchType>
+            </Style>
+          </FrameBackground>
+          <FrameImage>
+            <Source>External</Source>
+            <Value />
+          </FrameImage>
+        </BackFrame>
+        <TopImage>
+          <Source>External</Source>
+          <Value />
+        </TopImage>
+        <DataSetName>LoansProcessed_ToDate</DataSetName>
+        <Top>0.98833in</Top>
+        <Left>0.00417in</Left>
+        <Height>1.34167in</Height>
+        <Width>2.08333in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </GaugePanel>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>MTD vs Prior 6 Month Avg</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.73833in</Top>
+        <Left>0.00417in</Left>
+        <Height>0.25in</Height>
+        <Width>1.925in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>=switch(Sum(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value, "LoansProcessed_ToDate") &lt;= 50, "Arrow_Red_15",
+		Sum(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value, "LoansProcessed_ToDate") &gt; 50  and 
+		Sum(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value, "LoansProcessed_ToDate") &lt;= 75, "Arrow_Yellow_15",
+		Sum(Fields!MTDvsMonthlyPrior6mnthAvg_PerInc.Value, "LoansProcessed_ToDate") &gt; 75, "Arrow_Green_15")</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.73833in</Top>
+        <Left>1.92917in</Left>
+        <Height>0.22222in</Height>
+        <Width>0.15833in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <GaugePanel Name="GaugePanel3">
+        <RadialGauges>
+          <RadialGauge Name="RadialGauge1">
+            <PivotY>75</PivotY>
+            <GaugeScales>
+              <RadialScale Name="RadialScale1">
+                <Radius>54</Radius>
+                <StartAngle>90</StartAngle>
+                <SweepAngle>180</SweepAngle>
+                <GaugePointers>
+                  <RadialPointer Name="RadialPointer1">
+                    <PointerCap>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                        <BackgroundGradientEndColor>DimGray</BackgroundGradientEndColor>
+                        <BackgroundHatchType>None</BackgroundHatchType>
+                      </Style>
+                      <CapImage>
+                        <OffsetX>0pt</OffsetX>
+                        <OffsetY>0pt</OffsetY>
+                        <Source>External</Source>
+                        <Value />
+                      </CapImage>
+                      <OnTop>true</OnTop>
+                      <CapStyle>RoundedWithWideIndentation</CapStyle>
+                      <Width>33</Width>
+                    </PointerCap>
+                    <NeedleStyle>Tapered</NeedleStyle>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <BackgroundColor>White</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Orange</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>1pt</ShadowOffset>
+                    </Style>
+                    <GaugeInputValue>
+                      <Value>=Sum(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value)</Value>
+                      <Multiplier>1</Multiplier>
+                    </GaugeInputValue>
+                    <PointerImage>
+                      <OffsetX>0pt</OffsetX>
+                      <OffsetY>0pt</OffsetY>
+                      <Source>External</Source>
+                      <Value />
+                    </PointerImage>
+                    <MarkerLength>25</MarkerLength>
+                    <MarkerStyle>Wedge</MarkerStyle>
+                    <Placement>Inside</Placement>
+                    <Width>15</Width>
+                  </RadialPointer>
+                </GaugePointers>
+                <ScaleRanges>
+                  <ScaleRange Name="RadialRange1">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Red</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Yellow</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>1</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>50</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                  <ScaleRange Name="RadialRange2">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Yellow</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Yellow</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>50</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>75</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                  <ScaleRange Name="RadialRange3">
+                    <Style>
+                      <Border>
+                        <Color>Silver</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>Yellow</BackgroundColor>
+                      <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                      <BackgroundGradientEndColor>Green</BackgroundGradientEndColor>
+                      <BackgroundHatchType>None</BackgroundHatchType>
+                      <ShadowOffset>0pt</ShadowOffset>
+                    </Style>
+                    <DistanceFromScale>30</DistanceFromScale>
+                    <StartValue>
+                      <Value>75</Value>
+                      <Multiplier>1</Multiplier>
+                    </StartValue>
+                    <EndValue>
+                      <Value>100</Value>
+                      <Multiplier>1</Multiplier>
+                    </EndValue>
+                    <StartWidth>10</StartWidth>
+                    <EndWidth>10</EndWidth>
+                    <Placement>Inside</Placement>
+                  </ScaleRange>
+                </ScaleRanges>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <BackgroundColor>CornflowerBlue</BackgroundColor>
+                  <BackgroundGradientType>None</BackgroundGradientType>
+                  <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
+                  <BackgroundHatchType>None</BackgroundHatchType>
+                  <ShadowOffset>0pt</ShadowOffset>
+                </Style>
+                <Interval>NaN</Interval>
+                <IntervalOffset>NaN</IntervalOffset>
+                <MaximumValue>
+                  <Value>100</Value>
+                  <Multiplier>1</Multiplier>
+                </MaximumValue>
+                <MinimumValue>
+                  <Value>0</Value>
+                  <Multiplier>1</Multiplier>
+                </MinimumValue>
+                <GaugeMajorTickMarks>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>None</Style>
+                    </Border>
+                    <BackgroundColor>DimGray</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>18</Length>
+                  <Width>2</Width>
+                </GaugeMajorTickMarks>
+                <GaugeMinorTickMarks>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>None</Style>
+                    </Border>
+                    <BackgroundColor>DimGray</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>8</Length>
+                  <Width>1</Width>
+                </GaugeMinorTickMarks>
+                <MaximumPin>
+                  <PinLabel>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                    <DistanceFromScale>0</DistanceFromScale>
+                  </PinLabel>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>6</Length>
+                  <Width>6</Width>
+                  <Shape>Circle</Shape>
+                </MaximumPin>
+                <MinimumPin>
+                  <PinLabel>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                    <DistanceFromScale>0</DistanceFromScale>
+                  </PinLabel>
+                  <Style>
+                    <Border>
+                      <Color>DimGray</Color>
+                      <Style>Solid</Style>
+                    </Border>
+                    <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  </Style>
+                  <Placement>Cross</Placement>
+                  <TickMarkImage>
+                    <Source>External</Source>
+                    <Value />
+                  </TickMarkImage>
+                  <Length>6</Length>
+                  <Width>6</Width>
+                  <Shape>Circle</Shape>
+                </MinimumPin>
+                <ScaleLabels>
+                  <Style>
+                    <FontSize>14pt</FontSize>
+                    <Color>#404040</Color>
+                  </Style>
+                  <Interval>NaN</Interval>
+                  <IntervalOffset>NaN</IntervalOffset>
+                  <DistanceFromScale>0</DistanceFromScale>
+                  <RotateLabels>true</RotateLabels>
+                  <ShowEndLabels>true</ShowEndLabels>
+                  <UseFontPercent>true</UseFontPercent>
+                </ScaleLabels>
+                <Width>0</Width>
+              </RadialScale>
+            </GaugeScales>
+            <BackFrame>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <BackgroundColor>WhiteSmoke</BackgroundColor>
+                <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                <BackgroundGradientEndColor>Gainsboro</BackgroundGradientEndColor>
+                <BackgroundHatchType>None</BackgroundHatchType>
+                <ShadowOffset>0pt</ShadowOffset>
+              </Style>
+              <FrameStyle>Edged</FrameStyle>
+              <FrameShape>CustomSemiCircularN1</FrameShape>
+              <FrameBackground>
+                <Style>
+                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                  <BackgroundHatchType>None</BackgroundHatchType>
+                </Style>
+              </FrameBackground>
+              <FrameImage>
+                <Source>External</Source>
+                <Value />
+              </FrameImage>
+            </BackFrame>
+            <ClipContent>true</ClipContent>
+            <TopImage>
+              <Source>External</Source>
+              <Value />
+            </TopImage>
+            <AspectRatio>1.48</AspectRatio>
+            <Height>100</Height>
+            <Width>100</Width>
+          </RadialGauge>
+        </RadialGauges>
+        <GaugeLabels>
+          <GaugeLabel Name="GaugeLabel1">
+            <Text>=Round(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value, 0) &amp; "%"</Text>
+            <TextShadowOffset>0pt</TextShadowOffset>
+            <UseFontPercent>true</UseFontPercent>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>#00ffffff</BackgroundColor>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <BackgroundGradientEndColor>#00ffffff</BackgroundGradientEndColor>
+              <FontSize>15pt</FontSize>
+              <FontWeight>Bold</FontWeight>
+              <Color>#404040</Color>
+              <ShadowOffset>0pt</ShadowOffset>
+            </Style>
+            <Top>54.0880470275879</Top>
+            <Left>39.3081741333008</Left>
+            <Height>9</Height>
+            <Width>21</Width>
+            <ParentItem>RadialGauges.RadialGauge1</ParentItem>
+          </GaugeLabel>
+        </GaugeLabels>
+        <AutoLayout>true</AutoLayout>
+        <BackFrame>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Gainsboro</BackgroundColor>
+            <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+            <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+            <BackgroundHatchType>None</BackgroundHatchType>
+            <ShadowOffset>0pt</ShadowOffset>
+          </Style>
+          <FrameBackground>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+              <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+              <BackgroundHatchType>None</BackgroundHatchType>
+            </Style>
+          </FrameBackground>
+          <FrameImage>
+            <Source>External</Source>
+            <Value />
+          </FrameImage>
+        </BackFrame>
+        <TopImage>
+          <Source>External</Source>
+          <Value />
+        </TopImage>
+        <DataSetName>LoansProcessed_ToDate</DataSetName>
+        <Top>0.97444in</Top>
+        <Left>2.45417in</Left>
+        <Height>1.34167in</Height>
+        <Width>2.08333in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </GaugePanel>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Last Mnt vs Prior 6 Mnt avg</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.73834in</Top>
+        <Left>2.45417in</Left>
+        <Height>0.25in</Height>
+        <Width>1.925in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image2">
+        <Source>Embedded</Source>
+        <Value>=switch(Sum(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value, "LoansProcessed_ToDate") &lt;= 50, "Arrow_Red_15",
+		Sum(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value, "LoansProcessed_ToDate") &gt; 50  and 
+		Sum(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value, "LoansProcessed_ToDate") &lt;= 75, "Arrow_Yellow_15",
+		Sum(Fields!LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc.Value, "LoansProcessed_ToDate") &gt; 75, "Arrow_Green_15")</Value>
+        <Sizing>FitProportional</Sizing>
+        <Top>0.73834in</Top>
+        <Left>4.37917in</Left>
+        <Height>0.22222in</Height>
+        <Width>0.15833in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+    </ReportItems>
+    <Height>7.03333in</Height>
+    <Style />
+  </Body>
+  <Width>7.30833in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Mortgage">
+      <DataSourceReference>Mortgage</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>bca60139-d4ec-4f75-978c-ffa6e32e8275</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="LoansProcessed_ToDate">
+      <Query>
+        <DataSourceName>Mortgage</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ReportDate">
+            <Value>=Parameters!ReportDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>DECLARE		@CurrentMonth INT,
+			@CurrentYear  INT,
+			@PriorMonth INT,
+			@PriorYear  INT,
+			@MTD INT,
+			@MonthlyPrior6mnthAvg INT,
+			@MonthlyPrior6mnthAvgExcludeCurrMonth INT,
+			@LastFullMonth INT
+			--,@ReportDate Datetime = '6/25/2013'
+			
+SET			@CurrentMonth = DATEPART(MM,@ReportDate)
+SET			@CurrentYear = DATEPART(YY,@ReportDate)
+SET			@PriorMonth = DATEPART(MM,DateAdd(MM,-1,'6/25/2013'))
+SET			@PriorYear = (SELECT CASE WHEN DATEPART(MM,DateAdd(MM,-1,'6/25/2013')) = 1 THEN DATEPART(YY,DATEADD(YY,-1,@ReportDate)) ELSE @CurrentYear END)
+
+
+SET			@MTD =	(
+					SELECT		COUNT(*)  
+					FROM		dbo.Fact_Financials a
+					LEFT JOIN	dbo.Dim_Loan b
+					ON			a.Loan_ID = b.Loan_ID
+					LEFT JOIN	Dim_Property c
+					ON			a.Property_ID = c.Property_ID
+					LEFT JOIN	dbo.Dim_Borrower d
+					ON			a.Borrower_ID = d.Borrower_ID
+					WHERE		DATEPART(MM,LoanDate) = @CurrentMonth
+					AND			DATEPART(YY,LoanDate) = @CurrentYear
+					AND			LoanDate &lt;= @ReportDate
+					)
+
+SET			@MonthlyPrior6mnthAvg = 
+					(
+					SELECT		AVG(LoanCnt)
+					FROM	(
+							SELECT		TOP 6 DATEPART(MM,LoanDate) LoanMonth,DATEPART(YY,LoanDate) LoanYear,COUNT(*) LoanCnt
+							FROM		dbo.Fact_Financials a
+							LEFT JOIN	dbo.Dim_Loan b
+							ON			a.Loan_ID = b.Loan_ID
+							LEFT JOIN	Dim_Property c
+							ON			a.Property_ID = c.Property_ID
+							LEFT JOIN	dbo.Dim_Borrower d
+							ON			a.Borrower_ID = d.Borrower_ID
+							WHERE		CONVERT(VARCHAR(25),DATEPART(MM,LoanDate)) + CONVERT(VARCHAR(25),DATEPART(YY,LoanDate)) &lt;&gt; CONVERT(VARCHAR(25),@CurrentMonth) +  CONVERT(VARCHAR(25),@CurrentYear)
+							AND		LoanDate &lt;= @ReportDate	
+							GROUP BY	DATEPART(MM,LoanDate),DATEPART(YY,LoanDate)	
+							ORDER BY	DATEPART(YY,LoanDate) DESC,DATEPART(MM,LoanDate) DESC		
+							) a
+					)
+
+SET			@LastFullMonth = 
+					(
+					SELECT		AVG(LoanCnt)
+					FROM	(
+							SELECT		TOP 1 DATEPART(MM,LoanDate) LoanMonth,DATEPART(YY,LoanDate) LoanYear,COUNT(*) LoanCnt
+							FROM		dbo.Fact_Financials a
+							LEFT JOIN	dbo.Dim_Loan b
+							ON			a.Loan_ID = b.Loan_ID
+							LEFT JOIN	Dim_Property c
+							ON			a.Property_ID = c.Property_ID
+							LEFT JOIN	dbo.Dim_Borrower d
+							ON			a.Borrower_ID = d.Borrower_ID
+							WHERE		CONVERT(VARCHAR(25),DATEPART(MM,LoanDate)) + CONVERT(VARCHAR(25),DATEPART(YY,LoanDate)) &lt;&gt; CONVERT(VARCHAR(25),@CurrentMonth) +  CONVERT(VARCHAR(25),@CurrentYear)
+							AND			LoanDate &lt;= @ReportDate	
+							GROUP BY	DATEPART(MM,LoanDate),DATEPART(YY,LoanDate)	
+							ORDER BY	DATEPART(YY,LoanDate) DESC,DATEPART(MM,LoanDate) DESC		
+							) a
+					)
+
+SET			@MonthlyPrior6mnthAvgExcludeCurrMonth = 
+					(
+					SELECT		AVG(LoanCnt)
+					FROM	(
+							SELECT		TOP 6 DATEPART(MM,LoanDate) LoanMonth,DATEPART(YY,LoanDate) LoanYear,COUNT(*) LoanCnt
+							FROM		dbo.Fact_Financials a
+							LEFT JOIN	dbo.Dim_Loan b
+							ON			a.Loan_ID = b.Loan_ID
+							LEFT JOIN	Dim_Property c
+							ON			a.Property_ID = c.Property_ID
+							LEFT JOIN	dbo.Dim_Borrower d
+							ON			a.Borrower_ID = d.Borrower_ID
+							WHERE		(CONVERT(VARCHAR(25),DATEPART(MM,LoanDate)) + CONVERT(VARCHAR(25),DATEPART(YY,LoanDate)) &lt;&gt; CONVERT(VARCHAR(25),@CurrentMonth) +  CONVERT(VARCHAR(25),@CurrentYear)
+							AND			CONVERT(VARCHAR(25),DATEPART(MM,LoanDate)) + CONVERT(VARCHAR(25),DATEPART(YY,LoanDate)) &lt;&gt; CONVERT(VARCHAR(25),@PriorMonth) +  CONVERT(VARCHAR(25),@PriorYear))
+							AND			LoanDate &lt;= @ReportDate	
+							GROUP BY	DATEPART(MM,LoanDate),DATEPART(YY,LoanDate)	
+							ORDER BY	DATEPART(YY,LoanDate) DESC,DATEPART(MM,LoanDate) DESC
+							) a
+					)										
+SELECT		@MTD MTD,@MonthlyPrior6mnthAvg MonthlyPrior6mnthAvg,((@MTD *1.00)/@MonthlyPrior6mnthAvg) * 100 MTDvsMonthlyPrior6mnthAvg_PerInc,
+			@LastFullMonth LastFullMonth,@MonthlyPrior6mnthAvgExcludeCurrMonth MonthlyPrior6mnthAvgExcludeCurrMonth,((@LastFullMonth *1.00)/@MonthlyPrior6mnthAvgExcludeCurrMonth) * 100 LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="MTD">
+          <DataField>MTD</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MonthlyPrior6mnthAvg">
+          <DataField>MonthlyPrior6mnthAvg</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MTDvsMonthlyPrior6mnthAvg_PerInc">
+          <DataField>MTDvsMonthlyPrior6mnthAvg_PerInc</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LastFullMonth">
+          <DataField>LastFullMonth</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MonthlyPrior6mnthAvgExcludeCurrMonth">
+          <DataField>MonthlyPrior6mnthAvgExcludeCurrMonth</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc">
+          <DataField>LastFullMonthvsMonthlyPrior6mnthExcludeCurrMonth_Avg_PerInc</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="ReportDatePar">
+      <Query>
+        <DataSourceName>Mortgage</DataSourceName>
+        <CommandText>SELECT 		DISTINCT CONVERT(VARCHAR(13), LoanDate,101) AS LoanDate
+FROM     	Dim_Loan
+ORDER BY 	CONVERT(VARCHAR(13), LoanDate,101) DESC</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <Fields>
+        <Field Name="LoanDate">
+          <DataField>LoanDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="ReportDate">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>ReportDatePar</DataSetName>
+          <ValueField>LoanDate</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Report Date</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>ReportDatePar</DataSetName>
+          <ValueField>LoanDate</ValueField>
+          <LabelField>LoanDate</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Arrow_Green_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAACOklEQVQ4T2P4jxvoMjQxXGJAAuhKGbDo9QaKebPWMq0QmsD5n6eGzR2mHySOrB5dcyZUIaPBUvEf+svE/zM1M+7HZTuy5jaYItnpfOWee1X+++xW/8/QyvCfuYoxDMl2uOVwzXDTOxi4tBaL/nHepfg/6bTxf4Z2hv+MDQwX8Gk+BJOUn8cX6LBD/r/ddrn/BVdt/jN0MIAxYzWDKUgN0NpDMKvBNiPbqr1c5L/VVpn/lluk/5fddvzP0AXU3AnEtQxP0G1H1xxktlnqv+kmyf8mQAzW3A3UCDIAhOsZmKC2gy1H0ay9WuS14Qbx//pArLdeDKK5B6gJZkAdwx2oZjlUzV0MudprRf9rrxX5r7VG+L8mEJfdcf7P0AvUDDOgg+Efcy+DCMx2kM1RII7sEt7r6kANaquF/qusEvyvDMRNL/z/M/QDNfcBMcyQFoZ1cM0gBtMkxgLllQL/FVfw/1cAYud92v8Trzj/b3zu9z/opOV/qYVCEENABoBCvp5BFWhpBQPDbAZG3tlsT2WX8f532KX33/uo/v/82x7/+z8l/q956Pm/90Psf9/DBsDQV/svMlsAYkA7w2RwyDNNZ/Ax3qz832aP8v+Ke1H/e97H/G9+GfC/4Znv/9rHXv+rHrj/L7/r8r/laeh/F6DhCksE/3NN4vjP0MigBdJ8P+l88KPmtyGPGl4FPqp97veo+on3o4qHno8K7ji/yb3p8Dbrmu3bjMvWb9MvWr5MPmfyUm6R1EtgjusBAFHVz59/6wD4AAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Arrow_Red_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAAB/klEQVQ4T4WQTUgUYRjHX3dmR6IuRWy7lm3q5leJmdEHlUEWZJc61MU65KGCNPqwEoIIOkTgpUMRhSAVDQtBCF20WiH7AKUkUivacGvLSkkkEOqwzq/nXZllt3bpgWdeeGd+v//zjBoo8EQGC43I66AZeVNk9kZDRn+s1OyPl0tXeMNjKyx7vMqyJ6st+2eNZU+vsezfa/PtmVWqST0LGOGpxlqc9v1w+QBcOQjXj0DnMbjdCuE2uHcO7l+A7ovwsB1ntUK59WW54nuZ4tfVFrghfe0wdMh58wTcOQ13z8JAJ9QvgFrFdJUaScFPfJ4eLfgmgolyRaL7EnSdh1sn4UUHNFUnId0Zqa7hU4kiXTC50iOwJG+TtC3zYIOVhCfKVEwzSM0+pJ4WmA8+iuCzTPC1VDEuE9BaDzsDs4I6Eaz3pnbNgLXgQ5EiJoJ4SDEmApo3we4gNPhl3/n6/oebmoLd9D6/2ZUuoHkj7A3BrqUiWMSoX+XlhPWLd0FFVCYYLZbkFkneVwl7SoiGzOSuWWE3vXeh0fdWBO+XCXy0Tv50DU5jRcau+tuMsV1Ym4cLFVrgHN8Kh9YxVGzF/079B06l+7wvh0TgnNouo2/OmpoT1imvFitmzuzgecBIpO/pjpwVdtMf+cyeRFsDkbkqLx34L+wKHi+ZM5UL1Pd/AMpLIJTuoS2PAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Arrow_Yellow_15">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAAB30lEQVQ4T5XS30tTYRgH8O/E0gWRYnQVDYIlQXonQgZedNlV/0T0JwjSD1KXzYRAL40QLC+sSOdq6vHHLCcJ6o6cOTdwKs2JTM2lcyoevz0v22iGxnrh4fDA+3m+D5wX+M/T34zqoRZ0a07M5k19bQWXvzTi41AzONddwuj49fxw72MsDz4HR1rA0ZdguAfcnfpHsrsBFVJfFVJpw840nHff5E64krszp2DNaSn3OPBKVuSAIw21F+nUsVZwRbtErpQwqefgpffnrH1P0OF6CmahSlWJWRjstzFhXCEjYNLI4A/18Ao8cD8DPzeAnqZMqsKSOiqpE+0WxheqyM0bkgzuBQUnDJsnrt9maqGMXCwlQxfJwAVy7jyP9QIp8MiQClppblWTW3YyKjicSSZZ0fcI9+PeognTKCb9hTyetvBoStB38MAHpr6Bh5FbNNdt5Jr0i3+weN5TP93bigeht4iZgg4nBUopmBwHd8akD8rwDStTyyexGqCOY74DlkAnakPvYObCxIhat4pmooapH6djNaBLbeFrQ6GUfWMAq9vD4E8N3ByUB+IH92Nn4+wW2e81/TUexlwIxD3gL38p99bs6ef5980z+jvqrv4GdyM9cEU/5Z+cO69ODZlsx9XfX3zdusV4nE4AAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>09beb779-43d8-46f9-945a-bbc84915e67c</rd:ReportID>
+</Report>
