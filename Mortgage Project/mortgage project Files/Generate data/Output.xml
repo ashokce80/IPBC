@@ -1,0 +1,184 @@
+<ROOT>
+  <Borrower_details>
+    <Borrowers>
+      <SSN>821090840</SSN>
+      <Borrower_x0020_FirstName>Hebert</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Threader</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>hthreader0@is.gd</Borrower_x0020_Email>
+      <Home_x0020_Phone>419-855-3463</Home_x0020_Phone>
+      <Cell_x0020_Phone>415-616-5967</Cell_x0020_Phone>
+      <Marital_x0020_Status>Single</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1980-01-12T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Artisan</Current_x0020_Street_x0020_Address>
+      <City>Mansfield</City>
+      <State>Ohio</State>
+      <Zip>44905</Zip>
+      <YearsAtThisAddress>12</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Not Hispanic or Latino</Ethnicity>
+      <Race>White</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>166451118</SSN>
+      <Borrower_x0020_FirstName>Sarine</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Aindrais</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>saindrais1@ted.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>210-183-4604</Home_x0020_Phone>
+      <Cell_x0020_Phone>918-434-3652</Cell_x0020_Phone>
+      <Marital_x0020_Status>Married</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1988-01-29T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Fordem</Current_x0020_Street_x0020_Address>
+      <City>San Antonio</City>
+      <State>Texas</State>
+      <Zip>78220</Zip>
+      <YearsAtThisAddress>1</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Hispanic or Latino</Ethnicity>
+      <Race>White</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>827827391</SSN>
+      <Borrower_x0020_FirstName>Rayshell</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Galliver</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>rgalliver2@twitpic.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>626-285-9151</Home_x0020_Phone>
+      <Cell_x0020_Phone>573-348-8503</Cell_x0020_Phone>
+      <Marital_x0020_Status>Widowed</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1975-06-11T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Orin</Current_x0020_Street_x0020_Address>
+      <City>Pasadena</City>
+      <State>California</State>
+      <Zip>91125</Zip>
+      <YearsAtThisAddress>5</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Hispanic or Latino</Ethnicity>
+      <Race>White</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>643638028</SSN>
+      <Borrower_x0020_FirstName>Daffie</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Kilty</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>dkilty3@bloomberg.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>361-929-4099</Home_x0020_Phone>
+      <Cell_x0020_Phone>415-106-2708</Cell_x0020_Phone>
+      <Marital_x0020_Status>Married</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1985-11-03T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Crownhardt</Current_x0020_Street_x0020_Address>
+      <City>Corpus Christi</City>
+      <State>Texas</State>
+      <Zip>78475</Zip>
+      <YearsAtThisAddress>6</YearsAtThisAddress>
+      <Sex>Female</Sex>
+      <Ethnicity>Hispanic or Latino</Ethnicity>
+      <Race>White</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>354904583</SSN>
+      <Borrower_x0020_FirstName>Grete</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Brouncker</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>gbrouncker4@chicagotribune.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>215-839-4816</Home_x0020_Phone>
+      <Cell_x0020_Phone>713-714-6558</Cell_x0020_Phone>
+      <Marital_x0020_Status>Married</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1986-08-05T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Scofield</Current_x0020_Street_x0020_Address>
+      <City>Philadelphia</City>
+      <State>Pennsylvania</State>
+      <Zip>19146</Zip>
+      <YearsAtThisAddress>8</YearsAtThisAddress>
+      <Sex>Female</Sex>
+      <Ethnicity>Hispanic or Latino</Ethnicity>
+      <Race>African American</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>319807037</SSN>
+      <Borrower_x0020_FirstName>Sher</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Flecknell</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>sflecknell5@t.co</Borrower_x0020_Email>
+      <Home_x0020_Phone>704-556-7010</Home_x0020_Phone>
+      <Cell_x0020_Phone>512-524-6825</Cell_x0020_Phone>
+      <Marital_x0020_Status>Single</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1990-03-23T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Gateway</Current_x0020_Street_x0020_Address>
+      <City>Charlotte</City>
+      <State>North Carolina</State>
+      <Zip>28278</Zip>
+      <YearsAtThisAddress>5</YearsAtThisAddress>
+      <Sex>Female</Sex>
+      <Ethnicity>Hispanic or Latino</Ethnicity>
+      <Race>African American</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>344970911</SSN>
+      <Borrower_x0020_FirstName>Marc</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Bellow</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>mbellow6@newyorker.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>479-196-2638</Home_x0020_Phone>
+      <Cell_x0020_Phone>603-443-1406</Cell_x0020_Phone>
+      <Marital_x0020_Status>Single</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1974-03-14T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Forest Run</Current_x0020_Street_x0020_Address>
+      <City>Fort Smith</City>
+      <State>Arkansas</State>
+      <Zip>72916</Zip>
+      <YearsAtThisAddress>7</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Not Hispanic or Latino</Ethnicity>
+      <Race>African American</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>345166902</SSN>
+      <Borrower_x0020_FirstName>Kimball</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Collin</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>kcollin7@ycombinator.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>614-995-6326</Home_x0020_Phone>
+      <Cell_x0020_Phone>405-470-8189</Cell_x0020_Phone>
+      <Marital_x0020_Status>Divorced</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1983-10-15T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Spenser</Current_x0020_Street_x0020_Address>
+      <City>Columbus</City>
+      <State>Ohio</State>
+      <Zip>43210</Zip>
+      <YearsAtThisAddress>3</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Not Hispanic or Latino</Ethnicity>
+      <Race>African American</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>497195743</SSN>
+      <Borrower_x0020_FirstName>Leela</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Canelas</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>lcanelas8@freewebs.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>206-199-5882</Home_x0020_Phone>
+      <Cell_x0020_Phone>720-709-4853</Cell_x0020_Phone>
+      <Marital_x0020_Status>Married</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1987-12-21T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Anhalt</Current_x0020_Street_x0020_Address>
+      <City>Tacoma</City>
+      <State>Washington</State>
+      <Zip>98424</Zip>
+      <YearsAtThisAddress>5</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Not Hispanic or Latino</Ethnicity>
+      <Race>African American</Race>
+    </Borrowers>
+    <Borrowers>
+      <SSN>603252630</SSN>
+      <Borrower_x0020_FirstName>Lula</Borrower_x0020_FirstName>
+      <Borrower_x0020_LastName>Habershaw</Borrower_x0020_LastName>
+      <Borrower_x0020_Email>lhabershaw9@addtoany.com</Borrower_x0020_Email>
+      <Home_x0020_Phone>202-841-5634</Home_x0020_Phone>
+      <Cell_x0020_Phone>202-112-1094</Cell_x0020_Phone>
+      <Marital_x0020_Status>Married</Marital_x0020_Status>
+      <Date_x0020_of_x0020_Birth>1988-02-19T00:00:00.000</Date_x0020_of_x0020_Birth>
+      <Current_x0020_Street_x0020_Address>Beilfuss</Current_x0020_Street_x0020_Address>
+      <City>Washington</City>
+      <State>District of Columbia</State>
+      <Zip>20226</Zip>
+      <YearsAtThisAddress>8</YearsAtThisAddress>
+      <Sex>Male</Sex>
+      <Ethnicity>Not Hispanic or Latino</Ethnicity>
+      <Race>Pacific Islander</Race>
+    </Borrowers>
+  </Borrower_details>
+</ROOT>
