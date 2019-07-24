@@ -18,24 +18,22 @@
 	<Sex>Male</Sex>
 	<Ethnicity>Asian</Ethnicity>
 	<Race>Indian</Race>
-</Borrower>
-<CoBorrower>
-	<SSN>67656475</SSN>
-	<BorrowerFirstName>Sri</BorrowerFirstName>
-	<BorrowerLastName>G</BorrowerLastName>
-	<BorrowerEmail>c@b.com</BorrowerEmail>
-	<HomePhone>21036542267</HomePhone>
-	<CellPhone>21456895687</CellPhone>
-	<MaritalStatus>Not Married</MaritalStatus>
-	<DateofBirth>03/06/86</DateofBirth>
-	<CurrentCityStreetAddress>8970 Park</CurrentCityStreetAddress>
-	<State>TX</State>
-	<Zip>254127</Zip>
-	<YearsAtThisAdress>1</YearsAtThisAdress>
-	<Sex>Male</Sex>
-	<Ethnicity>Asian</Ethnicity>
-	<Race>Indian</Race>
-</CoBorrower>	
+	<Co-SSN>67656475</Co-SSN>
+	<Co-BorrowerFirstName>Sri</Co-BorrowerFirstName>
+	<Co-BorrowerLastName>G</Co-BorrowerLastName>
+	<Co-BorrowerEmail>c@b.com</Co-BorrowerEmail>
+	<Co-HomePhone>21036542267</Co-HomePhone>
+	<Co-CellPhone>21456895687</Co-CellPhone>
+	<Co-MaritalStatus>Not Married</Co-MaritalStatus>
+	<Co-DateofBirth>03/06/86</Co-DateofBirth>
+	<Co-CurrentCityStreetAddress>8970 Park</Co-CurrentCityStreetAddress>
+	<Co-State>TX</Co-State>
+	<Co-Zip>254127</Co-Zip>
+	<Co-YearsAtThisAdress>1</Co-YearsAtThisAdress>
+	<Co-Sex>Male</Co-Sex>
+	<Co-Ethnicity>Asian</Co-Ethnicity>
+	<Co-Race>Indian</Co-Race>
+</Borrower>	
 </Borrowers>
 <financial_detail>
 	<SSN>67656473</SSN>

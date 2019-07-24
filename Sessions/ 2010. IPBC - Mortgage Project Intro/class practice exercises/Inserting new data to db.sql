@@ -184,7 +184,6 @@ From	[dbo].[Financial_details]
 Select	*
 From	[dbo].[Loan_details]
 
-
 Select	*
 From	[dbo].[Property_details]
 
@@ -192,5 +191,91 @@ From	[dbo].[Property_details]
 Select *
 From	[dbo].[Borrower_details]
 for xml RAW('Borrowers'),Root('Borrower_details'),Elements --  auto
+
+Select	*
+From	[dbo].[XML Destination]
+
+
+Truncate table [dbo].[Borrower_details]
+
+Truncate table [dbo].[Financial_details]
+
+Truncate table 	[dbo].[Loan_details]
+
+Truncate table 	[dbo].[Property_details]
+--------------------------------------------------
+Alter table [dbo].[Borrower_details]
+Add Primary Key(SSN)
+
+Alter table [dbo].[Financial_details]
+--Add Primary Key(SSN) 
+Add Constraint FK_Borrower_details 
+Foreign key(SSN) References [dbo].[Borrower_details](SSN)
+
+Alter table [dbo].[Loan_details]
+--Add Primary Key(Loan_ID) 
+--Add Constraint FK_LoanToBorrower_tbls 
+--Foreign key(SSN) References [dbo].[Borrower_details](SSN)
+--Add Constraint FK_LoanToPropery_tbls 
+--Foreign key(Property_ID) References [dbo].[Property_details](Property_ID)
+Add Constraint FK_LoanToBorrowerOnCoBrrSSN_tbls 
+Foreign key([Co-Borrower SSN]) References [dbo].[Borrower_details]([Co-Borrower SSN])
+
+
+Alter table [dbo].[Property_details]
+--Add Primary Key([Property_ID]) 
+Add Constraint FK_Property_Borrower_tbls
+Foreign key(SSN) References [dbo].[Borrower_details](SSN)
+
+----------------------------------------
+CREATE TABLE [dbo].[MoLoanAppDatafromExcel](
+	[Borrower FirstName] [varchar](50) NULL,
+	[Borrower LastName] [varchar](50) NULL,
+	[Borrower Email] [varchar](50) NULL,
+	[SSN] [int] not NULL,
+	[Home Phone] [varchar](50) NULL,
+	[Cell Phone] [varchar](50) NULL,
+	[Marital Status] [varchar](50) NULL,
+	[Date of Birth] [datetime] NULL,
+	[Current Street Address] [varchar](50) NULL,
+	[City] [varchar](50) NULL,
+	[State] [varchar](50) NULL,
+	[Zip] [int] NULL,
+	[YearsAtThisAddress] [varchar](50) NULL,
+	[MonthlyIncome] [varchar](50) NULL,
+	[Bonuses] [varchar](50) NULL,
+	[Commission] [varchar](50) NULL,
+	[OtherIncome] [varchar](50) NULL,
+	[Rent or Own] [varchar](50) NULL,
+	[Loan_Date] [date] null,
+	[Purpose of Loan] [varchar](50) NULL,
+	[Property Usage] [varchar](50) NULL,
+	[LoanAmount] [int] NULL,
+	[Purchase Price] [int] NULL,
+	[Number of Units] [int] NULL,
+	[Property City] [varchar](50) NULL,
+	[Property State] [varchar](50) NULL,
+	[Property Zip] [int] NULL,
+	[Sex] [varchar](50) NULL,
+	[Ethnicity] [varchar](50) NULL,
+	[Race] [varchar](50) NULL,
+	[Co-Borrower SSN] [int] not NULL, 
+	[Co-Borrower FirstName] [varchar](50) NULL,
+	[Co-Borrower LastName] [varchar](50) NULL,
+	[Co-Borrower Email] [varchar](50) NULL,
+	[CreditCardAuthorization] [bit] NULL,
+	[Checking] [int] NULL,
+	[Savings] [int] NULL,
+	[RetirementFund] [int] NULL,
+	[MutualFund] [int] NULL,
+	[Referral] [varchar](50) NULL,
+	[RealEstateAgentName] [varchar](50) NULL,
+	[RealEstateAgentPhone] [varchar](50) NULL,
+	[RealEstateAgentEmail] [varchar](50) NULL
+);
+
+Select	*
+From	[dbo].[MoLoanAppDatafromExcel]
+[Data Conversion [2]] Error: Data conversion failed while converting column "Home Phone" (202) to column "Copy of Home Phone" (62).  The conversion returned status value 2 and status text "The value could not be converted because of a potential loss of data.".
 
 

@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>GenerateNewDataToTable</Name>
-    <LastWriteTime>2019-07-23T00:05:34.100702Z</LastWriteTime>
+    <LastWriteTime>2019-07-23T23:35:38.7204464Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Generatedata.dtsx</Name>
-      <LastWriteTime>2019-07-23T00:05:34.0669839Z</LastWriteTime>
+      <LastWriteTime>2019-07-23T03:05:42.2845657Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -19,6 +19,16 @@
     <ProjectBuildItemInfo>
       <Name>LoadToSQLTable.dtsx</Name>
       <LastWriteTime>2019-07-23T00:11:27.3354785Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Package1.dtsx</Name>
+      <LastWriteTime>2019-07-23T23:35:38.7024663Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ExceltoSql.dtsx</Name>
+      <LastWriteTime>2019-07-23T23:35:37.0061376Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

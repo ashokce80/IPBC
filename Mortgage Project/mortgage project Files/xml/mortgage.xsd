@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mortage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Borrowers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Borrower">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="SSN" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="BorrowerFirstName" type="xs:string" />
+                    <xs:element minOccurs="0" name="BorrowerLastName" type="xs:string" />
+                    <xs:element minOccurs="0" name="BorrowerEmail" type="xs:string" />
+                    <xs:element minOccurs="0" name="HomePhone" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="CellPhone" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="MaritalStatus" type="xs:string" />
+                    <xs:element minOccurs="0" name="DateofBirth" type="xs:string" />
+                    <xs:element minOccurs="0" name="CurrentCityStreetAddress" type="xs:string" />
+                    <xs:element minOccurs="0" name="city" type="xs:string" />
+                    <xs:element minOccurs="0" name="State" type="xs:string" />
+                    <xs:element minOccurs="0" name="Zip" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="YearsAtThisAdress" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="Sex" type="xs:string" />
+                    <xs:element minOccurs="0" name="Ethnicity" type="xs:string" />
+                    <xs:element minOccurs="0" name="Race" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CoBorrower">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="SSN" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="BorrowerFirstName" type="xs:string" />
+                    <xs:element minOccurs="0" name="BorrowerLastName" type="xs:string" />
+                    <xs:element minOccurs="0" name="BorrowerEmail" type="xs:string" />
+                    <xs:element minOccurs="0" name="HomePhone" type="xs:unsignedLong" />
+                    <xs:element minOccurs="0" name="CellPhone" type="xs:unsignedLong" />
+                    <xs:element minOccurs="0" name="MaritalStatus" type="xs:string" />
+                    <xs:element minOccurs="0" name="DateofBirth" type="xs:string" />
+                    <xs:element minOccurs="0" name="CurrentCityStreetAddress" type="xs:string" />
+                    <xs:element minOccurs="0" name="State" type="xs:string" />
+                    <xs:element minOccurs="0" name="Zip" type="xs:unsignedInt" />
+                    <xs:element minOccurs="0" name="YearsAtThisAdress" type="xs:unsignedByte" />
+                    <xs:element minOccurs="0" name="Sex" type="xs:string" />
+                    <xs:element minOccurs="0" name="Ethnicity" type="xs:string" />
+                    <xs:element minOccurs="0" name="Race" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="financial_detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SSN" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" name="MonthlyIncome" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="Bonuses" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="Commission" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="OtherIncome" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="RentorOwn" type="xs:string" />
+              <xs:element minOccurs="0" name="Checking" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="Savings" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="RetirementFund" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="MutualFund" type="xs:unsignedShort" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="Loan_detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Loan_ID" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="SSN" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" name="property_ID" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="PurposeofLoan" type="xs:string" />
+              <xs:element minOccurs="0" name="LoanAmount" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="PurchasePrice" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="NumberofUnits" type="xs:unsignedByte" />
+              <xs:element minOccurs="0" name="CreditCardAuthorization" type="xs:string" />
+              <xs:element minOccurs="0" name="Refferal" type="xs:string" />
+              <xs:element minOccurs="0" name="CoBorrowerSSN" type="xs:unsignedInt" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="property_detail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SSN" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" name="propertyID" type="xs:unsignedShort" />
+              <xs:element minOccurs="0" name="PropertyUsage" type="xs:string" />
+              <xs:element minOccurs="0" name="PropertyCity" type="xs:string" />
+              <xs:element minOccurs="0" name="PropertyState" type="xs:string" />
+              <xs:element minOccurs="0" name="PropertyZip" type="xs:unsignedInt" />
+              <xs:element minOccurs="0" name="RealEstateAgentName" type="xs:string" />
+              <xs:element minOccurs="0" name="RealEstateAgentPhone" type="xs:string" />
+              <xs:element minOccurs="0" name="RealEstateAgentEmail" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1314 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/23/2019 7:38:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-PF3DBQTQ"
+  DTS:CreatorName="LAPTOP-PF3DBQTQ\Ashok"
+  DTS:DTSID="{45DA7D59-F8E1-4B70-856A-B68776328968}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ValidateandLoadExceltoSTGSql"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{EBAC178A-EC25-4F3B-A9A7-0D8299D0495F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{199C6AD5-E03B-46AB-B157-FC8ED278447D}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\excel\EXCELDATA.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Readandloadexcelfile"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8EE9C1DE-6099-4019-A549-1F79DB48850E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Readandloadexcelfile"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Readandloadexcelfile\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Readandloadexcelfile\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Data Flow Readandloadexcelfile\Data Conversion.Inputs[Data Conversion Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Data Flow Readandloadexcelfile\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Readandloadexcelfile\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Readandloadexcelfile\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower FirstName]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower FirstName]"
+                      name="Borrower FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower LastName]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower LastName]"
+                      name="Borrower LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower Email]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Borrower Email]"
+                      name="Borrower Email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[SSN]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[SSN]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[SSN]"
+                      name="SSN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Home Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Home Phone]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Home Phone]"
+                      name="Home Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Cell Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cell Phone]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Cell Phone]"
+                      name="Cell Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Marital Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marital Status]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Marital Status]"
+                      name="Marital Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Date of Birth]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date of Birth]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Date of Birth]"
+                      name="Date of Birth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Current Street Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Current Street Address]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Current Street Address]"
+                      name="Current Street Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[City]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[State]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Zip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Zip]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Zip]"
+                      name="Zip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[YearsAtThisAddress]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[YearsAtThisAddress]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[YearsAtThisAddress]"
+                      name="YearsAtThisAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[MonthlyIncome]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthlyIncome]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[MonthlyIncome]"
+                      name="MonthlyIncome"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Bonuses]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Bonuses]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Bonuses]"
+                      name="Bonuses"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Commission]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Commission]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Commission]"
+                      name="Commission"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[OtherIncome]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[OtherIncome]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[OtherIncome]"
+                      name="OtherIncome"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Rent or Own]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Rent or Own]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Rent or Own]"
+                      name="Rent or Own"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Purpose of Loan]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Purpose of Loan]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Purpose of Loan]"
+                      name="Purpose of Loan"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property Usage]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property Usage]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property Usage]"
+                      name="Property Usage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[LoanAmount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[LoanAmount]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[LoanAmount]"
+                      name="LoanAmount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Purchase Price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Purchase Price]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Purchase Price]"
+                      name="Purchase Price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Number of Units]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Number of Units]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Number of Units]"
+                      name="Number of Units"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property City]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property City]"
+                      name="Property City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property State]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property State]"
+                      name="Property State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property Zip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property Zip]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property Zip]"
+                      name="Property Zip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sex]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      name="Sex"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Ethnicity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ethnicity]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Ethnicity]"
+                      name="Ethnicity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Race]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Race]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Race]"
+                      name="Race"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower FirstName]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower FirstName]"
+                      name="Co-Borrower FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower LastName]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower LastName]"
+                      name="Co-Borrower LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower Email]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower Email]"
+                      name="Co-Borrower Email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[CreditCardAuthorization]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[CreditCardAuthorization]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[CreditCardAuthorization]"
+                      name="CreditCardAuthorization"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Checking]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Checking]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Checking]"
+                      name="Checking"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Savings]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Savings]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Savings]"
+                      name="Savings"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RetirementFund]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RetirementFund]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RetirementFund]"
+                      name="RetirementFund"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[MutualFund]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[MutualFund]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[MutualFund]"
+                      name="MutualFund"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Referral]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Referral]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Referral]"
+                      name="Referral"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentName]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentName]"
+                      name="RealEstateAgentName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentPhone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentPhone]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentPhone]"
+                      name="RealEstateAgentPhone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentEmail]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentEmail]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[RealEstateAgentEmail]"
+                      name="RealEstateAgentEmail"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Loan_ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Loan_ID]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Loan_ID]"
+                      name="Loan_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property_ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property_ID]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Property_ID]"
+                      name="Property_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower SSN]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower SSN]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Co-Borrower SSN]"
+                      name="Co-Borrower SSN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Load_Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Load_Date]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Load_Date]"
+                      name="Load_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[F46]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[F46]"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[F46]"
+                      name="F46"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[F47]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[F47]"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[F47]"
+                      name="F47"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="Borrower FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="Borrower LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Borrower Email]"
+                      dataType="wstr"
+                      length="255"
+                      name="Borrower Email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[SSN]"
+                      dataType="r8"
+                      name="SSN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Home Phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="Home Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Cell Phone]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cell Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Marital Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Marital Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date of Birth]"
+                      dataType="date"
+                      name="Date of Birth" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Current Street Address]"
+                      dataType="wstr"
+                      length="255"
+                      name="Current Street Address" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="255"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="255"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Zip]"
+                      dataType="wstr"
+                      length="255"
+                      name="Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[YearsAtThisAddress]"
+                      dataType="r8"
+                      name="YearsAtThisAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[MonthlyIncome]"
+                      dataType="r8"
+                      name="MonthlyIncome" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Bonuses]"
+                      dataType="r8"
+                      name="Bonuses" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Commission]"
+                      dataType="r8"
+                      name="Commission" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[OtherIncome]"
+                      dataType="r8"
+                      name="OtherIncome" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Rent or Own]"
+                      dataType="wstr"
+                      length="255"
+                      name="Rent or Own" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Purpose of Loan]"
+                      dataType="wstr"
+                      length="255"
+                      name="Purpose of Loan" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property Usage]"
+                      dataType="wstr"
+                      length="255"
+                      name="Property Usage" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[LoanAmount]"
+                      dataType="r8"
+                      name="LoanAmount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Purchase Price]"
+                      dataType="r8"
+                      name="Purchase Price" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Number of Units]"
+                      dataType="r8"
+                      name="Number of Units" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property City]"
+                      dataType="wstr"
+                      length="255"
+                      name="Property City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property State]"
+                      dataType="wstr"
+                      length="255"
+                      name="Property State" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property Zip]"
+                      dataType="wstr"
+                      length="255"
+                      name="Property Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sex]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sex" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ethnicity]"
+                      dataType="wstr"
+                      length="255"
+                      name="Ethnicity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Race]"
+                      dataType="wstr"
+                      length="255"
+                      name="Race" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="Co-Borrower FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower LastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="Co-Borrower LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower Email]"
+                      dataType="wstr"
+                      length="255"
+                      name="Co-Borrower Email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[CreditCardAuthorization]"
+                      dataType="wstr"
+                      length="255"
+                      name="CreditCardAuthorization" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Checking]"
+                      dataType="r8"
+                      name="Checking" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Savings]"
+                      dataType="r8"
+                      name="Savings" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RetirementFund]"
+                      dataType="r8"
+                      name="RetirementFund" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[MutualFund]"
+                      dataType="r8"
+                      name="MutualFund" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Referral]"
+                      dataType="wstr"
+                      length="255"
+                      name="Referral" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentName]"
+                      dataType="wstr"
+                      length="255"
+                      name="RealEstateAgentName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentPhone]"
+                      dataType="wstr"
+                      length="255"
+                      name="RealEstateAgentPhone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[RealEstateAgentEmail]"
+                      dataType="wstr"
+                      length="255"
+                      name="RealEstateAgentEmail" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Loan_ID]"
+                      dataType="r8"
+                      name="Loan_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Property_ID]"
+                      dataType="r8"
+                      name="Property_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Co-Borrower SSN]"
+                      dataType="r8"
+                      name="Co-Borrower SSN" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[Load_Date]"
+                      dataType="date"
+                      name="Load_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[F46]"
+                      dataType="wstr"
+                      length="255"
+                      name="F46" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].ExternalColumns[F47]"
+                      dataType="date"
+                      name="F47" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower FirstName]"
+                      name="Borrower FirstName" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower LastName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower LastName]"
+                      name="Borrower LastName" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower Email]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Borrower Email]"
+                      name="Borrower Email" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[SSN]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[SSN]"
+                      name="SSN" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Home Phone]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Home Phone]"
+                      name="Home Phone" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Cell Phone]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Cell Phone]"
+                      name="Cell Phone" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Marital Status]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Marital Status]"
+                      name="Marital Status" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Date of Birth]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Date of Birth]"
+                      name="Date of Birth" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Current Street Address]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Current Street Address]"
+                      name="Current Street Address" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[State]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Zip]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Zip]"
+                      name="Zip" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[YearsAtThisAddress]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[YearsAtThisAddress]"
+                      name="YearsAtThisAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[MonthlyIncome]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[MonthlyIncome]"
+                      name="MonthlyIncome" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Bonuses]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Bonuses]"
+                      name="Bonuses" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Commission]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Commission]"
+                      name="Commission" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[OtherIncome]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[OtherIncome]"
+                      name="OtherIncome" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Rent or Own]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Rent or Own]"
+                      name="Rent or Own" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Purpose of Loan]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Purpose of Loan]"
+                      name="Purpose of Loan" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property Usage]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property Usage]"
+                      name="Property Usage" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[LoanAmount]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[LoanAmount]"
+                      name="LoanAmount" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Purchase Price]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Purchase Price]"
+                      name="Purchase Price" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Number of Units]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Number of Units]"
+                      name="Number of Units" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property City]"
+                      name="Property City" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property State]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property State]"
+                      name="Property State" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property Zip]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property Zip]"
+                      name="Property Zip" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Sex]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Sex]"
+                      name="Sex" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Ethnicity]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Ethnicity]"
+                      name="Ethnicity" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Race]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Race]"
+                      name="Race" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower FirstName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower FirstName]"
+                      name="Co-Borrower FirstName" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower LastName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower LastName]"
+                      name="Co-Borrower LastName" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower Email]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower Email]"
+                      name="Co-Borrower Email" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[CreditCardAuthorization]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[CreditCardAuthorization]"
+                      name="CreditCardAuthorization" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Checking]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Checking]"
+                      name="Checking" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Savings]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Savings]"
+                      name="Savings" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RetirementFund]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RetirementFund]"
+                      name="RetirementFund" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[MutualFund]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[MutualFund]"
+                      name="MutualFund" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Referral]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Referral]"
+                      name="Referral" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentName]"
+                      name="RealEstateAgentName" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentPhone]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentPhone]"
+                      name="RealEstateAgentPhone" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentEmail]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[RealEstateAgentEmail]"
+                      name="RealEstateAgentEmail" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Loan_ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Loan_ID]"
+                      name="Loan_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property_ID]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Property_ID]"
+                      name="Property_ID" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower SSN]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Co-Borrower SSN]"
+                      name="Co-Borrower SSN" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Load_Date]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[Load_Date]"
+                      name="Load_Date" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[F46]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[F46]"
+                      name="F46" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[F47]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[F47]"
+                      name="F47" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Connections[OleDbConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Readandloadexcelfile.Paths[Data Conversion Output]"
+              endId="Package\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Data Flow Readandloadexcelfile.Paths[Excel Source Output]"
+              endId="Package\Data Flow Readandloadexcelfile\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\Data Flow Readandloadexcelfile"
+          TopLeft="243.428575574135,63.6235303040607" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Readandloadexcelfile">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Data Flow Readandloadexcelfile\Excel Source"
+          TopLeft="282.857147674171,122.352942892424" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Data Flow Readandloadexcelfile\Data Conversion"
+          TopLeft="274.857147537932,214.729414776205" />
+        <EdgeLayout
+          Id="Package\Data Flow Readandloadexcelfile.Paths[Excel Source Output]"
+          TopLeft="352.257147606052,163.952942892424">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.7764718837804"
+              Start="0,0"
+              End="0,43.2764718837804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.2764718837804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Readandloadexcelfile\OLE DB Destination"
+          TopLeft="269.142861726333,317.505886805841" />
+        <EdgeLayout
+          Id="Package\Data Flow Readandloadexcelfile.Paths[Data Conversion Output]"
+          TopLeft="353.400004632132,256.329414776205">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.1764720296365"
+              Start="0,0"
+              End="0,53.6764720296365">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.6764720296365" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Readandloadexcelfile\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
