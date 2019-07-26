@@ -18,7 +18,7 @@
 	<Sex>Male</Sex>
 	<Ethnicity>Asian</Ethnicity>
 	<Race>Indian</Race>
-	<Co-SSN>67656475</Co-SSN>
+	<Co-SSN>67656411</Co-SSN>
 	<Co-BorrowerFirstName>Sri</Co-BorrowerFirstName>
 	<Co-BorrowerLastName>G</Co-BorrowerLastName>
 	<Co-BorrowerEmail>c@b.com</Co-BorrowerEmail>
@@ -57,7 +57,8 @@
 	<NumberofUnits>1</NumberofUnits>
 	<CreditCardAuthorization>Agree</CreditCardAuthorization>
 	<Refferal>NULL</Refferal>
-	<CoBorrowerSSN>67656473</CoBorrowerSSN>
+	<CoBorrowerSSN>67656411</CoBorrowerSSN>
+    <LoanDate>07/01/2000</LoanDate>
 </Loan_detail>
 <property_detail>
 	<SSN>67656473</SSN>
