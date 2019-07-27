@@ -2,12 +2,11 @@
 Select	*
 From	[dbo].[Borrower_details] --where SSN != 67656473
 Select	*
-From	 [dbo].[Financial_details] --where SSN != 67656473
-
+From	[dbo].[Financial_details] --where SSN != 67656473
 Select	*
-From 	[dbo].[Property_details]
+From 	[dbo].[Property_details] --where SSN != 67656473
 Select	* 
-From 	[dbo].[Loan_details]
+From 	[dbo].[Loan_details] 
 
 -- Create a sequence
 CREATE SEQUENCE Seq_MPLoanTbl_Property_ID
@@ -68,30 +67,72 @@ From		[dbo].[MoLoanAppDatafromExcel]
   ------------ Finally in SSIS working one is ---------------
    LEN(Zip) > 10 ? REVERSE(LEFT(REVERSE(Zip),4) + SUBSTRING(REVERSE(Zip),FINDSTRING(REVERSE(Zip),"-",1),6)) : Zip
    /*
-  
-
-REVERSE(LEFT(REVERSE(Zip),4) + SUBSTRING(REVERSE(Zip),FINDSTRING(REVERSE(Zip),"-",1),6))
-
-[Data Conversion [2]] Error: Data conversion failed while converting column "ZipCode" (21) to column "Copy of ZipCode" (7).  The conversion returned status value 2 and status text "The value could not be converted because of a potential loss of data.".
+  !ISNULL(SSN) && !ISNULL([Borrower FirstName]) && !ISNULL([Borrower LastName]) && !ISNULL([Borrower Email]) && !ISNULL([Home Phone]) && !ISNULL([Marital Status]) && !ISNULL([Date of Birth]) && !ISNULL(City) && !ISNULL(State) && !ISNULL(Zip) && !ISNULL(YearsAtThisAddress) && !ISNULL(MonthlyIncome) && !ISNULL([Rent or Own]) && !ISNULL(Checking) && !ISNULL(Savings) && !ISNULL(Property_ID) && !ISNULL([Property Usage]) && !ISNULL([Property City]) && !ISNULL([Property State]) && !ISNULL([Property Zip]) && !ISNULL(Loan_ID) && !ISNULL([Purpose of Loan]) && !ISNULL(LoanAmount) && !ISNULL([Purchase Price]) && !ISNULL(CreditCardAuthorization) && !ISNULL([Number of Units]) && !ISNULL(Refferal)
 
 
-[Derived Column [16]] Error: SSIS Error Code DTS_E_INDUCEDTRANSFORMFAILUREONERROR.  The "Derived Column" failed because error code 0xC0049064 occurred, and the error row disposition on "Derived Column.Outputs[Derived Column Output].Columns[ZipCode]" specifies failure on error. An error occurred on the specified object of the specified component.  There may be error messages posted before this with more information about the failure.
+  declare @SourceFileName varchar(250)
+declare @Body varchar(8000)
+declare @Subject varchar (100)
 
-[Derived Column [16]] Error: An error occurred while attempting to perform a type cast.
+set @SourceFileName =  ?
+set @Body=?
+set @Body = '"' + @SourceFileName + '" is not in the correct format.Please check for the errors' 
++ Char(13)+ Char(13)+
+@Body
+set @Subject =  ' Check for errors in the file.'
+
+select @Body as Body , @Subject as Subject
 
 
-[To Borrower Tbl [173]] Error: SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80004005.
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "The statement has been terminated.".
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "Violation of UNIQUE KEY constraint 'UK_Borrower_details'. Cannot insert duplicate key in object 'dbo.Borrower_details'. The duplicate key value is (123234578).".
+----
+DECLARE @recipients varchar(2000)
+DECLARE @filename varchar(200)
+DECLARE @subject varchar(2000)
+DECLARE @body  varchar(8000)
+
+SET @recipients = ISNULL(?, ' ')
+SET @subject = ISNULL(?, ' ')
+SET @body  = ISNULL(?, ' ')
+SET @filename = ISNULL(?, ' ')
 
 
-[To Loan Tbl [267]] Error: SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80004005.
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "The statement has been terminated.".
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "The INSERT statement conflicted with the FOREIGN KEY constraint "FK_LoanToBorrower_tbls". The conflict occurred in database "STG_Mortgage_Project", table "dbo.Borrower_details", column 'SSN'.".
-
-[To Financiall tbl [228]] Error: SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80004005.
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "The statement has been terminated.".
-An OLE DB record is available.  Source: "Microsoft SQL Server Native Client 11.0"  Hresult: 0x80004005  Description: "The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Borrower_details". The conflict occurred in database "STG_Mortgage_Project", table "dbo.Borrower_details", column 'SSN'.".
-
+EXEC msdb.dbo.sp_send_dbmail
+@recipients=@recipients,
+@subject=@subject ,
+@body=@body,
+@profile_name = 'EmailAlert'  
 
    */
+
+Create database Mort_Project_SSIS
+
+Create table sendEmail(body varchar(8000), recipients varchar(100))
+
+Select	* From	sendEmail
+
+---- Create view for error handling in SSIS for table columns
+
+Select		*
+From		[dbo].[Borrower_details] as B
+left join	[dbo].[Financial_details] as F
+on			B.SSN = F.SSN
+left join	[dbo].[Loan_details] as L
+on			L.SSN = F.SSN
+left join	[dbo].[Property_details] as  P
+on			P.SSN = L.SSN
+
+
+--- Clean up data
+
+--1... Phone number as below
+declare @num varchar(20) = '404-828-3036'  --'(123) 2349823'
+Select replace(replace(replace(replace(rtrim(ltrim(@num)), '-', ''), '(', ''),')',''),' ','')
+
+--2 zipcode
+
+declare @Zip varchar(15) = '12456'--'45895-1234'--'47894-1234123'--'nnjjb 12345-4567 '--'Me 92806-4043'
+		Select (REVERSE(SUBSTRING(REVERSE(@Zip),
+				Charindex('-',REVERSE(@Zip))+1,
+				6)))
+
+

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ValidateandLoadExceltoSTGSql"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{98C0C8BA-A635-40C9-A8AC-3D8B7F9B0688}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{ECDE0D18-7D2B-41B3-ADE3-BF3E4B2B0E32}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4544,21 +4544,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion"
-          TopLeft="219.428575165418,118.682354605652" />
+          TopLeft="218.285718003098,118.07058989119" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Excel Source Output]"
-          TopLeft="299.400003848757,74.6352945809546">
+          TopLeft="298.828575267597,74.6352945809546">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246974"
+              EndConnector="0,43.4352953102353"
               Start="0,0"
-              End="0,36.5470600246974">
+              End="0,35.9352953102353">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5470600246974" />
+                    End="0,35.9352953102353" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4569,18 +4569,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Data Conversion Output]"
-          TopLeft="297.971432259618,160.282354605652">
+          TopLeft="297.400003678458,159.67058989119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.047060024697"
+              EndConnector="0,44.6588247391591"
               Start="0,0"
-              End="0,36.547060024697">
+              End="0,37.1588247391591">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.547060024697" />
+                    End="0,37.1588247391591" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
