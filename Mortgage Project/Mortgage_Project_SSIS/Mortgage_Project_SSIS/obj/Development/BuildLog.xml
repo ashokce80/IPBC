@@ -2,23 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Mortgage_Project_SSIS</Name>
-    <LastWriteTime>2019-07-26T22:24:27.2821507Z</LastWriteTime>
+    <LastWriteTime>2019-07-27T23:09:22.820476Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>ValidateandLoadExceltoSTGSql.dtsx</Name>
-      <LastWriteTime>2019-07-26T22:35:24.1337679Z</LastWriteTime>
+      <LastWriteTime>2019-07-27T23:33:43.3175569Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LoadXMLtoSTGSQL.dtsx</Name>
-      <LastWriteTime>2019-07-26T20:51:02.4794508Z</LastWriteTime>
+      <LastWriteTime>2019-07-27T22:55:31.0946054Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SqlToSqlLoad.dtsx</Name>
-      <LastWriteTime>2019-07-26T19:44:19.9693447Z</LastWriteTime>
+      <LastWriteTime>2019-07-28T04:46:27.4874611Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Package1.dtsx</Name>
+      <LastWriteTime>2019-07-27T21:31:55.0772531Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ValidateandLoadExceltoSTGSql"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{98C0C8BA-A635-40C9-A8AC-3D8B7F9B0688}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{7F8CDC14-1268-4531-9E90-AFD7A3C72260}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,6 +36,16 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=LAPTOP-PF3DBQTQ\CB2016SQLSERVER;Initial Catalog=Mort_Project_SSIS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[serverDB.STG_Mortgage_Project]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{88A2D203-475F-4626-8132-9A7693CFF38F}"
+      DTS:ObjectName="serverDB.STG_Mortgage_Project">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-PF3DBQTQ\CB2016SQLSERVER;Initial Catalog=STG_Mortgage_Project;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -514,12 +524,11 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
-                          dataType="numeric"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]"
                           name="Copy of SSN"
-                          precision="18"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -709,12 +718,13 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YearsAtThisAddress]"
-                          dataType="numeric"
+                          codePage="1252"
+                          dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+                          length="50"
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YearsAtThisAddress]"
                           name="Copy of YearsAtThisAddress"
-                          precision="18"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -1410,26 +1420,6 @@
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
                               name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Loan_Date]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy (2) of Date of Birth]"
-                          dataType="dbDate"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy (2) of Date of Birth]"
-                          name="Copy (2) of Date of Birth"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output].Columns[Date of Birth]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2436,6 +2426,1124 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[MoLoanAppDatafromExcel]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[MoLoanAppDatafromExcel]) [refTable]
+where [refTable].[SSN] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Borrower FirstName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Borrower LastName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Borrower Email" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SSN" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Home Phone" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Cell Phone" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Marital Status" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Date of Birth" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Current Street Address" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="City" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="State" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Zip" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="YearsAtThisAddress" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MonthlyIncome" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Bonuses" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Commission" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="OtherIncome" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Rent or Own" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Loan_Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Purpose of Loan" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Property Usage" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LoanAmount" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Purchase Price" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Number of Units" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Property City" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Property State" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Property Zip" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Sex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Ethnicity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Race" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Co-Borrower SSN" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Co-Borrower FirstName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Co-Borrower LastName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Co-Borrower Email" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreditCardAuthorization" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Checking" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Savings" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RetirementFund" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MutualFund" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Referral" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RealEstateAgentName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RealEstateAgentPhone" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RealEstateAgentEmail" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Loan_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Propery_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[STG_Mortgage_Project]"
+                      connectionManagerRefId="Package.ConnectionManagers[STG_Mortgage_Project]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input].Columns[Copy of SSN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of SSN"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">SSN</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command"
+                  componentClassID="Microsoft.OLEDBCommand"
+                  contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+                  name="OLE DB Command"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Exec dbo.UD_SP_UpdateMoLoanAppDataTbl ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[STG_Mortgage_Project]"
+                      connectionManagerRefId="Package.ConnectionManagers[STG_Mortgage_Project]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input]"
+                      errorOrTruncationOperation="Command Execution"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Command Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Borrower FirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Borrower FirstName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerFirstName]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Borrower FirstName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Borrower LastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Borrower LastName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerLastName]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Borrower LastName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Borrower Email]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Borrower Email"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerEmail]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Borrower Email]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of SSN]"
+                          cachedDataType="i4"
+                          cachedName="Copy of SSN"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Home Phone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Home Phone"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@HomePhone]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Home Phone]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Cell Phone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Cell Phone"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CellPhone]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Cell Phone]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Marital Status]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Marital Status"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MaritalStatus]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Marital Status]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Date of Birth]"
+                          cachedDataType="dbDate"
+                          cachedName="Copy of Date of Birth"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@DateofBirth]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date of Birth]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Current Street Address]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Current Street Address"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CurrentStreetAddress]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Current Street Address]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of City]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of City"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@City]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of City]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of State]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of State"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@State]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of State]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Zip]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Copy of Zip"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Zip]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Zip]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of YearsAtThisAddress]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of YearsAtThisAddress"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@YearsAtThisAddress]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YearsAtThisAddress]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of MonthlyIncome]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of MonthlyIncome"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MonthlyIncome]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MonthlyIncome]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Bonuses]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Bonuses"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Bonuses]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Bonuses]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Commission]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Commission"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Commission]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Commission]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of OtherIncome]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of OtherIncome"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@OtherIncome]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OtherIncome]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Rent or Own]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Rent or Own"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RentorOwn]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Rent or Own]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Purpose of Loan]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Purpose of Loan"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PurposeofLoan]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Purpose of Loan]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Property Usage]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Property Usage"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyUsage]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Property Usage]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Loan_Date]"
+                          cachedDataType="dbDate"
+                          cachedName="Copy of Loan_Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Loan_Date]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Loan_Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of LoanAmount]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of LoanAmount"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@LoanAmount]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of LoanAmount]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Purchase Price]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Purchase Price"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PurchasePrice]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Purchase Price]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Number of Units]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Number of Units"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@NumberofUnits]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Number of Units]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Property City]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Property City"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyCity]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Property City]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Property State]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Property State"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyState]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Property State]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Property Zip]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="Copy of Property Zip"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyZip]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Property Zip]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Sex]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Sex"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Sex]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sex]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Ethnicity]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Ethnicity"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Ethnicity]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Ethnicity]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Race]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Race"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Race]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Race]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Co-Borrower FirstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Co-Borrower FirstName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerFirstName]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Co-Borrower FirstName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Co-Borrower LastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Co-Borrower LastName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerLastName]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Co-Borrower LastName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Co-Borrower Email]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Co-Borrower Email"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerEmail]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Co-Borrower Email]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of CreditCardAuthorization]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of CreditCardAuthorization"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CreditCardAuthorization]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CreditCardAuthorization]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Checking]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Checking"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Checking]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Checking]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Savings]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Savings"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Savings]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Savings]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of RetirementFund]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of RetirementFund"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RetirementFund]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RetirementFund]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of MutualFund]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of MutualFund"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MutualFund]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MutualFund]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Referral]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of Referral"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Referral]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Referral]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of RealEstateAgentName]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of RealEstateAgentName"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentName]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RealEstateAgentName]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of RealEstateAgentPhone]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of RealEstateAgentPhone"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentPhone]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RealEstateAgentPhone]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of RealEstateAgentEmail]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Copy of RealEstateAgentEmail"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentEmail]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of RealEstateAgentEmail]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Loan_ID]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Loan_ID"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Loan_ID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Loan_ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Property_ID]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Property_ID"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Propery_ID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Property_ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Co-Borrower SSN]"
+                          cachedDataType="numeric"
+                          cachedName="Copy of Co-Borrower SSN"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerSSN]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Co-Borrower SSN]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@BorrowerFirstName">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@BorrowerLastName">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@BorrowerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@BorrowerEmail">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                          dataType="i4"
+                          name="@SSN">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@HomePhone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@HomePhone">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CellPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CellPhone">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MaritalStatus]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@MaritalStatus">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@DateofBirth]"
+                          dataType="dbTimeStamp"
+                          name="@DateofBirth">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CurrentStreetAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CurrentStreetAddress">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@City]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@City">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@State]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@State">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Zip]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="@Zip">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@YearsAtThisAddress]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@YearsAtThisAddress">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MonthlyIncome]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@MonthlyIncome">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Bonuses]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Bonuses">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Commission]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Commission">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@OtherIncome]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@OtherIncome">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RentorOwn]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@RentorOwn">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Loan_Date]"
+                          dataType="dbDate"
+                          name="@Loan_Date">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PurposeofLoan]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@PurposeofLoan">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyUsage]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@PropertyUsage">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@LoanAmount]"
+                          dataType="i4"
+                          name="@LoanAmount">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PurchasePrice]"
+                          dataType="i4"
+                          name="@PurchasePrice">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@NumberofUnits]"
+                          dataType="i4"
+                          name="@NumberofUnits">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyCity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@PropertyCity">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyState]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@PropertyState">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@PropertyZip]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="@PropertyZip">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Sex]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Sex">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Ethnicity]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Ethnicity">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Race]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Race">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerSSN]"
+                          dataType="i4"
+                          name="@CoBorrowerSSN">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerFirstName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CoBorrowerFirstName">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerLastName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CoBorrowerLastName">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CoBorrowerEmail">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CreditCardAuthorization]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@CreditCardAuthorization">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Checking]"
+                          dataType="i4"
+                          name="@Checking">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Savings]"
+                          dataType="i4"
+                          name="@Savings">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RetirementFund]"
+                          dataType="i4"
+                          name="@RetirementFund">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@MutualFund]"
+                          dataType="i4"
+                          name="@MutualFund">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Referral]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@Referral">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentName]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@RealEstateAgentName">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentPhone]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@RealEstateAgentPhone">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentEmail]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="@RealEstateAgentEmail">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Loan_ID]"
+                          dataType="i4"
+                          name="@Loan_ID">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Propery_ID]"
+                          dataType="i4"
+                          name="@Propery_ID">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Output]"
+                      exclusionGroup="1"
+                      name="OLE DB Command Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Command Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -2533,9 +3641,8 @@
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Borrower Email]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SSN]"
-                          cachedDataType="numeric"
+                          cachedDataType="i4"
                           cachedName="Copy of SSN"
-                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SSN]"
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SSN]" />
                         <inputColumn
@@ -2602,9 +3709,10 @@
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Zip]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of YearsAtThisAddress]"
-                          cachedDataType="numeric"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
                           cachedName="Copy of YearsAtThisAddress"
-                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YearsAtThisAddress]"
                           lineageId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of YearsAtThisAddress]" />
                         <inputColumn
@@ -3126,7 +4234,7 @@
               <paths>
                 <path
                   refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Data Conversion Output]"
-                  endId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  endId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Inputs[Lookup Input]"
                   name="Data Conversion Output"
                   startId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Outputs[Data Conversion Output]" />
                 <path
@@ -3134,6 +4242,16 @@
                   endId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion.Inputs[Data Conversion Input]"
                   name="Excel Source Output"
                   startId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Excel Source.Outputs[Excel Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Lookup Match Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command.Inputs[OLE DB Command Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Lookup No Match Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup.Outputs[Lookup No Match Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -3177,7 +4295,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Move file to Archieve folder"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -3227,6 +4345,15 @@
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadWriteVariables="User::Body,User::ErrorsInSource,User::File_Name">
+              <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3346,35 +4473,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties.Settings.get_Default():ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties.Sett" +
-    "ings")]
-
-namespace ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -3763,35 +4861,34 @@ enum ScriptResults
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_caa8c3c6d3f4485ab935fbdcf627c9b3")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_caa8c3c6d3f4485ab935fbdcf627c9b3")]
-[assembly: AssemblyCopyright("Copyright @  2019")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties.Settings.get_Default():ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_caa8c3c6d3f4485ab935fbdcf627c9b3.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ST_caa8c3c6d3f4485ab935fbdcf627c9b3.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -3881,14 +4978,35 @@ using System.Runtime.CompilerServices;
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_caa8c3c6d3f4485ab935fbdcf627c9b3")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_caa8c3c6d3f4485ab935fbdcf627c9b3")]
+[assembly: AssemblyCopyright("Copyright @  2019")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -4532,33 +5650,73 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Foreach Loop Container\Data Flow Readandloadexcelfile">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Destination"
-          TopLeft="213.714289353818,204.329414630349" />
+          TopLeft="69.1428583203527,285.082356939349" />
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Excel Source"
-          TopLeft="232.571432532096,33.0352945809546" />
+          TopLeft="226.285718139337,14.0705884326288" />
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion"
-          TopLeft="219.428575165418,118.682354605652" />
+          Size="112.8,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup"
+          TopLeft="240.571432668336,201.270591058038" />
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Excel Source Output]"
-          TopLeft="299.400003848757,74.6352945809546">
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Lookup No Match Output]"
+          TopLeft="279.504766001669,242.870591058038">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.0470600246974"
+              EndConnector="-125.161907681316,42.211765881311"
               Start="0,0"
-              End="0,36.5470600246974">
+              End="-125.161907681316,34.711765881311">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5470600246974" />
+                    End="0,13.2389309613186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.2389309613186"
+                    Point2="0,17.2389309613186"
+                    Point3="-4,17.2389309613186" />
+                  <mssgle:LineSegment
+                    End="-121.161907681316,17.2389309613186" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-121.161907681316,17.2389309613186"
+                    Point2="-125.161907681316,17.2389309613186"
+                    Point3="-125.161907681316,21.2389309613186" />
+                  <mssgle:LineSegment
+                    End="-125.161907681316,34.711765881311" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.387340559408,22.2389309613186,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Data Conversion"
+          TopLeft="225.714289558177,101.129413025932" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Excel Source Output]"
+          TopLeft="299.400003848757,55.6705884326288">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.4588245933031"
+              Start="0,0"
+              End="0,37.9588245933031">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.9588245933031" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4569,24 +5727,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Data Conversion Output]"
-          TopLeft="297.971432259618,160.282354605652">
+          TopLeft="300.142861113256,142.729413025932">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.047060024697"
+              EndConnector="0,58.5411780321062"
               Start="0,0"
-              End="0,36.547060024697">
+              End="0,51.0411780321062">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.547060024697" />
+                    End="0,51.0411780321062" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\OLE DB Command"
+          TopLeft="374.857149240922,298.729415797197" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Readandloadexcelfile.Paths[Lookup Match Output]"
+          TopLeft="314.438099335002,242.870591058038">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142.81904990592,55.8588247391592"
+              Start="0,0"
+              End="142.81904990592,48.3588247391592">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.8122752780902" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.8122752780902"
+                    Point2="0,22.8122752780902"
+                    Point3="4,22.8122752780902" />
+                  <mssgle:LineSegment
+                    End="138.81904990592,22.8122752780902" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138.81904990592,22.8122752780902"
+                    Point2="142.81904990592,22.8122752780902"
+                    Point3="142.81904990592,26.8122752780902" />
+                  <mssgle:LineSegment
+                    End="142.81904990592,48.3588247391592" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="23.2181382342099,27.8122752780902,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4615,6 +5813,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Data Flow Readandloadexcelfile\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[MoLoanAppDatafromExcel]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
