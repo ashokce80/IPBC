@@ -11,11 +11,438 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SqlToSqlLoad"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{3FC2081D-558C-4840-A866-077BF17A89F5}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{22E06321-B11A-4B3C-A967-2CEBDAB9FE47}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E9D2E884-938F-441E-9740-3ED0A52DB150}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\test.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Borrower FirstName"
+              DTS:DTSID="{B954C24D-787C-43D6-B056-95E7E4C8A536}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Borrower LastName"
+              DTS:DTSID="{CB8048D2-FC0F-46ED-A1C6-FD0BE57B1BC5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Borrower Email"
+              DTS:DTSID="{84B9EF5D-E0F3-43FF-8296-32F3D0C98A8E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SSN"
+              DTS:DTSID="{036A9B0F-C43D-4ED8-B017-DA02B0C42AB1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Home Phone"
+              DTS:DTSID="{EFD2446A-55CF-44D0-9EEB-B6BED2D0F0B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cell Phone"
+              DTS:DTSID="{31E8FA8F-6EF5-412E-87E4-2EF5978D83C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Marital Status"
+              DTS:DTSID="{075017CD-CD55-4692-AD02-0CFEADA596F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date of Birth"
+              DTS:DTSID="{ECCC2DB5-4EBE-4AA5-A548-30A30700FC40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Current Street Address"
+              DTS:DTSID="{1E9AF8CA-2943-4323-9A16-6BC1960495C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{C806BC32-99CD-402B-8DC3-8065858056E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="State"
+              DTS:DTSID="{679806D2-5BDB-4E67-9A7C-9A9979129994}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Zip"
+              DTS:DTSID="{8C1F0A43-5B79-4C8E-87AA-6A6612906DC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YearsAtThisAddress"
+              DTS:DTSID="{DBDA5EDA-F6EB-4376-87E7-8D7B891CF19B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthlyIncome"
+              DTS:DTSID="{3DE17E22-BB57-4C3D-BA7D-5924558BE737}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bonuses"
+              DTS:DTSID="{F79C2236-CE88-4A82-A246-BA3653720D4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commission"
+              DTS:DTSID="{C3060D8E-6562-4C37-B0E3-F1FD98E7AA1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OtherIncome"
+              DTS:DTSID="{FB6D38DC-2E2F-4D46-9E7A-634B6A9E6979}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rent or Own"
+              DTS:DTSID="{05012A3F-B807-4728-9B7F-D57BCE8397D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loan_Date"
+              DTS:DTSID="{5973C441-3A93-4A5F-9961-5FCA9C25B39E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Purpose of Loan"
+              DTS:DTSID="{EC3D5FB0-AD8F-4518-A47B-DD7AE38D2A84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Property Usage"
+              DTS:DTSID="{2CCCDCB7-E996-4320-8C65-FC3C3417D3DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LoanAmount"
+              DTS:DTSID="{99962AF8-9F71-4B92-911F-152EF9FA4D30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Purchase Price"
+              DTS:DTSID="{E57FEED8-A8E1-4E10-8F4B-DA2537FECBBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Number of Units"
+              DTS:DTSID="{72FA7C71-F787-4BC2-961F-D4460A780210}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Property City"
+              DTS:DTSID="{A47919C8-BCDF-444A-AF04-838210BBE1B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Property State"
+              DTS:DTSID="{BC9D4EF1-932B-44FC-A933-6932F6C45F48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Property Zip"
+              DTS:DTSID="{75EFC784-36E0-4D3A-8841-0FF04600BD5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sex"
+              DTS:DTSID="{D3B7AFC8-80E4-4D9D-834A-CBA3EEA0835B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ethnicity"
+              DTS:DTSID="{7409E7EA-6B32-4EF3-8F13-07478BD6EC7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Race"
+              DTS:DTSID="{416D6CA2-77A6-440D-880B-FFDD82CEE5E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Co-Borrower SSN"
+              DTS:DTSID="{590BF2EF-7779-498E-B755-C61C98770EB2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Co-Borrower FirstName"
+              DTS:DTSID="{981508F5-0428-447D-A4C5-3391CED2B6F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Co-Borrower LastName"
+              DTS:DTSID="{8C49BBA5-C326-4B2B-87AF-0DA96700A0E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Co-Borrower Email"
+              DTS:DTSID="{C5041EE6-6779-4683-91BF-B88B00D47AD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CreditCardAuthorization"
+              DTS:DTSID="{E0CB35E0-503B-4C1D-A99A-453E9A05370C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Checking"
+              DTS:DTSID="{3CE244CF-4F87-4AEB-87FC-3B7626968BA1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Savings"
+              DTS:DTSID="{E510774F-83EC-4DB3-87CE-E24F4262F360}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RetirementFund"
+              DTS:DTSID="{C8464AAF-343B-4BAC-BCDA-9E0BCF216F23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MutualFund"
+              DTS:DTSID="{7701B7FC-C5CA-40EA-9A32-9AD0582ED3E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Referral"
+              DTS:DTSID="{76072364-45A4-4700-99CA-65AEE52F7355}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RealEstateAgentName"
+              DTS:DTSID="{E89F9FA8-5ECA-4BEB-B375-B03AE7B26787}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RealEstateAgentPhone"
+              DTS:DTSID="{4B608D50-E621-4662-9F4B-47F7EF2F3220}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RealEstateAgentEmail"
+              DTS:DTSID="{27894330-98EA-49B6-8E14-AB9430F27AFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Loan_ID"
+              DTS:DTSID="{A3ADDFE2-D3A3-4240-A24A-0C58F8C00313}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Propery_ID"
+              DTS:DTSID="{7E56E5D4-F27C-465C-978F-3F238CF0BB6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{3046EC3E-75E5-4FE7-A726-A1F2D9C3782D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{69AC7C59-2944-45C1-9BAE-8C3279D6D80E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LAPTOP-PF3DBQTQ\CB2016SQLSERVER.STG_Mortgage_Project]"
       DTS:CreationName="OLEDB"
@@ -276,6 +703,36 @@ where [refTable].[SSN] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DFT for LoadToBorrowerTbl\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      name="SSN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SSN</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[Co-Borrower SSN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[Co-Borrower SSN]"
+                      name="Co-Borrower SSN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Co-Borrower SSN</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -346,16 +803,10 @@ where [refTable].[SSN] = ?</property>
                 <input
                   refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="RedirectRow"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
-                      lineageId="Package\DFT for LoadToBorrowerTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[SSN]" />
                     <inputColumn
                       refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[Borrower FirstName]"
                       cachedCodepage="1252"
@@ -475,12 +926,6 @@ where [refTable].[SSN] = ?</property>
                       externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@Race]"
                       lineageId="Package\DFT for LoadToBorrowerTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[Race]" />
                     <inputColumn
-                      refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[Co-Borrower SSN]"
-                      cachedDataType="i4"
-                      cachedName="Co-Borrower SSN"
-                      externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerSSN]"
-                      lineageId="Package\DFT for LoadToBorrowerTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]" />
-                    <inputColumn
                       refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[Co-Borrower FirstName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -504,6 +949,18 @@ where [refTable].[SSN] = ?</property>
                       cachedName="Co-Borrower Email"
                       externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerEmail]"
                       lineageId="Package\DFT for LoadToBorrowerTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]" />
+                    <inputColumn
+                      refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[SSN]"
+                      cachedDataType="i4"
+                      cachedName="SSN"
+                      externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                      lineageId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]" />
+                    <inputColumn
+                      refId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].Columns[Co-Borrower SSN]"
+                      cachedDataType="i4"
+                      cachedName="Co-Borrower SSN"
+                      externalMetadataColumnId="Package\DFT for LoadToBorrowerTbl\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[@CoBorrowerSSN]"
+                      lineageId="Package\DFT for LoadToBorrowerTbl\Lookup.Outputs[Lookup Match Output].Columns[Co-Borrower SSN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2334,12 +2791,6 @@ where [refTable].[SSN] = ?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
-                      lineageId="Package\DFT for LoadToFinancialTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[SSN]" />
-                    <inputColumn
                       refId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].Columns[MonthlyIncome]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2403,6 +2854,12 @@ where [refTable].[SSN] = ?</property>
                       cachedName="MutualFund"
                       externalMetadataColumnId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].ExternalColumns[@MutualFund]"
                       lineageId="Package\DFT for LoadToFinancialTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[MutualFund]" />
+                    <inputColumn
+                      refId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].Columns[SSN]"
+                      cachedDataType="i4"
+                      cachedName="SSN"
+                      externalMetadataColumnId="Package\DFT for LoadToFinancialTbl\FinTblUpdate.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                      lineageId="Package\DFT for LoadToFinancialTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2668,6 +3125,22 @@ where [refTable].[SSN] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DFT for LoadToFinancialTbl\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT for LoadToFinancialTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT for LoadToFinancialTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      name="SSN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SSN</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -4157,6 +4630,22 @@ where [refTable].[SSN] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DFT for LoadToLoanTbl\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT for LoadToLoanTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT for LoadToLoanTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      name="SSN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SSN</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -5547,12 +6036,6 @@ where [refTable].[SSN] = ?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
-                      lineageId="Package\DFT for LoadToLoanTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[SSN]" />
-                    <inputColumn
                       refId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].Columns[Propery_ID]"
                       cachedDataType="i4"
                       cachedName="Propery_ID"
@@ -5618,6 +6101,12 @@ where [refTable].[SSN] = ?</property>
                       cachedName="Loan_Date"
                       externalMetadataColumnId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].ExternalColumns[@LoanDate]"
                       lineageId="Package\DFT for LoadToLoanTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loan_Date]" />
+                    <inputColumn
+                      refId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].Columns[SSN]"
+                      cachedDataType="i4"
+                      cachedName="SSN"
+                      externalMetadataColumnId="Package\DFT for LoadToLoanTbl\Update Loan Tbl.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                      lineageId="Package\DFT for LoadToLoanTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6026,6 +6515,22 @@ where [refTable].[SSN] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\DFT for LoadToPropertyTbl\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT for LoadToPropertyTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT for LoadToPropertyTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]"
+                      name="SSN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">SSN</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -7412,12 +7917,6 @@ where [refTable].[SSN] = ?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
-                      lineageId="Package\DFT for LoadToPropertyTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[SSN]" />
-                    <inputColumn
                       refId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].Columns[Propery_ID]"
                       cachedDataType="i4"
                       cachedName="Propery_ID"
@@ -7479,6 +7978,12 @@ where [refTable].[SSN] = ?</property>
                       cachedName="RealEstateAgentEmail"
                       externalMetadataColumnId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].ExternalColumns[@RealEstateAgentEmail]"
                       lineageId="Package\DFT for LoadToPropertyTbl\OLE DB Source.Outputs[OLE DB Source Output].Columns[RealEstateAgentEmail]" />
+                    <inputColumn
+                      refId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].Columns[SSN]"
+                      cachedDataType="i4"
+                      cachedName="SSN"
+                      externalMetadataColumnId="Package\DFT for LoadToPropertyTbl\Update PropertyTbl.Inputs[OLE DB Command Input].ExternalColumns[@SSN]"
+                      lineageId="Package\DFT for LoadToPropertyTbl\Lookup.Outputs[Lookup Match Output].Columns[SSN]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7703,20 +8208,28 @@ where [refTable].[SSN] = ?</property>
           Size="207.2,41.6"
           Id="Package\DFT for LoadToFinancialTbl"
           TopLeft="179.785717253782,117.500000145856" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\DFT for LoadToLoanTbl"
+          TopLeft="182.071431578422,295.523532054334" />
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\DFT for LoadToPropertyTbl"
+          TopLeft="174.857145834942,206.776473488197" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="284.664288740742,63.0117650061743">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.4882351396818"
+              EndConnector="0,54.4882351396817"
               Start="0,0"
-              End="0,46.9882351396818">
+              End="0,46.9882351396817">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.9882351396818" />
+                    End="0,46.9882351396817" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7725,10 +8238,6 @@ where [refTable].[SSN] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="206.4,41.6"
-          Id="Package\DFT for LoadToPropertyTbl"
-          TopLeft="174.857145834942,206.776473488197" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="280.721431544362,159.100000145856">
@@ -7751,10 +8260,6 @@ where [refTable].[SSN] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="188.8,41.6"
-          Id="Package\DFT for LoadToLoanTbl"
-          TopLeft="182.071431578422,295.523532054334" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="277.264288706682,248.376473488197">
@@ -7790,9 +8295,21 @@ where [refTable].[SSN] = ?</property>
           Id="Package\DFT for LoadToBorrowerTbl\OLE DB Source"
           TopLeft="187.42857462046,37.9294122966516" />
         <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\DFT for LoadToBorrowerTbl\OLE DB Command"
+          TopLeft="306.857148082889,287.388239223652" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\DFT for LoadToBorrowerTbl\To Borrower Tbl"
+          TopLeft="84.0000014305114,288.14118051166" />
+        <NodeLayout
           Size="152.8,41.6"
           Id="Package\DFT for LoadToBorrowerTbl\Derived Column"
           TopLeft="180.571431646541,116.847060462265" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\DFT for LoadToBorrowerTbl\Lookup"
+          TopLeft="201.71428914946,199.905885055568" />
         <EdgeLayout
           Id="Package\DFT for LoadToBorrowerTbl.Paths[OLE DB Source Output]"
           TopLeft="259.600003133501,79.5294122966516">
@@ -7807,36 +8324,6 @@ where [refTable].[SSN] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,29.8176481656138" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\DFT for LoadToBorrowerTbl\To Borrower Tbl"
-          TopLeft="84.0000014305114,288.14118051166" />
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\DFT for LoadToBorrowerTbl\Lookup"
-          TopLeft="201.71428914946,199.905885055568" />
-        <EdgeLayout
-          Id="Package\DFT for LoadToBorrowerTbl.Paths[Derived Column Output]"
-          TopLeft="257.542860398,158.447060462265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.458824593303"
-              Start="0,0"
-              End="0,33.958824593303">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.958824593303" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7881,62 +8368,67 @@ where [refTable].[SSN] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\DFT for LoadToBorrowerTbl\OLE DB Command"
-          TopLeft="306.857148082889,287.388239223652" />
         <EdgeLayout
           Id="Package\DFT for LoadToBorrowerTbl.Paths[Lookup Match Output]"
-          TopLeft="275.580955816126,241.505885055568">
+          TopLeft="275.580955816127,241.505885055568">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.676192266763,45.8823541680835"
+              EndConnector="113.676192266762,45.882354168084"
               Start="0,0"
-              End="113.676192266763,38.3823541680835">
+              End="113.676192266762,38.382354168084">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.7379684154971" />
+                    End="0,14.7379684154973" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.7379684154971"
-                    Point2="0,18.7379684154971"
-                    Point3="4,18.7379684154971" />
+                    Point1="0,14.7379684154973"
+                    Point2="0,18.7379684154973"
+                    Point3="4,18.7379684154973" />
                   <mssgle:LineSegment
-                    End="109.676192266763,18.7379684154971" />
+                    End="109.676192266762,18.7379684154973" />
                   <mssgle:CubicBezierSegment
-                    Point1="109.676192266763,18.7379684154971"
-                    Point2="113.676192266763,18.7379684154971"
-                    Point3="113.676192266763,22.7379684154971" />
+                    Point1="109.676192266762,18.7379684154973"
+                    Point2="113.676192266762,18.7379684154973"
+                    Point3="113.676192266762,22.7379684154973" />
                   <mssgle:LineSegment
-                    End="113.676192266763,38.3823541680835" />
+                    End="113.676192266762,38.382354168084" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="8.64670941463138,23.7379684154971,96.3827734375,11.609375"
+              BoundingBox="8.64670941463118,23.7379684154973,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT for LoadToBorrowerTbl.Paths[Derived Column Output]"
+          TopLeft="257.542860398,158.447060462265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.458824593303"
+              Start="0,0"
+              End="0,33.958824593303">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.958824593303" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToBorrowerTbl\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT for LoadToBorrowerTbl\To Borrower Tbl">
     <Properties>
@@ -7973,61 +8465,60 @@ where [refTable].[SSN] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT for LoadToBorrowerTbl\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT for LoadToFinancialTbl">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\DFT for LoadToFinancialTbl\Lookup"
-          TopLeft="209.71428914946,129.905885055568" />
-        <NodeLayout
           Size="149.6,41.6"
           Id="Package\DFT for LoadToFinancialTbl\To FinancialTbl"
           TopLeft="63.3333347638448,298.14118051166" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT for LoadToFinancialTbl\OLE DB Source"
+          TopLeft="187.42857462046,37.9294122966516" />
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\DFT for LoadToFinancialTbl\FinTblUpdate"
           TopLeft="354.857148082889,283.388239223652" />
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\DFT for LoadToFinancialTbl\OLE DB Source"
-          TopLeft="187.42857462046,37.9294122966516" />
+          Size="112.8,41.6"
+          Id="Package\DFT for LoadToFinancialTbl\Lookup"
+          TopLeft="209.71428914946,129.905885055568" />
         <EdgeLayout
-          Id="Package\DFT for LoadToFinancialTbl.Paths[Lookup Match Output]"
-          TopLeft="283.580955816127,171.505885055568">
+          Id="Package\DFT for LoadToFinancialTbl.Paths[OLE DB Source Output]"
+          TopLeft="264.17143188496,79.5294122966516">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="151.676192266762,111.882354168084"
+              EndConnector="0,50.3764727589164"
               Start="0,0"
-              End="151.676192266762,104.382354168084">
+              End="0,42.8764727589164">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.6918145693434" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.6918145693434"
-                    Point2="0,45.6918145693434"
-                    Point3="4,45.6918145693434" />
-                  <mssgle:LineSegment
-                    End="147.676192266762,45.6918145693434" />
-                  <mssgle:CubicBezierSegment
-                    Point1="147.676192266762,45.6918145693434"
-                    Point2="151.676192266762,45.6918145693434"
-                    Point3="151.676192266762,49.6918145693434" />
-                  <mssgle:LineSegment
-                    End="151.676192266762,104.382354168084" />
+                    End="0,42.8764727589164" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="27.6467094146311,50.6918145693434,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8067,53 +8558,44 @@ where [refTable].[SSN] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT for LoadToFinancialTbl.Paths[OLE DB Source Output]"
-          TopLeft="264.17143188496,79.5294122966516">
+          Id="Package\DFT for LoadToFinancialTbl.Paths[Lookup Match Output]"
+          TopLeft="283.580955816127,171.505885055568">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.3764727589164"
+              EndConnector="151.676192266762,111.882354168084"
               Start="0,0"
-              End="0,42.8764727589164">
+              End="151.676192266762,104.382354168084">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.8764727589164" />
+                    End="0,41.6918145693434" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.6918145693434"
+                    Point2="0,45.6918145693434"
+                    Point3="4,45.6918145693434" />
+                  <mssgle:LineSegment
+                    End="147.676192266762,45.6918145693434" />
+                  <mssgle:CubicBezierSegment
+                    Point1="147.676192266762,45.6918145693434"
+                    Point2="151.676192266762,45.6918145693434"
+                    Point3="151.676192266762,49.6918145693434" />
+                  <mssgle:LineSegment
+                    End="151.676192266762,104.382354168084" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="27.6467094146311,50.6918145693434,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToFinancialTbl\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Financial_details]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT for LoadToFinancialTbl\To FinancialTbl">
     <Properties>
@@ -8140,6 +8622,203 @@ where [refTable].[SSN] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT for LoadToFinancialTbl\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Financial_details]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT for LoadToLoanTbl">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT for LoadToLoanTbl\OLE DB Source"
+          TopLeft="187.42857462046,37.9294122966516" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT for LoadToLoanTbl\Update Loan Tbl"
+          TopLeft="306.857148082889,287.388239223652" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\DFT for LoadToLoanTbl\Lookup"
+          TopLeft="204.380955816127,142.572551722235" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\DFT for LoadToLoanTbl\To Loan Tbl"
+          TopLeft="84.0000014305114,288.14118051166" />
+        <EdgeLayout
+          Id="Package\DFT for LoadToLoanTbl.Paths[Lookup No Match Output]"
+          TopLeft="243.31428914946,184.172551722235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-92.1142877189486,103.968628789425"
+              Start="0,0"
+              End="-92.1142877189486,96.4686287894254">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.4599155335835" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.4599155335835"
+                    Point2="0,42.4599155335835"
+                    Point3="-4,42.4599155335835" />
+                  <mssgle:LineSegment
+                    End="-88.1142877189486,42.4599155335835" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-88.1142877189486,42.4599155335835"
+                    Point2="-92.1142877189486,42.4599155335835"
+                    Point3="-92.1142877189486,46.4599155335835" />
+                  <mssgle:LineSegment
+                    End="-92.1142877189486,96.4686287894254" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-101.863530578224,47.4599155335835,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT for LoadToLoanTbl.Paths[Lookup Match Output]"
+          TopLeft="278.247622482793,184.172551722235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="106.609525600096,103.215687501417"
+              Start="0,0"
+              End="106.609525600096,95.7156875014174">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.1524206299495" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.1524206299495"
+                    Point2="0,42.1524206299495"
+                    Point3="4,42.1524206299495" />
+                  <mssgle:LineSegment
+                    End="102.609525600096,42.1524206299495" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102.609525600096,42.1524206299495"
+                    Point2="106.609525600096,42.1524206299495"
+                    Point3="106.609525600096,46.1524206299495" />
+                  <mssgle:LineSegment
+                    End="106.609525600096,95.7156875014174" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="5.11337608129785,47.1524206299495,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT for LoadToLoanTbl.Paths[OLE DB Source Output]"
+          TopLeft="261.504765218293,79.5294122966516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.0431394255831"
+              Start="0,0"
+              End="0,55.5431394255831">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.5431394255831" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="To Loan Table "
+          ParentId="Package\DFT for LoadToLoanTbl"
+          FontInfo="{assembly:Null}"
+          Size="104,40"
+          Id="1b944285-0422-40c7-8030-0037ff6ead63"
+          TopLeft="364,87.2" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT for LoadToLoanTbl\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT for LoadToLoanTbl\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Loan_details]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT for LoadToLoanTbl\To Loan Tbl">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT for LoadToPropertyTbl">
     <LayoutInfo>
@@ -8150,14 +8829,6 @@ where [refTable].[SSN] = ?</property>
           Id="Package\DFT for LoadToPropertyTbl\Lookup"
           TopLeft="201.71428914946,199.905885055568" />
         <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\DFT for LoadToPropertyTbl\To Property Tbl"
-          TopLeft="84.0000014305114,288.14118051166" />
-        <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\DFT for LoadToPropertyTbl\Update PropertyTbl"
-          TopLeft="306.857148082889,287.388239223652" />
-        <NodeLayout
           Size="149.6,41.6"
           Id="Package\DFT for LoadToPropertyTbl\OLE DB Source"
           TopLeft="187.42857462046,37.9294122966516" />
@@ -8165,64 +8836,14 @@ where [refTable].[SSN] = ?</property>
           Size="152.8,41.6"
           Id="Package\DFT for LoadToPropertyTbl\Derived Column"
           TopLeft="180.571431646541,116.847060462265" />
-        <EdgeLayout
-          Id="Package\DFT for LoadToPropertyTbl.Paths[Lookup Match Output]"
-          TopLeft="275.580955816127,241.505885055568">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="116.076192266762,45.882354168084"
-              Start="0,0"
-              End="116.076192266762,38.382354168084">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.7379684154973" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.7379684154973"
-                    Point2="0,18.7379684154973"
-                    Point3="4,18.7379684154973" />
-                  <mssgle:LineSegment
-                    End="112.076192266762,18.7379684154973" />
-                  <mssgle:CubicBezierSegment
-                    Point1="112.076192266762,18.7379684154973"
-                    Point2="116.076192266762,18.7379684154973"
-                    Point3="116.076192266762,22.7379684154973" />
-                  <mssgle:LineSegment
-                    End="116.076192266762,38.382354168084" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="9.8467094146312,23.7379684154973,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT for LoadToPropertyTbl.Paths[Derived Column Output]"
-          TopLeft="257.542860398,158.447060462265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.458824593303"
-              Start="0,0"
-              End="0,33.958824593303">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.958824593303" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\DFT for LoadToPropertyTbl\Update PropertyTbl"
+          TopLeft="306.857148082889,287.388239223652" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\DFT for LoadToPropertyTbl\To Property Tbl"
+          TopLeft="84.0000014305114,288.14118051166" />
         <EdgeLayout
           Id="Package\DFT for LoadToPropertyTbl.Paths[OLE DB Source Output]"
           TopLeft="259.600003133501,79.5294122966516">
@@ -8281,32 +8902,67 @@ where [refTable].[SSN] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT for LoadToPropertyTbl.Paths[Lookup Match Output]"
+          TopLeft="275.580955816127,241.505885055568">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.076192266762,45.882354168084"
+              Start="0,0"
+              End="116.076192266762,38.382354168084">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.7379684154973" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.7379684154973"
+                    Point2="0,18.7379684154973"
+                    Point3="4,18.7379684154973" />
+                  <mssgle:LineSegment
+                    End="112.076192266762,18.7379684154973" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.076192266762,18.7379684154973"
+                    Point2="116.076192266762,18.7379684154973"
+                    Point3="116.076192266762,22.7379684154973" />
+                  <mssgle:LineSegment
+                    End="116.076192266762,38.382354168084" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.8467094146312,23.7379684154973,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT for LoadToPropertyTbl.Paths[Derived Column Output]"
+          TopLeft="257.542860398,158.447060462265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.458824593303"
+              Start="0,0"
+              End="0,33.958824593303">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.958824593303" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToPropertyTbl\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Property_details]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT for LoadToPropertyTbl\To Property Tbl">
     <Properties>
@@ -8333,133 +8989,8 @@ where [refTable].[SSN] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DFT for LoadToLoanTbl">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\DFT for LoadToLoanTbl\Lookup"
-          TopLeft="204.380955816127,142.572551722235" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\DFT for LoadToLoanTbl\To Loan Tbl"
-          TopLeft="84.0000014305114,288.14118051166" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\DFT for LoadToLoanTbl\Update Loan Tbl"
-          TopLeft="306.857148082889,287.388239223652" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\DFT for LoadToLoanTbl\OLE DB Source"
-          TopLeft="187.42857462046,37.9294122966516" />
-        <EdgeLayout
-          Id="Package\DFT for LoadToLoanTbl.Paths[Lookup Match Output]"
-          TopLeft="278.247622482793,184.172551722235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="106.609525600096,103.215687501417"
-              Start="0,0"
-              End="106.609525600096,95.7156875014174">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.1524206299495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.1524206299495"
-                    Point2="0,42.1524206299495"
-                    Point3="4,42.1524206299495" />
-                  <mssgle:LineSegment
-                    End="102.609525600096,42.1524206299495" />
-                  <mssgle:CubicBezierSegment
-                    Point1="102.609525600096,42.1524206299495"
-                    Point2="106.609525600096,42.1524206299495"
-                    Point3="106.609525600096,46.1524206299495" />
-                  <mssgle:LineSegment
-                    End="106.609525600096,95.7156875014174" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="5.11337608129785,47.1524206299495,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT for LoadToLoanTbl.Paths[Lookup No Match Output]"
-          TopLeft="243.31428914946,184.172551722235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-92.1142877189486,103.968628789425"
-              Start="0,0"
-              End="-92.1142877189486,96.4686287894254">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.4599155335835" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.4599155335835"
-                    Point2="0,42.4599155335835"
-                    Point3="-4,42.4599155335835" />
-                  <mssgle:LineSegment
-                    End="-88.1142877189486,42.4599155335835" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-88.1142877189486,42.4599155335835"
-                    Point2="-92.1142877189486,42.4599155335835"
-                    Point3="-92.1142877189486,46.4599155335835" />
-                  <mssgle:LineSegment
-                    End="-92.1142877189486,96.4686287894254" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-101.863530578224,47.4599155335835,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="To Loan Table "
-          ParentId="Package\DFT for LoadToLoanTbl"
-          FontInfo="{assembly:Null}"
-          Size="104,60"
-          Id="1b944285-0422-40c7-8030-0037ff6ead63"
-          TopLeft="364,87.2" />
-        <EdgeLayout
-          Id="Package\DFT for LoadToLoanTbl.Paths[OLE DB Source Output]"
-          TopLeft="261.504765218293,79.5294122966516">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,63.0431394255831"
-              Start="0,0"
-              End="0,55.5431394255831">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,55.5431394255831" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToLoanTbl\Lookup">
+    design-time-name="Package\DFT for LoadToPropertyTbl\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -8469,41 +9000,15 @@ where [refTable].[SSN] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Loan_details]</Value>
+          type="q3:string">[dbo].[Property_details]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToLoanTbl\To Loan Tbl">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT for LoadToLoanTbl\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

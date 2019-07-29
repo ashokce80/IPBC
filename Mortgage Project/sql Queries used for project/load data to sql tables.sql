@@ -404,8 +404,46 @@ AS
 
 Exec	dbo.UD_SP_UpdateLoanTBL	?,?,?,?,?,?,?,?,?,?,?
 
+--------------------------------------
+/* Create view for 4 stagging table to do error handling
+*/
+--- trial for borower table
+Go
+Create View	UD_VIEW_BrrowerTbl
+As
+	Select * From	[dbo].[Borrower_details]
+
+Select	* From	UD_VIEW_BrrowerTbl
+
+Update	UD_VIEW_BrrowerTbl
+Set		[Borrower LastName] = 'Sagar'
+Where	SSN = 67656473
+-------------- so we can update delete and select data from view which point to specific data of table
+--Same way we create view for all stagging tables with join to do errorhandling and send wrong data back to loan officer
+Go
+Create View		UD_VW_Final_Stg_tbls
+As
+	Select		B.[SSN], [Borrower FirstName], [Borrower LastName], [Borrower Email], [Home Phone],				[Cell Phone], [Marital Status], [Date of Birth], [Current Street Address], [City],				[State], [Zip], [YearsAtThisAddress], [Sex], [Ethnicity], [Race], B.[Co-Borrower SSN],		[Co-Borrower FirstName], [Co-Borrower LastName], [Co-Borrower Email],[MonthlyIncome],		[Bonuses], [Commission], [OtherIncome], [Rent or Own], [Checking], [Savings],		[RetirementFund], [MutualFund],p.[Property_ID], [Property Usage], [Property City],				[Property State], [Property Zip], [RealEstateAgentName], [RealEstateAgentPhone],				[RealEstateAgentEmail],[Loan_ID], [Purpose of Loan], [LoanAmount], [Purchase Price],			[CreditCardAuthorization], [Number of Units], [Refferal],  [Loan Date]
+	From		[dbo].[Borrower_details] as B
+	left join	[dbo].[Financial_details] as F
+	on			B.SSN = F.SSN
+	left join	[dbo].[Loan_details] as L
+	on			L.SSN = F.SSN
+	left join	[dbo].[Property_details] as  P
+	on			P.SSN = L.SSN
+
+Select	* From	UD_VW_Final_Stg_tbls
+
+--------------------- error handling 
+!ISNULL([SSN])&& !ISNULL([Borrower FirstName])&& !ISNULL([Borrower LastName])&& !ISNULL([Borrower Email])&& !ISNULL([Home Phone])&&!ISNULL([Cell Phone])&& !ISNULL([Marital Status])&& !ISNULL([Date of Birth])&& !ISNULL([Current Street Address])&& !ISNULL([City])&&!ISNULL([State])&& !ISNULL([Zip])&& !ISNULL([YearsAtThisAddress])&& !ISNULL([Sex])&& !ISNULL([Ethnicity])&& !ISNULL([Race])&&!ISNULL([Co-Borrower SSN])&&!ISNULL([Co-Borrower FirstName])&& !ISNULL([Co-Borrower LastName])&&!ISNULL([Co-Borrower Email])&& !ISNULL([MonthlyIncome])&&!ISNULL([Bonuses])&& !ISNULL([Commission])&& !ISNULL([OtherIncome])&& !ISNULL([Rent or Own])&& !ISNULL([Checking])&& !ISNULL([Savings])&&!ISNULL([RetirementFund])&& !ISNULL([MutualFund])&&p.!ISNULL([Property_ID])&& !ISNULL([Property Usage])&& !ISNULL([Property City])&&!ISNULL([Property State])&& !ISNULL([Property Zip])&& !ISNULL([RealEstateAgentName])&& !ISNULL([RealEstateAgentPhone])&& !ISNULL([RealEstateAgentEmail])&& !ISNULL([Loan_ID])&& !ISNULL([Purpose of Loan])&& !ISNULL([LoanAmount])&& !ISNULL([Purchase Price])&&!ISNULL([CreditCardAuthorization])&& !ISNULL([Number of Units])&& !ISNULL([Refferal])&&  !ISNULL([Loan Date])
 
 
+LEN([Home Phone]) == 10
 
+LEN([Cell Phone]) == 10
 
+LEN(RealEstateAgentPhone) == 10
 
+Len(Zip) == 5
+
+LEN((DT_STR,10,1252)SSN) == 9
