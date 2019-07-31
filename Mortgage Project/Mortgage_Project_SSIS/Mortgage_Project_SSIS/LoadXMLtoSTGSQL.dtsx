@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="LoadXMLtoSTGSQL"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{6688ECF6-6755-4777-8888-B7DA5040C898}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{A5203F9B-4BBD-45A4-AAC0-918CD0200E05}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -9359,18 +9359,11 @@ where [refTable].[SSN] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="227.2,41.6"
           Id="Package\Data Flow readAndLoadXML file"
           TopLeft="145.028573803026,23.2470591495606" />
-        <AnnotationLayout
-          Text="XML file move to successfull folder, we dont need to move XSD file as it will be same for all future xmls"
-          ParentId="Package"
-          FontInfo="{assembly:Null}"
-          Size="571.2,40"
-          Id="f5ccc642-f199-4c5e-8938-ea297e466caa"
-          TopLeft="13.0285714869598,170.682355334932" />
         <NodeLayout
           Size="184,41.6"
           Id="Package\Move File to Succssfull"
@@ -9397,6 +9390,13 @@ where [refTable].[SSN] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="XML file move to successfull folder, we dont need to move XSD file as it will be same for all future xmls"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="571.2,40"
+          Id="f5ccc642-f199-4c5e-8938-ea297e466caa"
+          TopLeft="13.0285714869598,170.682355334932" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -9406,117 +9406,91 @@ where [refTable].[SSN] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow readAndLoadXML file\Data onversion"
-          TopLeft="285.085718548055,146.776472467205" />
+          Size="106.4,41.6"
+          Id="Package\Data Flow readAndLoadXML file\Sort 1"
+          TopLeft="375.428577822082,312.564707461031" />
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Data Flow readAndLoadXML file\Merge Join 2"
-          TopLeft="168.000002861023,381.835298227356" />
+          Size="164.8,41.6"
+          Id="Package\Data Flow readAndLoadXML file\OLE DB Command"
+          TopLeft="401.14286397428,554.258827802136" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Data Flow readAndLoadXML file\OLE DB Destination"
-          TopLeft="27.4285718956772,555.811770986273" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow readAndLoadXML file\Sort"
-          TopLeft="70.2857154826728,304.611766173023" />
+          TopLeft="114.285716231988,555.200006271811" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Data Flow readAndLoadXML file\Merge Join"
-          TopLeft="48.0000008174352,223.388238202659" />
+          TopLeft="94.8571444725504,223.388238202659" />
         <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow readAndLoadXML file\Sort 1"
-          TopLeft="297.71429078433,313.176472175493" />
+          Size="97.6,41.6"
+          Id="Package\Data Flow readAndLoadXML file\Sort"
+          TopLeft="117.142859137788,304.611766173023" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Data Flow readAndLoadXML file\Data Conversion"
+          TopLeft="61.5999989100862,86.8235304499175" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Data Flow readAndLoadXML file\data conversion"
-          TopLeft="383.428577958321,91.105883451152" />
+          TopLeft="461.142864996073,90.4941187366899" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Data Flow readAndLoadXML file\data Conversion"
-          TopLeft="111.428573326188,149.835296039515" />
+          TopLeft="158.285716981303,149.835296039515" />
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Data Flow readAndLoadXML file\Merge Join 1"
-          TopLeft="286.857147742291,233.929414192781" />
+          TopLeft="364.571434780043,233.317649478319" />
         <NodeLayout
           Size="133.6,41.6"
           Id="Package\Data Flow readAndLoadXML file\XML Source"
           TopLeft="242.171430556628,12.2352942892424" />
         <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow readAndLoadXML file\Data onversion"
+          TopLeft="362.800005585807,146.164707752743" />
+        <NodeLayout
           Size="112.8,41.6"
           Id="Package\Data Flow readAndLoadXML file\Lookup"
-          TopLeft="177.142860159582,449.976473925765" />
+          TopLeft="250.857147129214,462.82353292947" />
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Data Flow readAndLoadXML file\Data Conversion"
-          TopLeft="14.7428552549709,86.8235304499175" />
+          Size="138.4,41.6"
+          Id="Package\Data Flow readAndLoadXML file\Merge Join 2"
+          TopLeft="234.285718275576,389.176474800901" />
         <EdgeLayout
-          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output2]"
-          TopLeft="235.371431510303,423.435298227357">
+          Id="Package\Data Flow readAndLoadXML file.Paths[Lookup Match Output]"
+          TopLeft="324.723813795881,504.42353292947">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.5411756984089"
+              EndConnector="158.819050178398,49.8352948726667"
               Start="0,0"
-              End="0,19.0411756984089">
+              End="158.819050178398,42.3352948726667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.0411756984089" />
+                    End="0,16.3523162277184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.3523162277184"
+                    Point2="0,20.3523162277184"
+                    Point3="4,20.3523162277184" />
+                  <mssgle:LineSegment
+                    End="154.819050178398,20.3523162277184" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.819050178398,20.3523162277184"
+                    Point2="158.819050178398,20.3523162277184"
+                    Point3="158.819050178398,24.3523162277184" />
+                  <mssgle:LineSegment
+                    End="158.819050178398,42.3352948726667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output1]"
-          TopLeft="353.48571926331,275.529414192781">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.6470579827119"
-              Start="0,0"
-              End="0,30.1470579827119">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.1470579827119" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output]"
-          TopLeft="115.942858150054,264.988238202659">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.6235279703635"
-              Start="0,0"
-              End="0,32.1235279703635">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.1235279703635" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="31.2181383704492,25.3523162277184,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9525,33 +9499,33 @@ where [refTable].[SSN] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="101.577147401693,37.2705891619095"
+              EndConnector="179.291434439445,36.6588244474475"
               Start="0,0"
-              End="101.577147401693,29.7705891619095">
+              End="179.291434439445,29.1588244474475">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.31484108001256" />
+                    End="0,7.12911768045946" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,7.31484108001256"
-                    Point2="0,11.3148410800126"
-                    Point3="4,11.3148410800126" />
+                    Point1="0,7.12911768045946"
+                    Point2="0,11.1291176804595"
+                    Point3="4,11.1291176804595" />
                   <mssgle:LineSegment
-                    End="97.5771474016931,11.3148410800126" />
+                    End="175.291434439445,11.1291176804595" />
                   <mssgle:CubicBezierSegment
-                    Point1="97.5771474016931,11.3148410800126"
-                    Point2="101.577147401693,11.3148410800126"
-                    Point3="101.577147401693,15.3148410800126" />
+                    Point1="175.291434439445,11.1291176804595"
+                    Point2="179.291434439445,11.1291176804595"
+                    Point3="179.291434439445,15.1291176804595" />
                   <mssgle:LineSegment
-                    End="101.577147401693,29.7705891619095" />
+                    End="179.291434439445,29.1588244474475" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="25.1714447945965,16.3148410800126,51.2342578125,11.0625"
+              BoundingBox="64.0285883134726,16.1291176804595,51.2342578125,11.0625"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9561,45 +9535,45 @@ where [refTable].[SSN] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-107.78285723044,96.0000017502728"
+              EndConnector="-60.9257135753247,96.0000017502726"
               Start="0,0"
-              End="-107.78285723044,88.5000017502728">
+              End="-60.9257135753247,88.5000017502726">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.0191680017746" />
+                    End="0,39.0191680017745" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.0191680017746"
-                    Point2="0,43.0191680017746"
-                    Point3="-4,43.0191680017746" />
+                    Point1="0,39.0191680017745"
+                    Point2="0,43.0191680017745"
+                    Point3="-4,43.0191680017745" />
                   <mssgle:LineSegment
-                    End="-103.78285723044,43.0191680017746" />
+                    End="-56.9257135753247,43.0191680017745" />
                   <mssgle:CubicBezierSegment
-                    Point1="-103.78285723044,43.0191680017746"
-                    Point2="-107.78285723044,43.0191680017746"
-                    Point3="-107.78285723044,47.0191680017746" />
+                    Point1="-56.9257135753247,43.0191680017745"
+                    Point2="-60.9257135753247,43.0191680017745"
+                    Point3="-60.9257135753247,47.0191680017745" />
                   <mssgle:LineSegment
-                    End="-107.78285723044,88.5000017502728" />
+                    End="-60.9257135753247,88.5000017502726" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-87.34640908397,48.0191680017746,66.9099609375,11.111328125"
+              BoundingBox="-63.9178372564124,48.0191680017745,66.9099609375,11.111328125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Data Conversion Output3]"
-          TopLeft="448.228577958321,132.705883451152">
+          TopLeft="525.942864996073,132.09411873669">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
               EndConnector="-70.438096882697,101.223530741629"
               Start="0,0"
-              End="-70.438096882697,93.7235307416286">
+              End="-70.438096882697,93.723530741629">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -9616,7 +9590,7 @@ where [refTable].[SSN] = ?</property>
                     Point2="-70.438096882697,60.0400142341774"
                     Point3="-70.438096882697,64.0400142341774" />
                   <mssgle:LineSegment
-                    End="-70.438096882697,93.7235307416286" />
+                    End="-70.438096882697,93.723530741629" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9627,7 +9601,7 @@ where [refTable].[SSN] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Data Conversion Output2]"
-          TopLeft="352.971433145173,188.376472467205">
+          TopLeft="430.685720182925,187.764707752743">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9649,7 +9623,7 @@ where [refTable].[SSN] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Data Conversion Output1]"
-          TopLeft="188.628573326188,191.435296039515">
+          TopLeft="235.485716981303,191.435296039515">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9683,7 +9657,7 @@ where [refTable].[SSN] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Data Conversion Output]"
-          TopLeft="92.4380947028697,128.423530449918">
+          TopLeft="139.295238357985,128.423530449918">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -9709,62 +9683,62 @@ where [refTable].[SSN] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-178.948575301657,32.9882361606751"
+              EndConnector="-132.091431646542,32.9882361606751"
               Start="0,0"
-              End="-178.948575301657,25.4882361606751">
+              End="-132.091431646542,25.4882361606751">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,6.01477728314072" />
+                    End="0,6.01477728314073" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,6.01477728314072"
+                    Point1="0,6.01477728314073"
                     Point2="0,10.0147772831407"
                     Point3="-4,10.0147772831407" />
                   <mssgle:LineSegment
-                    End="-174.948575301657,10.0147772831407" />
+                    End="-128.091431646542,10.0147772831407" />
                   <mssgle:CubicBezierSegment
-                    Point1="-174.948575301657,10.0147772831407"
-                    Point2="-178.948575301657,10.0147772831407"
-                    Point3="-178.948575301657,14.0147772831407" />
+                    Point1="-128.091431646542,10.0147772831407"
+                    Point2="-132.091431646542,10.0147772831407"
+                    Point3="-132.091431646542,14.0147772831407" />
                   <mssgle:LineSegment
-                    End="-178.948575301657,25.4882361606751" />
+                    End="-132.091431646542,25.4882361606751" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-110.197979057078,15.0147772831407,41.4473828125,9.421875"
+              BoundingBox="-86.7694072295209,15.0147772831407,41.4473828125,9.421875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Sort Output1]"
-          TopLeft="350.91429078433,354.776472175493">
+          TopLeft="428.628577822082,354.164707461031">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-91.9809545899734,27.0588260518639"
+              EndConnector="-103.409526213172,35.0117673398705"
               Start="0,0"
-              End="-91.9809545899734,19.5588260518639">
+              End="-103.409526213172,27.5117673398705">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.0497493953342" />
+                    End="0,16.7669797135918" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.0497493953342"
-                    Point2="0,16.0497493953342"
-                    Point3="-4,16.0497493953342" />
+                    Point1="0,16.7669797135918"
+                    Point2="0,20.7669797135918"
+                    Point3="-4,20.7669797135918" />
                   <mssgle:LineSegment
-                    End="-87.9809545899734,16.0497493953342" />
+                    End="-99.4095262131725,20.7669797135918" />
                   <mssgle:CubicBezierSegment
-                    Point1="-87.9809545899734,16.0497493953342"
-                    Point2="-91.9809545899734,16.0497493953342"
-                    Point3="-91.9809545899734,20.0497493953342" />
+                    Point1="-99.4095262131725,20.7669797135918"
+                    Point2="-103.409526213172,20.7669797135918"
+                    Point3="-103.409526213172,24.7669797135918" />
                   <mssgle:LineSegment
-                    End="-91.9809545899734,19.5588260518639" />
+                    End="-103.409526213172,27.5117673398705" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9775,30 +9749,30 @@ where [refTable].[SSN] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Sort Output]"
-          TopLeft="119.085715482673,346.211766173023">
+          TopLeft="165.942859137788,346.211766173023">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="96.3809540450169,35.6235320543336"
+              EndConnector="115.809525804455,42.9647086278785"
               Start="0,0"
-              End="96.3809540450169,28.1235320543336">
+              End="115.809525804455,35.4647086278785">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.1298435842276" />
+                    End="0,21.4842100318502" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.1298435842276"
-                    Point2="0,21.1298435842276"
-                    Point3="4,21.1298435842276" />
+                    Point1="0,21.4842100318502"
+                    Point2="0,25.4842100318502"
+                    Point3="4,25.4842100318502" />
                   <mssgle:LineSegment
-                    End="92.3809540450169,21.1298435842276" />
+                    End="111.809525804455,25.4842100318502" />
                   <mssgle:CubicBezierSegment
-                    Point1="92.3809540450169,21.1298435842276"
-                    Point2="96.3809540450169,21.1298435842276"
-                    Point3="96.3809540450169,25.1298435842276" />
+                    Point1="111.809525804455,25.4842100318502"
+                    Point2="115.809525804455,25.4842100318502"
+                    Point3="115.809525804455,29.4842100318502" />
                   <mssgle:LineSegment
-                    End="96.3809540450169,28.1235320543336" />
+                    End="115.809525804455,35.4647086278785" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9813,138 +9787,141 @@ where [refTable].[SSN] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28.3542879914268,92.9411781779624"
+              EndConnector="106.068575029179,92.3294134635005"
               Start="0,0"
-              End="28.3542879914268,85.4411781779624">
+              End="106.068575029179,84.8294134635005">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.6484592231715" />
+                    End="0,37.374317467451" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.6484592231715"
-                    Point2="0,41.6484592231715"
-                    Point3="4,41.6484592231715" />
+                    Point1="0,37.374317467451"
+                    Point2="0,41.374317467451"
+                    Point3="4,41.374317467451" />
                   <mssgle:LineSegment
-                    End="24.3542879914268,41.6484592231715" />
+                    End="102.068575029179,41.374317467451" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.3542879914268,41.6484592231715"
-                    Point2="28.3542879914268,41.6484592231715"
-                    Point3="28.3542879914268,45.6484592231715" />
+                    Point1="102.068575029179,41.374317467451"
+                    Point2="106.068575029179,41.374317467451"
+                    Point3="106.068575029179,45.374317467451" />
                   <mssgle:LineSegment
-                    End="28.3542879914268,85.4411781779624" />
+                    End="106.068575029179,84.8294134635005" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.4916060042866,46.6484592231715,67.3375,11.609375"
+              BoundingBox="19.3655375145896,46.374317467451,67.3375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output2]"
+          TopLeft="305.371432702395,430.776474800902">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.047058128568"
+              Start="0,0"
+              End="0,24.547058128568">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.547058128568" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output1]"
+          TopLeft="431.200006301062,274.917649478319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.6470579827119"
+              Start="0,0"
+              End="0,30.1470579827119">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.1470579827119" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow readAndLoadXML file.Paths[Merge Join Output]"
+          TopLeft="162.800001805169,264.988238202659">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6235279703635"
+              Start="0,0"
+              End="0,32.1235279703635">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1235279703635" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow readAndLoadXML file.Paths[Lookup No Match Output]"
-          TopLeft="216.076193492915,491.576473925765">
+          TopLeft="289.790480462548,504.42353292947">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-103.447621597238,64.2352970605081"
+              EndConnector="-90.3047642305594,50.7764733423415"
               Start="0,0"
-              End="-103.447621597238,56.7352970605081">
+              End="-90.3047642305594,43.2764733423415">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.2331562820537" />
+                    End="0,16.7366856167325" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.2331562820537"
-                    Point2="0,26.2331562820537"
-                    Point3="-4,26.2331562820537" />
+                    Point1="0,16.7366856167325"
+                    Point2="0,20.7366856167325"
+                    Point3="-4,20.7366856167325" />
                   <mssgle:LineSegment
-                    End="-99.4476215972381,26.2331562820537" />
+                    End="-86.3047642305594,20.7366856167325" />
                   <mssgle:CubicBezierSegment
-                    Point1="-99.4476215972381,26.2331562820537"
-                    Point2="-103.447621597238,26.2331562820537"
-                    Point3="-103.447621597238,30.2331562820537" />
+                    Point1="-86.3047642305594,20.7366856167325"
+                    Point2="-90.3047642305594,20.7366856167325"
+                    Point3="-90.3047642305594,24.7366856167325" />
                   <mssgle:LineSegment
-                    End="-103.447621597238,56.7352970605081" />
+                    End="-90.3047642305594,43.2764733423415" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-107.530197517369,31.2331562820537,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow readAndLoadXML file\OLE DB Command"
-          TopLeft="317.714291124928,542.635298227356" />
-        <EdgeLayout
-          Id="Package\Data Flow readAndLoadXML file.Paths[Lookup Match Output]"
-          TopLeft="251.009526826249,491.576473925765">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="149.104764298679,51.0588243015914"
-              Start="0,0"
-              End="149.104764298679,43.5588243015914">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8519953791115" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8519953791115"
-                    Point2="0,20.8519953791115"
-                    Point3="4,20.8519953791115" />
-                  <mssgle:LineSegment
-                    End="145.104764298679,20.8519953791115" />
-                  <mssgle:CubicBezierSegment
-                    Point1="145.104764298679,20.8519953791115"
-                    Point2="149.104764298679,20.8519953791115"
-                    Point3="149.104764298679,24.8519953791115" />
-                  <mssgle:LineSegment
-                    End="149.104764298679,43.5588243015914" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="26.3609954305896,25.8519953791115,96.3827734375,11.609375"
+              BoundingBox="-100.95876883403,25.7366856167325,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow readAndLoadXML file\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[MoLoanAppDatafromExcel]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow readAndLoadXML file\OLE DB Destination">
     <Properties>
@@ -9955,6 +9932,29 @@ where [refTable].[SSN] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow readAndLoadXML file\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[MoLoanAppDatafromExcel]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

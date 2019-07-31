@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ErrorHandlingOnStgTbls"
   DTS:PackageType="5"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{581DC783-62C7-41C3-BC59-B77294CBD41D}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{7FF7AC0B-738E-4713-ABBE-81EF8871F2D9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

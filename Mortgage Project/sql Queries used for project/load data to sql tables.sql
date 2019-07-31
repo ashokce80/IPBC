@@ -447,3 +447,70 @@ LEN(RealEstateAgentPhone) == 10
 Len(Zip) == 5
 
 LEN((DT_STR,10,1252)SSN) == 9
+
+------------
+--Creating new ODS database Mortgage_ODS
+Create database Mortgage_ODS
+
+Select	*
+From	[dbo].[Borrower_details]
+
+Select *
+From	[dbo].[MoLoanAppDatafromExcel]
+
+
+Exec  dbo.UD_SP_UpdateBorrowerTBL 109876234,	'Wilbur', 	'Royals',	'test@coolmail.com',	9789838620,	9789838600,	'Divorsed',	'1975-10-07',	'10 Wall St',	'Burlington',	'MA',	'01803-4749',	3,	'Male',	'Hispanic or Latino',	'White',	123234572,	'Dennis', 	'Bell',	'Bell@gmail.com'
+
+----Create Final tbl in Mortgage_ODS db
+Create database Mortgage_ODS
+
+CREATE TABLE [dbo].[Final_Mortgage](
+			[SSN] [bigint] Not NULL,
+			[Borrower Email] [varchar](50) Not NULL,
+			[Borrower FirstName] [varchar](50) Not NULL,
+			[Borrower LastName] [varchar](50) Not NULL,
+			[Current Street Address] [varchar](50) Not NULL,
+			[City] [varchar](50) Not NULL,
+			[Zip] [varchar](15)  Not NULL,
+			[State] [varchar](50) Not NULL,
+			[Cell Phone] [bigint] NULL,
+			[Home Phone] [bigint] Not NULL,
+			[Date of Birth] [date] Not NULL,
+			[YearsAtThisAddress] [int] Not NULL,
+			[Bonuses] [money] NULL,
+			[Marital Status] [varchar](50) Not NULL,
+			[Co_Borrower SSN] [bigint] Not NULL,
+			[MutualFund] [money] NULL,
+			[Commission] [money] NULL,
+			[OtherIncome] [money] NULL,
+			[Savings] [money] Not NULL,
+			[Checking] [money] Not NULL,
+			[MonthlyIncome] [money] Not NULL,
+			[RetirementFund] [money] NULL,
+			[Loan Date] [date] Not NULL,
+			[Purchase Price] [money] Not NULL,
+			[Co_Borrower Email] [varchar](50) Not NULL,
+			[Co_Borrower FirstName] [varchar](50) Not NULL,
+			[Co_Borrower LastName] [varchar](50) Not NULL,
+			[CreditCardAuthorization] [varchar](50) Not NULL,
+			[Refferal] [varchar](50) NULL,
+			[RealEstateAgentName] [varchar](50) NULL,
+			[RealEstateAgentEmail] [varchar](50) NULL,
+			[Rent or Own] [varchar](50) Not NULL,
+			[RealEstateAgentPhone] [bigint] NULL,
+			[Property_ID] [int] Not NULL,
+			[Number of Units] [int] Not NULL,
+			[LoanAmount] [int] Not NULL,
+			[Loan_ID] [int] Not NULL,
+			[Purpose of Loan] [varchar](50) Not NULL,
+			[Property Usage] [varchar](50) Not NULL,
+			[Property City] [varchar](50) Not NULL,
+			[Property State] [varchar](50) Not NULL,
+			[Property Zip] [varchar](15) Not NULL,
+			[Sex] [varchar](50) NULL,
+			[Ethnicity] [varchar](50) NULL,
+			[Race] [varchar](50) NULL
+)
+GO
+
+Select * From [dbo].[Final_Mortgage]
