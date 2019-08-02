@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ErrorHandlingOnStgTbls"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{15C9CA49-E4F7-4E99-A6CE-E25C46C86C0C}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{7FF7AC0B-738E-4713-ABBE-81EF8871F2D9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1707,7 +1707,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="SSN"
-              DTS:DTSID="{93B70F51-D30F-4891-85FB-1EA8EC1B59A1}"
+              DTS:DTSID="{518DDB5C-BBF5-41DC-AC97-DF028CCDF160}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1716,7 +1716,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Borrower FirstName"
-              DTS:DTSID="{1EC63157-AB50-4295-97DC-6DACB5049065}"
+              DTS:DTSID="{D21B8CEC-0424-431A-A5B9-6949E11078A7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1725,7 +1725,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Borrower LastName"
-              DTS:DTSID="{B506B3A2-E3C8-4DBE-817D-A7F6614276B8}"
+              DTS:DTSID="{1FD13EC1-FA79-4D94-B03A-0D8B3EDD4767}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1734,7 +1734,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Borrower Email"
-              DTS:DTSID="{D182D4D9-BA85-4E8A-A675-595F1D3BDB57}"
+              DTS:DTSID="{5D51EEC9-B73F-4DB4-9A89-8E0F73DF6473}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1743,7 +1743,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Home Phone"
-              DTS:DTSID="{0B8A1F6F-5EA9-49F5-82FD-8B1B4A7F02A7}"
+              DTS:DTSID="{BB27CDC1-434B-44E1-BBCD-3C3AB66CAA20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1752,7 +1752,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cell Phone"
-              DTS:DTSID="{64E62258-6F86-4E28-B46C-4668B734C429}"
+              DTS:DTSID="{BFE53B36-2C05-4757-BB04-69E07F25B575}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1761,7 +1761,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Marital Status"
-              DTS:DTSID="{77E290F0-A33D-44B9-B0DF-F3CF8F9CAFFE}"
+              DTS:DTSID="{2FEE30B6-FDFA-400C-B6B2-A6F1D58509BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1769,7 +1769,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="Date of Birth"
-              DTS:DTSID="{F7DA98E7-DEE1-492D-BFE3-EF6724BD9732}"
+              DTS:DTSID="{F1B305A9-196C-459A-9DEB-D2121EDEC2AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1778,7 +1778,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Current Street Address"
-              DTS:DTSID="{CD9B1E7A-7E4D-48EB-BB1B-9E96A516998E}"
+              DTS:DTSID="{D5C309C1-3E03-44F4-82D8-A338B9FFA06A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1787,7 +1787,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{8A555AF3-30DD-43BB-B4EB-E235010F2972}"
+              DTS:DTSID="{E41A13B2-2830-466E-80AE-68566BF4B600}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1796,7 +1796,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State"
-              DTS:DTSID="{EFBE1282-1828-435D-A898-36BC3BDA9A72}"
+              DTS:DTSID="{DD6DECEA-27B2-44A5-9655-DAD36F6D5A2E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1805,7 +1805,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Zip"
-              DTS:DTSID="{433947F0-D932-43E8-A11D-DE2ED4FEE1C8}"
+              DTS:DTSID="{CE9671C2-EC3D-473A-A368-3F07C7BA43C6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1813,7 +1813,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="YearsAtThisAddress"
-              DTS:DTSID="{5BAA9368-28F9-4C09-98A1-97F3D170999E}"
+              DTS:DTSID="{CF817D8A-3570-44B7-BD11-AA4828BE955C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1822,7 +1822,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex"
-              DTS:DTSID="{A912ACDC-30C8-475B-A766-9AFCE4559856}"
+              DTS:DTSID="{69106735-B653-4B0F-84B7-8F291235AB17}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1831,7 +1831,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Ethnicity"
-              DTS:DTSID="{BF9A1C53-FB7D-4D85-9DC5-8F0F804928F5}"
+              DTS:DTSID="{07E35ADC-E4EB-4243-9C91-1D2449DFFACE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1840,7 +1840,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Race"
-              DTS:DTSID="{1B9FF2FA-72E8-46DD-B5EB-24571B61FBD1}"
+              DTS:DTSID="{BE01B9B5-C93F-40E8-A004-531FE4706D41}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1848,7 +1848,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Co-Borrower SSN"
-              DTS:DTSID="{169CA9CC-0ECB-4FE4-9BED-EE22F9BFB76B}"
+              DTS:DTSID="{BB8298F1-742F-4B56-B340-098A190BE285}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1857,7 +1857,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Co-Borrower FirstName"
-              DTS:DTSID="{CBF694B7-09B2-4649-9DCE-2967C7F7E131}"
+              DTS:DTSID="{EA296F2D-1827-410A-BF90-B4C7E367D6A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1866,7 +1866,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Co-Borrower LastName"
-              DTS:DTSID="{7A5B7393-C6AE-46D1-B37E-7C9AE1D06B1A}"
+              DTS:DTSID="{94A7121B-D064-47F0-BA3A-06A16AB5E2FD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1875,7 +1875,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Co-Borrower Email"
-              DTS:DTSID="{07C30C69-459E-4F82-ACC8-BC9FDBB2C002}"
+              DTS:DTSID="{3D14B0F9-A3F6-4215-9FD6-4CA4FB4CDB07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1884,7 +1884,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="MonthlyIncome"
-              DTS:DTSID="{24955FCC-4EF2-4640-A9E0-47FF194945EF}"
+              DTS:DTSID="{1B2E4C5B-F3FF-40DD-BA82-7C9BBD5002AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1893,7 +1893,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Bonuses"
-              DTS:DTSID="{A56FE152-FC33-42F3-B50B-BF0EA47A5CAF}"
+              DTS:DTSID="{4E140AF0-B94D-401F-8786-3B3CB3CC1CCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1902,7 +1902,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Commission"
-              DTS:DTSID="{1A3AD43E-F253-474E-8F65-DA5F9F4E33DC}"
+              DTS:DTSID="{C4F53D35-BE8A-464D-9CD0-D701CD453F94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1911,7 +1911,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="OtherIncome"
-              DTS:DTSID="{CC8CB74E-7BDE-4EC4-9E7C-A3FD920733AF}"
+              DTS:DTSID="{916F2FA8-A19C-44B9-AA9E-E1ACB77D455F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1920,7 +1920,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Rent or Own"
-              DTS:DTSID="{5539B8A6-9067-4912-8133-752127B061BB}"
+              DTS:DTSID="{682885E8-1C6A-41E8-A584-0AB2D5A8F42B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1928,7 +1928,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Checking"
-              DTS:DTSID="{5390CFBE-346A-431D-BDAC-0688A1111F42}"
+              DTS:DTSID="{3FFDAA43-324F-4749-BCB6-66AEEC1FC46A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1936,7 +1936,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Savings"
-              DTS:DTSID="{90F3CD70-EAFC-4BB2-A45C-4C1AA957834A}"
+              DTS:DTSID="{5DDF237C-C8A4-4D5F-AD2F-98901E204F67}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1944,7 +1944,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="RetirementFund"
-              DTS:DTSID="{43DDE9DB-7835-487D-AEA5-ED547B5299E9}"
+              DTS:DTSID="{77AF9010-2919-40E1-9690-5D8CAEEBDC2A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1952,7 +1952,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="MutualFund"
-              DTS:DTSID="{EA8BB2C8-38BE-4F5F-B425-57782EB358A2}"
+              DTS:DTSID="{B229E569-BDB6-44F6-9DB6-11A56F0E934E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1960,7 +1960,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Property_ID"
-              DTS:DTSID="{BD08655A-BC16-4E47-B3BB-337813D15E53}"
+              DTS:DTSID="{A94CA1BF-20C8-476A-893D-578215D1C538}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1969,7 +1969,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Property Usage"
-              DTS:DTSID="{783AAC1A-A0B3-463D-8E2D-9E46F2F430BA}"
+              DTS:DTSID="{EEDB13E6-8D69-438F-8A7A-418FE8AA66BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1978,7 +1978,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Property City"
-              DTS:DTSID="{CA7699CE-6A74-4598-928E-FB773C9258B5}"
+              DTS:DTSID="{58B656E6-A41A-46F9-9B77-CB8310B23955}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1987,7 +1987,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Property State"
-              DTS:DTSID="{ADDD5E3E-4FE8-4A68-B794-BE17C5A1B005}"
+              DTS:DTSID="{B7E6889B-0767-4B11-87EE-072E7A60B2BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1996,7 +1996,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Property Zip"
-              DTS:DTSID="{9DEBAA27-EEE4-46C7-9ED6-0BBDD38B909A}"
+              DTS:DTSID="{961B81A9-3430-4BBF-9984-6BFF5E1F72A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2005,7 +2005,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="RealEstateAgentName"
-              DTS:DTSID="{EF328F36-9EF3-4C99-9A57-26385477849B}"
+              DTS:DTSID="{369621C2-DFAB-4E84-AE6B-55850A10F211}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2014,7 +2014,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="RealEstateAgentPhone"
-              DTS:DTSID="{B45B07A0-3CC5-4DA8-85E1-A331CEBE2ACB}"
+              DTS:DTSID="{9660A56A-9832-4AD6-BB61-EA0F3EFE57E2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2023,7 +2023,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="RealEstateAgentEmail"
-              DTS:DTSID="{2A4337FE-9BC3-45FA-BF9A-F503B18EF75F}"
+              DTS:DTSID="{EFB14C43-C028-4C6C-8748-C839D36B0516}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2031,7 +2031,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Loan_ID"
-              DTS:DTSID="{484EE91A-32B9-480E-AB8A-0959C77D45AF}"
+              DTS:DTSID="{EDA26815-2EF9-492D-8A38-73DD7EF247F2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2040,7 +2040,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Purpose of Loan"
-              DTS:DTSID="{C06CD88D-1F23-4677-A5CB-793F2EFACFD9}"
+              DTS:DTSID="{5129C435-F493-4B6A-9D0D-741DF4B05485}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2048,7 +2048,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="LoanAmount"
-              DTS:DTSID="{E4CFCF8C-0A54-438F-97DB-B96B02E9F53D}"
+              DTS:DTSID="{417ADBDD-1F4C-48D9-A019-B6122DD85017}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2056,7 +2056,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Purchase Price"
-              DTS:DTSID="{3319BD0D-A9AB-4192-8858-EE9D26C149A3}"
+              DTS:DTSID="{CE1F440F-158D-4715-9A8B-345A2B2FB685}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2065,7 +2065,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CreditCardAuthorization"
-              DTS:DTSID="{E0C1C5AC-13D1-4C56-A3D3-DCFDDECF5314}"
+              DTS:DTSID="{41E7E77F-8FFF-47D3-9E29-B5F10591F0AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2073,7 +2073,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Units"
-              DTS:DTSID="{F0F9208D-D679-49C2-AFF4-587AB384D13E}"
+              DTS:DTSID="{1212D2E8-2447-415E-9315-096ADD847EC0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2082,7 +2082,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Refferal"
-              DTS:DTSID="{BFAA3168-DB63-4F6C-8DA4-56AF76AEF393}"
+              DTS:DTSID="{E9845488-8C7C-4DF8-8419-80AFBFBDF7C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -2090,7 +2090,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="Loan Date"
-              DTS:DTSID="{0742A786-B49F-4467-A8F1-CEB9E33111FA}"
+              DTS:DTSID="{29788016-B888-42CB-89E1-FF432F36C0AA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2506,6 +2506,16 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{4734768D-552B-45F9-A894-90B62BF964F0}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=www.goog.smtp.com;UseWindowsAuthentication=False;EnableSsl=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -9781,2258 +9791,41 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task 1"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{48CF4F24-C3E1-48CB-9E43-2F099548F978}"
-      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:refId="Package\Send Mail Task"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{3C663F24-E9E4-4664-BDD3-F413C625DBD6}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task 1"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      DTS:ObjectName="Send Mail Task"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; SQL Server 2017; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="FileAttachments">@[User::SSNErrorFile] + "|"+ @[User::ZipErrorFile]+ "|"+ @[User::AgentPhoneErrorFile]+ "|"+  @[User::CellPhoneErrorFile]+ "|"+   @[User::HomePhoneErrorFile]+ "|"+  @[User::NullInDataFile]</DTS:PropertyExpression>
       <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Data Flow Task 1\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Borrower FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower FirstName"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower FirstName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Borrower LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower LastName"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower LastName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Borrower Email]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower Email"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower Email]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Home Phone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Home Phone"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Cell Phone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Cell Phone"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Cell Phone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Marital Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Marital Status"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Marital Status]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Date of Birth]"
-                      cachedDataType="dbDate"
-                      cachedName="Date of Birth"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Date of Birth]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Current Street Address]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Current Street Address"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Current Street Address]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="City"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[State]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="State"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[State]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Zip"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[YearsAtThisAddress]"
-                      cachedDataType="i4"
-                      cachedName="YearsAtThisAddress"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[YearsAtThisAddress]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Co-Borrower SSN]"
-                      cachedDataType="i4"
-                      cachedName="Co-Borrower SSN"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Co-Borrower FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower FirstName"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower FirstName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Co-Borrower LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower LastName"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower LastName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Co-Borrower Email]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower Email"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[MonthlyIncome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="MonthlyIncome"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MonthlyIncome]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Rent or Own]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Rent or Own"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Rent or Own]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Checking]"
-                      cachedDataType="i4"
-                      cachedName="Checking"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Checking]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Savings]"
-                      cachedDataType="i4"
-                      cachedName="Savings"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Savings]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Property_ID]"
-                      cachedDataType="i4"
-                      cachedName="Property_ID"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Property Usage]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property Usage"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Usage]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Property City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property City"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Property State]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property State"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property State]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Property Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Property Zip"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Zip]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[RealEstateAgentPhone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="RealEstateAgentPhone"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentPhone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Loan_ID]"
-                      cachedDataType="i4"
-                      cachedName="Loan_ID"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Purpose of Loan]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Purpose of Loan"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purpose of Loan]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[LoanAmount]"
-                      cachedDataType="i4"
-                      cachedName="LoanAmount"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[LoanAmount]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Purchase Price]"
-                      cachedDataType="i4"
-                      cachedName="Purchase Price"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purchase Price]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[CreditCardAuthorization]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CreditCardAuthorization"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[CreditCardAuthorization]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Number of Units]"
-                      cachedDataType="i4"
-                      cachedName="Number of Units"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Number of Units]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input].Columns[Loan Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Loan Date"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[SSN]"
-                  description="Output 6 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="SSN"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN]([TRIM]((DT_STR,10,1252)#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]})) != 9</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">LEN(TRIM((DT_STR,10,1252)SSN)) != 9</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Home Phone]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Home Phone"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN]([TRIM](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]})) != 10</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">LEN(TRIM([Home Phone])) != 10</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Zip]"
-                  description="Output 5 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Zip"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN]([TRIM](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]})) != 10</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">LEN(TRIM(Zip)) != 10</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">2</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Cell Phone]"
-                  description="Output 3 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Cell Phone"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN]([TRIM](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Cell Phone]})) != 10</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">LEN(TRIM([Cell Phone])) != 10</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">3</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[RealEstateAgenetPhone]"
-                  description="Output 4 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="RealEstateAgenetPhone"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[LEN]([TRIM](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentPhone]})) != 10</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">LEN(TRIM(RealEstateAgentPhone)) != 10</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">4</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Checking required fields]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Checking required fields"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower FirstName]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower LastName]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower Email]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Marital Status]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Date of Birth]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Current Street Address]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[City]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[State]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[YearsAtThisAddress]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower FirstName]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower LastName]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MonthlyIncome]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Rent or Own]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Checking]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Savings]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property_ID]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Usage]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property City]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property State]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Zip]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan_ID]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purpose of Loan]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[LoanAmount]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purchase Price]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[CreditCardAuthorization]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Number of Units]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan Date]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(SSN) &amp;&amp; !ISNULL([Borrower FirstName]) &amp;&amp; !ISNULL([Borrower LastName]) &amp;&amp; !ISNULL([Borrower Email]) &amp;&amp; !ISNULL([Home Phone]) &amp;&amp; !ISNULL([Marital Status]) &amp;&amp; !ISNULL([Date of Birth]) &amp;&amp; !ISNULL([Current Street Address]) &amp;&amp; !ISNULL(City) &amp;&amp; !ISNULL(State) &amp;&amp; !ISNULL(Zip) &amp;&amp; !ISNULL(YearsAtThisAddress) &amp;&amp; !ISNULL([Co-Borrower SSN]) &amp;&amp; !ISNULL([Co-Borrower FirstName]) &amp;&amp; !ISNULL([Co-Borrower LastName]) &amp;&amp; !ISNULL([Co-Borrower Email]) &amp;&amp; !ISNULL(MonthlyIncome) &amp;&amp; !ISNULL([Rent or Own]) &amp;&amp; !ISNULL(Checking) &amp;&amp; !ISNULL(Savings) &amp;&amp; !ISNULL(Property_ID) &amp;&amp; !ISNULL([Property Usage]) &amp;&amp; !ISNULL([Property City]) &amp;&amp; !ISNULL([Property State]) &amp;&amp; !ISNULL([Property Zip]) &amp;&amp; !ISNULL(Loan_ID) &amp;&amp; !ISNULL([Purpose of Loan]) &amp;&amp; !ISNULL(LoanAmount) &amp;&amp; !ISNULL([Purchase Price]) &amp;&amp; !ISNULL(CreditCardAuthorization) &amp;&amp; !ISNULL([Number of Units]) &amp;&amp; !ISNULL([Loan Date])</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">5</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 1\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 1\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\Derived Column.Inputs[Derived Column Input].Columns[Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Zip"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task 1\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[ZipLength]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output].Columns[ZipLength]"
-                      name="ZipLength"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]})</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">LEN(Zip)</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task 1\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 1\SSN error data to File"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Flat File Destination"
-              localeId="1033"
-              name="SSN error data to File">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 1\SSN error data to File.Connections[FlatFileConnection]"
-                  connectionManagerID="{96ADC907-CA8E-4A10-ABD0-7BE5F68EE829}:invalid"
-                  connectionManagerRefId="{96ADC907-CA8E-4A10-ABD0-7BE5F68EE829}:invalid"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[SSN]"
-                      cachedDataType="i4"
-                      cachedName="SSN"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[SSN]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Borrower FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower FirstName"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower FirstName]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower FirstName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Borrower LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower LastName"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower LastName]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower LastName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Borrower Email]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Borrower Email"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower Email]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower Email]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Home Phone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Home Phone"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Home Phone]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Cell Phone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Cell Phone"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Cell Phone]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Cell Phone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Marital Status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Marital Status"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Marital Status]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Marital Status]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Date of Birth]"
-                      cachedDataType="dbDate"
-                      cachedName="Date of Birth"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Date of Birth]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Date of Birth]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Current Street Address]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Current Street Address"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Current Street Address]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Current Street Address]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="City"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[City]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[State]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="State"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[State]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[State]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Zip"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Zip]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[YearsAtThisAddress]"
-                      cachedDataType="i4"
-                      cachedName="YearsAtThisAddress"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[YearsAtThisAddress]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[YearsAtThisAddress]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Sex]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Sex"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Sex]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Sex]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Ethnicity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Ethnicity"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Ethnicity]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Ethnicity]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Race]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Race"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Race]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Race]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Co-Borrower SSN]"
-                      cachedDataType="i4"
-                      cachedName="Co-Borrower SSN"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower SSN]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Co-Borrower FirstName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower FirstName"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower FirstName]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower FirstName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Co-Borrower LastName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower LastName"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower LastName]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower LastName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Co-Borrower Email]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Co-Borrower Email"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower Email]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[MonthlyIncome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="MonthlyIncome"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[MonthlyIncome]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MonthlyIncome]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Bonuses]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Bonuses"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Bonuses]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Bonuses]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Commission]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Commission"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Commission]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Commission]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[OtherIncome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="OtherIncome"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[OtherIncome]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[OtherIncome]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Rent or Own]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Rent or Own"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Rent or Own]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Rent or Own]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Checking]"
-                      cachedDataType="i4"
-                      cachedName="Checking"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Checking]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Checking]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Savings]"
-                      cachedDataType="i4"
-                      cachedName="Savings"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Savings]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Savings]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[RetirementFund]"
-                      cachedDataType="i4"
-                      cachedName="RetirementFund"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RetirementFund]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RetirementFund]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[MutualFund]"
-                      cachedDataType="i4"
-                      cachedName="MutualFund"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[MutualFund]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MutualFund]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Property_ID]"
-                      cachedDataType="i4"
-                      cachedName="Property_ID"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property_ID]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Property Usage]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property Usage"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property Usage]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Usage]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Property City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property City"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property City]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property City]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Property State]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Property State"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property State]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property State]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Property Zip]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Property Zip"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property Zip]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Zip]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[RealEstateAgentName]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="RealEstateAgentName"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentName]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentName]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[RealEstateAgentPhone]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="RealEstateAgentPhone"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentPhone]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentPhone]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[RealEstateAgentEmail]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="RealEstateAgentEmail"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentEmail]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentEmail]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Loan_ID]"
-                      cachedDataType="i4"
-                      cachedName="Loan_ID"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Loan_ID]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Purpose of Loan]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Purpose of Loan"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Purpose of Loan]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purpose of Loan]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[LoanAmount]"
-                      cachedDataType="i4"
-                      cachedName="LoanAmount"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[LoanAmount]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[LoanAmount]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Purchase Price]"
-                      cachedDataType="i4"
-                      cachedName="Purchase Price"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Purchase Price]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purchase Price]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[CreditCardAuthorization]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="CreditCardAuthorization"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[CreditCardAuthorization]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[CreditCardAuthorization]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Number of Units]"
-                      cachedDataType="i4"
-                      cachedName="Number of Units"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Number of Units]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Number of Units]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Refferal]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Refferal"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Refferal]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Refferal]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].Columns[Loan Date]"
-                      cachedDataType="dbDate"
-                      cachedName="Loan Date"
-                      externalMetadataColumnId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Loan Date]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan Date]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[SSN]"
-                      dataType="i4"
-                      name="SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower Email" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Home Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Home Phone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Cell Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Cell Phone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Marital Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Marital Status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Date of Birth]"
-                      dataType="dbDate"
-                      name="Date of Birth" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Current Street Address]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Current Street Address" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="State" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Zip" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[YearsAtThisAddress]"
-                      dataType="i4"
-                      name="YearsAtThisAddress" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Sex]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Sex" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Ethnicity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Race]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Race" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower SSN]"
-                      dataType="i4"
-                      name="Co-Borrower SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Co-Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower Email" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[MonthlyIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="MonthlyIncome" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Bonuses]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Bonuses" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Commission]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Commission" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[OtherIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="OtherIncome" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Rent or Own]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Rent or Own" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Checking]"
-                      dataType="i4"
-                      name="Checking" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Savings]"
-                      dataType="i4"
-                      name="Savings" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RetirementFund]"
-                      dataType="i4"
-                      name="RetirementFund" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[MutualFund]"
-                      dataType="i4"
-                      name="MutualFund" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property_ID]"
-                      dataType="i4"
-                      name="Property_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property Usage]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property Usage" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property State" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Property Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Property Zip" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentPhone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentPhone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[RealEstateAgentEmail]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentEmail" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Loan_ID]"
-                      dataType="i4"
-                      name="Loan_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Purpose of Loan]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Purpose of Loan" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[LoanAmount]"
-                      dataType="i4"
-                      name="LoanAmount" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Purchase Price]"
-                      dataType="i4"
-                      name="Purchase Price" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[CreditCardAuthorization]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CreditCardAuthorization" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Number of Units]"
-                      dataType="i4"
-                      name="Number of Units" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Refferal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Refferal" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input].ExternalColumns[Loan Date]"
-                      dataType="dbDate"
-                      name="Loan Date" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task 1\Stg tbls View"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="Stg tbls View"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[UD_VW_Final_Stg_tbls]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task 1\Stg tbls View.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[.STG_Mortgage_Project]"
-                  connectionManagerRefId="Package.ConnectionManagers[.STG_Mortgage_Project]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[SSN]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[SSN]"
-                      name="SSN"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower FirstName]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower FirstName]"
-                      name="Borrower FirstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower LastName]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower LastName]"
-                      name="Borrower LastName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower Email]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Borrower Email]"
-                      name="Borrower Email"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Home Phone]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Home Phone]"
-                      name="Home Phone"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Cell Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Cell Phone]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Cell Phone]"
-                      name="Cell Phone"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Marital Status]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Marital Status]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Marital Status]"
-                      name="Marital Status"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Date of Birth]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Date of Birth]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Date of Birth]"
-                      name="Date of Birth"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Current Street Address]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Current Street Address]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Current Street Address]"
-                      name="Current Street Address"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[City]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[City]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[City]"
-                      name="City"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[State]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[State]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[State]"
-                      name="State"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Zip]"
-                      length="15"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Zip]"
-                      name="Zip"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[YearsAtThisAddress]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[YearsAtThisAddress]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[YearsAtThisAddress]"
-                      name="YearsAtThisAddress"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Sex]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Sex]"
-                      name="Sex"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Ethnicity]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Ethnicity]"
-                      name="Ethnicity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Race]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Race]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Race]"
-                      name="Race"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower SSN]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower SSN]"
-                      name="Co-Borrower SSN"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower FirstName]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower FirstName]"
-                      name="Co-Borrower FirstName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower LastName]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower LastName]"
-                      name="Co-Borrower LastName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower Email]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Co-Borrower Email]"
-                      name="Co-Borrower Email"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MonthlyIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[MonthlyIncome]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MonthlyIncome]"
-                      name="MonthlyIncome"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Bonuses]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Bonuses]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Bonuses]"
-                      name="Bonuses"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Commission]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Commission]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Commission]"
-                      name="Commission"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[OtherIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[OtherIncome]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[OtherIncome]"
-                      name="OtherIncome"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Rent or Own]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Rent or Own]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Rent or Own]"
-                      name="Rent or Own"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Checking]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Checking]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Checking]"
-                      name="Checking"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Savings]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Savings]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Savings]"
-                      name="Savings"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RetirementFund]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RetirementFund]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RetirementFund]"
-                      name="RetirementFund"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MutualFund]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[MutualFund]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[MutualFund]"
-                      name="MutualFund"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property_ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property_ID]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property_ID]"
-                      name="Property_ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Usage]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property Usage]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Usage]"
-                      name="Property Usage"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property City]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property City]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property City]"
-                      name="Property City"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property State]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property State]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property State]"
-                      name="Property State"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property Zip]"
-                      length="15"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Property Zip]"
-                      name="Property Zip"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentName]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentName]"
-                      name="RealEstateAgentName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentPhone]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentPhone]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentPhone]"
-                      name="RealEstateAgentPhone"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentEmail]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentEmail]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[RealEstateAgentEmail]"
-                      name="RealEstateAgentEmail"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan_ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Loan_ID]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan_ID]"
-                      name="Loan_ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purpose of Loan]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Purpose of Loan]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purpose of Loan]"
-                      name="Purpose of Loan"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[LoanAmount]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[LoanAmount]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[LoanAmount]"
-                      name="LoanAmount"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purchase Price]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Purchase Price]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Purchase Price]"
-                      name="Purchase Price"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[CreditCardAuthorization]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[CreditCardAuthorization]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[CreditCardAuthorization]"
-                      name="CreditCardAuthorization"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Number of Units]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Number of Units]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Number of Units]"
-                      name="Number of Units"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Refferal]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Refferal]"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Refferal]"
-                      name="Refferal"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan Date]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Loan Date]"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].Columns[Loan Date]"
-                      name="Loan Date"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[SSN]"
-                      dataType="i4"
-                      name="SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Borrower Email" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Home Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Home Phone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Cell Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Cell Phone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Marital Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Marital Status" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Date of Birth]"
-                      dataType="dbDate"
-                      name="Date of Birth" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Current Street Address]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Current Street Address" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="State" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Zip" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[YearsAtThisAddress]"
-                      dataType="i4"
-                      name="YearsAtThisAddress" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Sex" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Ethnicity" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Race]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Race" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower SSN]"
-                      dataType="i4"
-                      name="Co-Borrower SSN" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower FirstName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower LastName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Co-Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Co-Borrower Email" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[MonthlyIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="MonthlyIncome" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Bonuses]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Bonuses" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Commission]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Commission" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[OtherIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="OtherIncome" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Rent or Own]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Rent or Own" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Checking]"
-                      dataType="i4"
-                      name="Checking" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Savings]"
-                      dataType="i4"
-                      name="Savings" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RetirementFund]"
-                      dataType="i4"
-                      name="RetirementFund" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[MutualFund]"
-                      dataType="i4"
-                      name="MutualFund" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property_ID]"
-                      dataType="i4"
-                      name="Property_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property Usage]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property Usage" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property City" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Property State" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Property Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Property Zip" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentName" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentPhone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentPhone" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[RealEstateAgentEmail]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="RealEstateAgentEmail" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Loan_ID]"
-                      dataType="i4"
-                      name="Loan_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Purpose of Loan]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Purpose of Loan" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[LoanAmount]"
-                      dataType="i4"
-                      name="LoanAmount" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Purchase Price]"
-                      dataType="i4"
-                      name="Purchase Price" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[CreditCardAuthorization]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="CreditCardAuthorization" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Number of Units]"
-                      dataType="i4"
-                      name="Number of Units" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Refferal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Refferal" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output].ExternalColumns[Loan Date]"
-                      dataType="dbDate"
-                      name="Loan Date" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[SSN]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[SSN]"
-                      name="SSN" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower FirstName]"
-                      name="Borrower FirstName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower LastName]"
-                      name="Borrower LastName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Borrower Email]"
-                      name="Borrower Email" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Home Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Home Phone]"
-                      name="Home Phone" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Cell Phone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Cell Phone]"
-                      name="Cell Phone" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Marital Status]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Marital Status]"
-                      name="Marital Status" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Date of Birth]"
-                      dataType="dbDate"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Date of Birth]"
-                      name="Date of Birth" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Current Street Address]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Current Street Address]"
-                      name="Current Street Address" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[City]"
-                      name="City" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[State]"
-                      name="State" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Zip]"
-                      name="Zip" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[YearsAtThisAddress]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[YearsAtThisAddress]"
-                      name="YearsAtThisAddress" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Sex]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Sex]"
-                      name="Sex" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Ethnicity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Ethnicity]"
-                      name="Ethnicity" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Race]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Race]"
-                      name="Race" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower SSN]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower SSN]"
-                      name="Co-Borrower SSN" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower FirstName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower FirstName]"
-                      name="Co-Borrower FirstName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower LastName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower LastName]"
-                      name="Co-Borrower LastName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower Email]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Co-Borrower Email]"
-                      name="Co-Borrower Email" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[MonthlyIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[MonthlyIncome]"
-                      name="MonthlyIncome" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Bonuses]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Bonuses]"
-                      name="Bonuses" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Commission]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Commission]"
-                      name="Commission" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[OtherIncome]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[OtherIncome]"
-                      name="OtherIncome" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Rent or Own]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Rent or Own]"
-                      name="Rent or Own" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Checking]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Checking]"
-                      name="Checking" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Savings]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Savings]"
-                      name="Savings" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RetirementFund]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RetirementFund]"
-                      name="RetirementFund" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[MutualFund]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[MutualFund]"
-                      name="MutualFund" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property_ID]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property_ID]"
-                      name="Property_ID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property Usage]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property Usage]"
-                      name="Property Usage" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property City]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property City]"
-                      name="Property City" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property State]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property State]"
-                      name="Property State" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property Zip]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Property Zip]"
-                      name="Property Zip" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentName]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentName]"
-                      name="RealEstateAgentName" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentPhone]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentPhone]"
-                      name="RealEstateAgentPhone" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentEmail]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[RealEstateAgentEmail]"
-                      name="RealEstateAgentEmail" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Loan_ID]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Loan_ID]"
-                      name="Loan_ID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Purpose of Loan]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Purpose of Loan]"
-                      name="Purpose of Loan" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[LoanAmount]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[LoanAmount]"
-                      name="LoanAmount" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Purchase Price]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Purchase Price]"
-                      name="Purchase Price" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[CreditCardAuthorization]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[CreditCardAuthorization]"
-                      name="CreditCardAuthorization" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Number of Units]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Number of Units]"
-                      name="Number of Units" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Refferal]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Refferal]"
-                      name="Refferal" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Loan Date]"
-                      dataType="dbDate"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[Loan Date]"
-                      name="Loan Date" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Data Flow Task 1.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task 1\SSN error data to File.Inputs[Flat File Destination Input]"
-              name="Derived Column Output"
-              startId="Package\Data Flow Task 1\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task 1\Conditional Split.Inputs[Conditional Split Input]"
-              name="OLE DB Source Output"
-              startId="Package\Data Flow Task 1\Stg tbls View.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Data Flow Task 1.Paths[SSN]"
-              endId="Package\Data Flow Task 1\Derived Column.Inputs[Derived Column Input]"
-              name="SSN"
-              startId="Package\Data Flow Task 1\Conditional Split.Outputs[SSN]" />
-          </paths>
-        </pipeline>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{4734768D-552B-45F9-A894-90B62BF964F0}"
+          SendMailTask:From="ashvi@gmail.com"
+          SendMailTask:To="test@gmail.com"
+          SendMailTask:Subject="Error in Files to process"
+          SendMailTask:MessageSource="Please See attached files for data error...." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask">
+          <SendMailTask:Attachments
+            SendMailTask:FileName="C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\SSNErrorFile.txt|C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\ZipErrorFile.txt|C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\AgentPhoneErrorFile.txt|C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\CellPhoneErrorFile.txt|C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\HomePhoneErrorFile.txt|C:\Users\Ashok\Desktop\Data Analytics Course\IPBC\Mortgage Project\mortgage project Files\Rejected\txtFromStgTbls\NullInDataFile.txt" />
+        </SendMailTask:SendMailTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7CAA6388-482D-4E0C-8069-6A19D17ADCA8}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Send Mail Task" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -12044,15 +9837,37 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
-          TopLeft="208.571432123379,71.5764715920682" />
+          TopLeft="282.285719093011,83.8117658813106" />
         <NodeLayout
-          Size="160,41.6"
-          Id="Package\Data Flow Task 1"
-          TopLeft="308.000005245209,218.400003062978" />
+          Size="148.8,41.6"
+          Id="Package\Send Mail Task"
+          TopLeft="277.714290443732,178.63529662294" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="354.800004768372,125.411765881311">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.223530741629"
+              Start="0,0"
+              End="0,45.723530741629">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.723530741629" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -12098,15 +9913,15 @@
         <NodeLayout
           Size="192.8,41.6"
           Id="Package\Data Flow Task\Cell Ph error data to File"
-          TopLeft="296.00000504085,278.400002479553" />
+          TopLeft="222.857146652378,283.905884909712" />
         <NodeLayout
           Size="193.6,41.6"
           Id="Package\Data Flow Task\Home ph err data to File"
-          TopLeft="494.85715128451,272.941177448682" />
+          TopLeft="419.428578571398,285.788236452387" />
         <NodeLayout
           Size="188,41.6"
           Id="Package\Data Flow Task\AgenPH err data to File"
-          TopLeft="604.000010286059,213.647057545144" />
+          TopLeft="532.000009059906,237.505881409167" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[SSN]"
           TopLeft="238.857146924856,113.788236598242">
@@ -12133,149 +9948,149 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Cell Phone]"
-          TopLeft="281.280004223415,133.97647188378">
+          TopLeft="277.371432395857,133.97647188378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="94.5485719637971,144.423530595773"
+              EndConnector="11.0285708738835,149.929413025932"
               Start="0,0"
-              End="94.5485719637971,136.923530595773">
+              End="11.0285708738835,142.429413025932">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,68.2577849742466" />
+                    End="0,56.8944077520709" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,68.2577849742466"
-                    Point2="0,72.2577849742466"
-                    Point3="4,72.2577849742466" />
+                    Point1="0,56.8944077520709"
+                    Point2="0,60.8944077520709"
+                    Point3="4,60.8944077520709" />
                   <mssgle:LineSegment
-                    End="90.5485719637971,72.2577849742466" />
+                    End="7.0285708738835,60.8944077520709" />
                   <mssgle:CubicBezierSegment
-                    Point1="90.5485719637971,72.2577849742466"
-                    Point2="94.5485719637971,72.2577849742466"
-                    Point3="94.5485719637971,76.2577849742466" />
+                    Point1="7.0285708738835,60.8944077520709"
+                    Point2="11.0285708738835,60.8944077520709"
+                    Point3="11.0285708738835,64.8944077520709" />
                   <mssgle:LineSegment
-                    End="94.5485719637971,136.923530595773" />
+                    End="11.0285708738835,142.429413025932" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="23.3954187943985,77.2577849742466,47.757734375,9.7490234375"
+              BoundingBox="-18.3645817505583,65.8944077520709,47.757734375,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Home Phone]"
-          TopLeft="301.417146924856,133.97647188378">
+          TopLeft="316.057146924856,133.97647188378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="290.240004359654,138.964705564902"
+              EndConnector="200.171431646542,151.811764568606"
               Start="0,0"
-              End="290.240004359654,131.464705564902">
+              End="200.171431646542,144.311764568606">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.2040067268192" />
+                    End="0,71.9058822843031" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.2040067268192"
-                    Point2="0,62.2040067268192"
-                    Point3="4,62.2040067268192" />
+                    Point1="0,71.9058822843031"
+                    Point2="0,75.9058822843031"
+                    Point3="4,75.9058822843031" />
                   <mssgle:LineSegment
-                    End="286.240004359654,62.2040067268192" />
+                    End="196.171431646542,75.9058822843031" />
                   <mssgle:CubicBezierSegment
-                    Point1="286.240004359654,62.2040067268192"
-                    Point2="290.240004359654,62.2040067268192"
-                    Point3="290.240004359654,66.2040067268192" />
+                    Point1="196.171431646542,75.9058822843031"
+                    Point2="200.171431646542,75.9058822843031"
+                    Point3="200.171431646542,79.9058822843031" />
                   <mssgle:LineSegment
-                    End="290.240004359654,131.464705564902" />
+                    End="200.171431646542,144.311764568606" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="116.453654523577,67.2040067268192,57.3326953125,9.7490234375"
+              BoundingBox="71.4193681670209,80.9058822843031,57.3326953125,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[RealEstateAgenetPhone]"
-          TopLeft="330.697146924856,133.97647188378">
+          TopLeft="340.457146924856,133.97647188378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="367.302863361203,79.6705856613634"
+              EndConnector="285.542862135051,103.529409525386"
               Start="0,0"
-              End="367.302863361203,72.1705856613634">
+              End="285.542862135051,96.0294095253862">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.6625060029686" />
+                    End="0,38.0488678687722" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.6625060029686"
-                    Point2="0,35.6625060029686"
-                    Point3="4,35.6625060029686" />
+                    Point1="0,38.0488678687722"
+                    Point2="0,42.0488678687722"
+                    Point3="4,42.0488678687722" />
                   <mssgle:LineSegment
-                    End="363.302863361203,35.6625060029686" />
+                    End="281.542862135051,42.0488678687722" />
                   <mssgle:CubicBezierSegment
-                    Point1="363.302863361203,35.6625060029686"
-                    Point2="367.302863361203,35.6625060029686"
-                    Point3="367.302863361203,39.6625060029686" />
+                    Point1="281.542862135051,42.0488678687722"
+                    Point2="285.542862135051,42.0488678687722"
+                    Point3="285.542862135051,46.0488678687722" />
                   <mssgle:LineSegment
-                    End="367.302863361203,72.1705856613634" />
+                    End="285.542862135051,96.0294095253862" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="130.850084024352,40.6625060029686,105.6026953125,11.6630859375"
+              BoundingBox="89.9700834112753,47.0488678687722,105.6026953125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="165.6,41.6"
           Id="Package\Data Flow Task\Zip err data to File"
-          TopLeft="702.857154826729,162.305878929613" />
+          TopLeft="637.714296574496,185.552938079174" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Zip]"
-          TopLeft="359.977146924856,133.97647188378">
+          TopLeft="364.857146924856,133.97647188378">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="425.680007901873,28.329407045833"
+              EndConnector="355.65714964964,51.5764661953936"
               Start="0,0"
-              End="425.680007901873,20.829407045833">
+              End="355.65714964964,44.0764661953936">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,4.53369538817272" />
+                    End="0,9.8709435601248" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,4.53369538817272"
-                    Point2="0,8.53369538817272"
-                    Point3="4,8.53369538817272" />
+                    Point1="0,9.8709435601248"
+                    Point2="0,13.8709435601248"
+                    Point3="4,13.8709435601248" />
                   <mssgle:LineSegment
-                    End="421.680007901873,8.53369538817272" />
+                    End="351.65714964964,13.8709435601248" />
                   <mssgle:CubicBezierSegment
-                    Point1="421.680007901873,8.53369538817272"
-                    Point2="425.680007901873,8.53369538817272"
-                    Point3="425.680007901873,12.5336953881727" />
+                    Point1="351.65714964964,13.8709435601248"
+                    Point2="355.65714964964,13.8709435601248"
+                    Point3="355.65714964964,17.8709435601248" />
                   <mssgle:LineSegment
-                    End="425.680007901873,20.829407045833" />
+                    End="355.65714964964,44.0764661953936" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="205.426859419687,13.5336953881727,14.8262890625,11.3310546875"
+              BoundingBox="170.41543029357,18.8709435601248,14.8262890625,11.3310546875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12389,136 +10204,6 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task 1">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\Data Flow Task 1\Stg tbls View"
-          TopLeft="517.904765661071,20" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task 1\Conditional Split"
-          TopLeft="561.714289421938,162.470589307765" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Data Flow Task 1\SSN error data to File"
-          TopLeft="191.333333333333,201.69411873669" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task 1\Derived Column"
-          TopLeft="436,247.333333333333" />
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
-          TopLeft="587.504765661071,61.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="51.4095237608668,100.870589307765"
-              Start="0,0"
-              End="51.4095237608668,93.3705893077652">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.4352946538826" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.4352946538826"
-                    Point2="0,50.4352946538826"
-                    Point3="4,50.4352946538826" />
-                  <mssgle:LineSegment
-                    End="47.4095237608668,50.4352946538826" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47.4095237608668,50.4352946538826"
-                    Point2="51.4095237608668,50.4352946538826"
-                    Point3="51.4095237608668,54.4352946538826" />
-                  <mssgle:LineSegment
-                    End="51.4095237608668,93.3705893077652" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[Derived Column Output]"
-          TopLeft="436,268.133333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-64.6666666666668,-45.6392145966438"
-              Start="0,0"
-              End="-57.1666666666668,-45.6392145966438">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-28.3333333333334,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-28.3333333333334,0"
-                    Point2="-32.3333333333334,0"
-                    Point3="-32.3333333333334,-4" />
-                  <mssgle:LineSegment
-                    End="-32.3333333333334,-41.6392145966438" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-32.3333333333334,-41.6392145966438"
-                    Point2="-32.3333333333334,-45.6392145966438"
-                    Point3="-36.3333333333334,-45.6392145966438" />
-                  <mssgle:LineSegment
-                    End="-57.1666666666668,-45.6392145966438" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-40.3333333333334,1,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task 1.Paths[SSN]"
-          TopLeft="638.914289421938,204.070589307765">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-126.514289421938,43.2627440255681"
-              Start="0,0"
-              End="-126.514289421938,35.7627440255681">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.6313720127841" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.6313720127841"
-                    Point2="0,21.6313720127841"
-                    Point3="-4,21.6313720127841" />
-                  <mssgle:LineSegment
-                    End="-122.514289421938,21.6313720127841" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-122.514289421938,21.6313720127841"
-                    Point2="-126.514289421938,21.6313720127841"
-                    Point3="-126.514289421938,25.6313720127841" />
-                  <mssgle:LineSegment
-                    End="-126.514289421938,35.7627440255681" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-72.607906429719,26.6313720127841,18.7015234375,9.5341796875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Final OLAP">
     <Properties>
