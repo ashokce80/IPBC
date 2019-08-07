@@ -1,7 +1,7 @@
 Use Mortgage_DW
 Go
 
-Alter Proc UDF_SP_LoanByMonth
+Create Proc UDF_SP_LoanByMonth
 /*
 Ashok
 LoanProcessed to date 
@@ -152,6 +152,7 @@ UDF_SP_LoanProcessed_ToDate
 	
 	--drop table	#Financials
 	
+	Exec UDF_SP_LoanByMonth
 	
 Declare @ReportDate date = getdate()
 Select	Distinct	'Age' DemographicGroup,

@@ -11,8 +11,8 @@ Alter Proc UDF_SP_LoanGuage
 As
 Begin
 
-	drop table	#Financials 
-	drop table	#Financials2
+	--drop table	#Financials 
+	--drop table	#Financials2
 	Declare	@CurrentMonth int,
 			@CurrentYear int,
 			@PriorMonth int,
