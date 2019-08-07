@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>MortgageDSource</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@ReportDate">
+          <DefaultValue>=Nothing</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@DemographicGroups">
+          <DefaultValue>=Nothing</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT DISTINCT 
+             'Age' DemographicGroup, CASE WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) &lt; 25 THEN '&lt;=25' WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) BETWEEN 26 AND 35 THEN '26-35' WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) BETWEEN 36 AND 
+             45 THEN '36-45' WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) &gt; 46 THEN '46+' END Lable, CASE WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) &lt; 25 THEN 1 WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) BETWEEN 26 AND 35 THEN 2 WHEN DATEDIFF(yy, [Date of Birth], 
+             @ReportDate) BETWEEN 36 AND 45 THEN 3 WHEN DATEDIFF(yy, [Date of Birth], @ReportDate) &gt; 45 THEN 4 END LableOrder
+INTO     #demoTbl
+FROM   [dbo].[Dim_Borrower] AS B
+UNION
+SELECT 'Marital Status', [Marital Status], 1
+FROM   [dbo].[Dim_Borrower]
+UNION
+SELECT 'Race', [Race], 1
+FROM   [dbo].[Dim_Borrower]
+UNION
+SELECT 'Sex', [Sex], 1
+FROM   [dbo].[Dim_Borrower]
+                 SELECT *, DemographicGroup + '-' + Lable AS RealLable
+                FROM    #demoTbl
+                WHERE DemographicGroup IN (@DemographicGroups)</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="DemographicGroup">
+        <DataField>DemographicGroup</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Lable">
+        <DataField>Lable</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LableOrder">
+        <DataField>LableOrder</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="RealLable">
+        <DataField>RealLable</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

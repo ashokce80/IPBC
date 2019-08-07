@@ -49,6 +49,8 @@
     <Reports>@(Report)</Reports>
   </PropertyGroup>
   <ItemGroup>
+    <DataSet Include="DemographicsDetailPar2.rsd" />
+    <DataSet Include="DemographicsGroupPar1.rsd" />
     <DataSet Include="LoanAmountPar.rsd" />
     <DataSet Include="LoanPurposePar.rsd" />
     <DataSet Include="PropertyUsagePar.rsd" />
@@ -59,7 +61,10 @@
     <DataSource Include="MortgageDSource.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="LoanDashboardDemographics.rdl" />
+    <Report Include="LoanDashboardLoanOverview.rdl" />
     <Report Include="LoanDashboardToDATE.rdl" />
+    <Report Include="Report1.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

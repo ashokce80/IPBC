@@ -2,12 +2,16 @@ Use Mortgage_DW
 Go
 
 Alter Proc UDF_SP_LoanProcessed_ToDate
-
+/*
+Ashok
+LoanProcessed to date 
+note: to get different part of time frame to get loan date and loan count
+*/
 @ReportDate date,
 @LoanAmount varchar(max) = NULL,
 @LoanPurpose varchar(max) = NULL,
-@PropertyUsage varchar(max) = Null
-
+@PropertyUsage varchar(max) = Null,
+@Demographics2 varchar(max) = Null
 As
 Begin
 	
@@ -39,8 +43,9 @@ Begin
 							)
 	--Select	@BiginOfYear
 	
-	Select		L.*,P.[Property Usage],
-				CASE when [Loan Date] >= @BiginOfWeek AND 
+	Select		L.*,P.[Property Usage],B.[Marital Status],B.[Sex],B.[Race]
+				,DATEDIFF(YY,[Date of Birth],@ReportDate) As Age 
+				,CASE when [Loan Date] >= @BiginOfWeek AND 
 								[Loan Date] <= @ReportDate
 							Then	'WeekToDate'
 					when [Loan Date] >= @BiginOfMonth AND 
@@ -74,14 +79,29 @@ Begin
 				Case	When	LoanAmount <= 100000 Then 1
 						When	LoanAmount Between 100000 And 200000 Then         2
 						When	LoanAmount	> 200000 Then 3
-						End		LoanAmountGroupOrder
-
+						End		LoanAmountGroupOrder,
+				Case	When	DATEDIFF(yy,[Date of Birth],@ReportDate) < 25 
+						then	'<=25'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		26 and 35 then '26-35'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		36 and 45 then '36-45'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) > 46 
+						then '46+'
+						End		AgeGroup,
+				Case	When	DATEDIFF(yy,[Date of Birth],@ReportDate) < 25 
+						then	1
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		26 and 35 then 2
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		36 and 45 then 3
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) > 45 
+						then	4
+						End		AgeGroupOrder
 	Into		#Financials
 	From		[dbo].[Fact_Financials] as F
 	Left join	[dbo].[Dim_Loan] as L
 	On			F.[LoanKey] = L.[LoanKey]
 	Left join	[dbo].[Dim_Property] as P
 	On			F.[PropertyKey] = P.[PropertyKey]
+	Left join	[dbo].[Dim_Borrower] as B
+	On			F.BorrowerKey = B.BorrowerKey
 	Where		[Loan Date] <= @ReportDate
 
 
@@ -95,7 +115,19 @@ Begin
 				Select items from dbo.split(@LoanPurpose,',')) 
 				AND
 				[Property Usage] in (
-				Select	items from	dbo.split(@PropertyUsage,',')) 
+				Select	items from	dbo.split(@PropertyUsage,','))
+				ANd
+				AgeGroup in (
+				Select	items from	dbo.split(@Demographics2,','))
+				OR
+				[Marital Status] in (
+				Select	items from	dbo.split(@Demographics2,','))
+				OR
+				[Sex] in (
+				Select items from dbo.split(@Demographics2,','))
+				OR
+				[Race] in (
+				Select items from dbo.Split(@Demographics2,''))
 
 End
 
@@ -109,4 +141,37 @@ UDF_SP_LoanProcessed_ToDate
 	
 	--drop table	#Financials
 	
-	*/
+	
+Declare @ReportDate date = getdate()
+Select	Distinct	'Age' DemographicGroup,
+					Case	When	DATEDIFF(yy,[Date of Birth],@ReportDate) < 25 
+						then	'<=25'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		26 and 35 then '26-35'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		36 and 45 then '36-45'
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) > 46 
+						then '46+'
+						End		Lable,
+				Case	When	DATEDIFF(yy,[Date of Birth],@ReportDate) < 25 
+						then	1
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		26 and 35 then 2
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) between		36 and 45 then 3
+						When	DATEDIFF(yy,[Date of Birth],@ReportDate) > 45 
+						then	4
+						End		LableOrder
+Into					#demoTbl
+From					[dbo].[Dim_Borrower] as B
+Union		
+Select					'Marital Status', [Marital Status], 1
+From					[dbo].[Dim_Borrower]
+Union
+Select					'Race', [Race], 1
+From					[dbo].[Dim_Borrower]
+Union
+Select					'Sex', [Sex], 1
+From					[dbo].[Dim_Borrower]
+
+Select			*, DemographicGroup+'-'+Lable as RealLable
+From			#demoTbl
+Where			DemographicGroup in (@DemographicGroups)
+
+*/
