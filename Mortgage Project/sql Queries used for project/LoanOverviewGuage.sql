@@ -237,15 +237,15 @@ Begin
 	
 	--we need to show data in guage as % so need to result is * by 100					--Find MTDvsPrior6MonthAvg_Perg
 	Select @MTD as MonthToDateLoanCnt ,@Prior6MonthAvg as Prior6MonthAvg
-			,((@MTD * 1.00)/@Prior6MonthAvg ) * 100 as MTDvsPrior6MonthAvg_Perg
+			,Convert(Decimal(10,0),((@MTD * 1.00)/@Prior6MonthAvg ) * 100 ) as MTDvsPrior6MonthAvg_Perg
 			
 			--Find LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg
 			,@LastFullMonth as LastFullMonth , @Prior6MonthAvgExcludeCurrMonth as Prior6MonthAvgExcludeCurrMonth
-			,((@LastFullMonth * 1.00)/@Prior6MonthAvgExcludeCurrMonth ) * 100 as LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg
+			,Convert(Decimal(10,0),((@LastFullMonth * 1.00)/@Prior6MonthAvgExcludeCurrMonth ) * 100 )as LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg
 				
 			--Find QTDvsLastFullQuarter			
 			,@QTD as QTD,@LastFullQuarter as LastFullQuarterExcludeCurrQuarter
-			,((@QTD * 1.00)/@LastFullQuarter ) * 100 
+			,Convert(Decimal(10,0),((@QTD * 1.00)/@LastFullQuarter ) * 100 )
 			as QTDvsLastFullQuarterExcludeCurrQuarter
 
 	/*Select		Convert(Varchar(20),DATEPART(MM,[Loan Date])) + 
@@ -282,4 +282,16 @@ UDF_SP_LoanProcessed_ToDate
 Select	datepart(qq,getdate()-45) --shows quarter 1,2,3or4
 
 Exec UDF_SP_LoanGuage
+--for directional images
+=Switch(
+	Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value,"LoanGuages") <= 50, "Arrow_Red_15"
+	,Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") > 50 
+	And Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") <= 75, "Arrow_Yellow_15"
+	,Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") > 75, "Arrow_Green_15")
+ )
+
+ =Switch(Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") <= 50, "Arrow_Red_15", Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") > 50 And Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") <= 75, "Arrow_Yellow_15", Sum(Fields!LastFullMonthvsPrior6MonthAvgExcludeCurrMonthAVG_Perg.Value, "LoanGuages") > 75, "Arrow_Green_15")
+
+ =Switch(Sum(Fields!QTDvsLastFullQuarterExcludeCurrQuarter.Value, "LoanGuages") <= 50, "Arrow_Red_15", Sum(Fields!QTDvsLastFullQuarterExcludeCurrQuarter.Value, "LoanGuages") > 50 And Sum(Fields!QTDvsLastFullQuarterExcludeCurrQuarter.Value, "LoanGuages") <= 75, "Arrow_Yellow_15", Sum(Fields!QTDvsLastFullQuarterExcludeCurrQuarter.Value, "LoanGuages") > 75, "Arrow_Green_15")
+
 */

@@ -1,7 +1,7 @@
 Use Mortgage_DW
 Go
 
-Alter Proc UDF_SP_LoanByMonth
+Alter Proc UDF_SP_AvgLoanByAvgMonthlyIncome
 /*
 Ashok
 LoanProcessed to date 
@@ -44,6 +44,7 @@ Begin
 	--Select	@BiginOfYear
 	
 	Select		L.*,P.[Property Usage],B.[Marital Status],B.[Sex],B.[Race]
+				,[MonthlyIncome],[LoanAmount]
 				,DATEDIFF(YY,[Date of Birth],@ReportDate) As Age 
 				,CASE when [Loan Date] >= @BiginOfWeek AND 
 								[Loan Date] <= @ReportDate
@@ -104,6 +105,8 @@ Begin
 	On			F.BorrowerKey = B.BorrowerKey
 	Where		[Loan Date] <= @ReportDate
 
+
+
 	Select		*
 	Into		#Financials2
 	From		#Financials 
@@ -130,7 +133,9 @@ Begin
  
 	Select		DatePart(MM,[Loan Date]) LoanMonth
 				,DATEPART(YYYY,[Loan Date]) LoanYear
-				,Count(*) LoanCount
+				,AVG(Convert(decimal(10,2),[MonthlyIncome])) as AvgMonthlyIncome
+				,Avg(Convert(decimal(10,2),[LoanAmount])) as AvgLoanAmount
+				,SUM((Convert(decimal(10,2),[MonthlyIncome]))/(Convert(decimal(10,2),[LoanAmount]))) as MonthlyIncomeVSLoanAmt
 	From		#Financials2
 	Where		DatePart(YYYY,[Loan Date]) = DatePart(YYYY,@ReportDate)
 				--[Loan Date] <= @ReportDate -- this gives all record previous yers too including reportdate year so changed 
@@ -145,6 +150,15 @@ End
 Exec 
 UDF_SP_LoanProcessed_ToDate
 '08/03/2019','Less Than $100K,$100k to $200K', 'Construction,Purchase','Investment,PrimaryResidence,SecondHome','Age-<=25'
+	
+08/03/2019
+'Less Than $100K,$100k to $200K'
+'Construction,Purchase'
+'Investment,PrimaryResidence,SecondHome'
+'Age-<=25'
+
+	
+	
 	/*Select		*
 	From		#Financials*/
 

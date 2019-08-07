@@ -1,7 +1,7 @@
 Use Mortgage_DW
 Go
 
-Alter Proc UDF_SP_LoanByMonth
+Alter Proc UDF_SP_LoanByQuarter
 /*
 Ashok
 LoanProcessed to date 
@@ -104,6 +104,8 @@ Begin
 	On			F.BorrowerKey = B.BorrowerKey
 	Where		[Loan Date] <= @ReportDate
 
+
+
 	Select		*
 	Into		#Financials2
 	From		#Financials 
@@ -128,15 +130,16 @@ Begin
 				[Race] in (
 				Select items from dbo.Split(@Demographics2,''))
  
-	Select		DatePart(MM,[Loan Date]) LoanMonth
+	Select		DatePart(QQ,[Loan Date]) LoanQuarter
 				,DATEPART(YYYY,[Loan Date]) LoanYear
 				,Count(*) LoanCount
 	From		#Financials2
 	Where		DatePart(YYYY,[Loan Date]) = DatePart(YYYY,@ReportDate)
-				--[Loan Date] <= @ReportDate -- this gives all record previous yers too including reportdate year so changed 
-	Group by	DatePart(MM,[Loan Date]),DATEPART(YYYY,[Loan Date]) 
+				--[Loan Date] <= @ReportDate 
+				-- this gives all record previous yers too including reportdate year so changed 
+	Group by	DatePart(QQ,[Loan Date]),DATEPART(YYYY,[Loan Date]) 
 	Order by	DATEPART(YYYY,[Loan Date]) Desc
-				,DatePart(MM,[Loan Date]) Desc--DateName(Month,[Loan Date]) Desc
+				,DatePart(QQ,[Loan Date]) Desc--DateName(Month,[Loan Date]) Desc
 				
 				
 End
