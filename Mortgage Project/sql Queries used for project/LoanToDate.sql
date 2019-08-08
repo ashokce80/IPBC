@@ -11,7 +11,7 @@ note: to get different part of time frame to get loan date and loan count
 @LoanAmount varchar(max) = NULL,
 @LoanPurpose varchar(max) = NULL,
 @PropertyUsage varchar(max) = Null,
-@Demographics2 varchar(max) = Null
+@Demographics2 varchar(max) = Null 
 As
 Begin
 	

@@ -332,7 +332,7 @@
               <Actions>
                 <Action>
                   <Drillthrough>
-                    <ReportName>LoanDashboardToDemographics</ReportName>
+                    <ReportName>LoanDashboardDemographics</ReportName>
                     <Parameters>
                       <Parameter Name="ReportDate">
                         <Value>=Parameters!ReportDate.Value</Value>
@@ -381,81 +381,6 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Loan to Date</Value>
-                    <Style>
-                      <FontFamily>Arial</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <Color>White</Color>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <ActionInfo>
-              <Actions>
-                <Action>
-                  <Drillthrough>
-                    <ReportName>LoanDashboardToDATE</ReportName>
-                    <Parameters>
-                      <Parameter Name="ReportDate">
-                        <Value>=Parameters!ReportDate.Value</Value>
-                      </Parameter>
-                      <Parameter Name="LoanAmount">
-                        <Value>=Parameters!LoanAmount.Value</Value>
-                      </Parameter>
-                      <Parameter Name="PropertyUsage">
-                        <Value>=Parameters!PropertyUsage.Value</Value>
-                      </Parameter>
-                      <Parameter Name="LoanPurpose">
-                        <Value>=Parameters!LoanPurpose.Value</Value>
-                      </Parameter>
-                      <Parameter Name="Demographics1">
-                        <Value>=Parameters!Demographics1.Value</Value>
-                      </Parameter>
-                      <Parameter Name="Demographics2">
-                        <Value>=Parameters!Demographics2.Value</Value>
-                      </Parameter>
-                    </Parameters>
-                  </Drillthrough>
-                </Action>
-              </Actions>
-            </ActionInfo>
-            <Top>0.52444in</Top>
-            <Left>1.31945in</Left>
-            <Height>0.25in</Height>
-            <Width>1.29167in</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <TopBorder>
-                <Style>Solid</Style>
-              </TopBorder>
-              <LeftBorder>
-                <Style>Solid</Style>
-              </LeftBorder>
-              <RightBorder>
-                <Style>Solid</Style>
-              </RightBorder>
-              <BackgroundColor>LightGrey</BackgroundColor>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox4">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -477,7 +402,7 @@
             <Left>3.25778in</Left>
             <Height>0.35833in</Height>
             <Width>2.7in</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -513,7 +438,7 @@
               <Actions>
                 <Action>
                   <Drillthrough>
-                    <ReportName>LoanDashboardToDemographics</ReportName>
+                    <ReportName>LoanDashboardLoanOverview</ReportName>
                     <Parameters>
                       <Parameter Name="ReportDate">
                         <Value>=Parameters!ReportDate.Value</Value>
@@ -542,7 +467,7 @@
             <Left>0.06945in</Left>
             <Height>0.25in</Height>
             <Width>1.25in</Width>
-            <ZIndex>3</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -912,7 +837,7 @@
             <Left>0.06945in</Left>
             <Height>2.14167in</Height>
             <Width>2.85833in</Width>
-            <ZIndex>4</ZIndex>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1269,7 +1194,7 @@
             <Left>3.49417in</Left>
             <Height>2.14167in</Height>
             <Width>2.85833in</Width>
-            <ZIndex>5</ZIndex>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1299,7 +1224,7 @@
             <Left>3.49723in</Left>
             <Height>0.29611in</Height>
             <Width>2.64972in</Width>
-            <ZIndex>6</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1322,7 +1247,7 @@
             <Left>6.16084in</Left>
             <Height>0.30056in</Height>
             <Width>0.31666in</Width>
-            <ZIndex>7</ZIndex>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1352,7 +1277,7 @@
             <Left>0.06945in</Left>
             <Height>0.29611in</Height>
             <Width>2.64972in</Width>
-            <ZIndex>8</ZIndex>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1372,7 +1297,7 @@
             <Left>2.73306in</Left>
             <Height>0.30056in</Height>
             <Width>0.31666in</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1729,7 +1654,7 @@
             <Left>7.05667in</Left>
             <Height>2.14167in</Height>
             <Width>2.85833in</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>9</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1759,7 +1684,7 @@
             <Left>7.05973in</Left>
             <Height>0.29611in</Height>
             <Width>2.64972in</Width>
-            <ZIndex>11</ZIndex>
+            <ZIndex>10</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1779,7 +1704,7 @@
             <Left>9.72334in</Left>
             <Height>0.30056in</Height>
             <Width>0.31666in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2143,7 +2068,7 @@
             <Top>6.23583in</Top>
             <Height>3.35833in</Height>
             <Width>4.9825in</Width>
-            <ZIndex>13</ZIndex>
+            <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -2508,7 +2433,7 @@
             <Left>5.05194in</Left>
             <Height>3.35833in</Height>
             <Width>4.86306in</Width>
-            <ZIndex>14</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -2902,7 +2827,7 @@
             <Left>0.06945in</Left>
             <Height>2.38333in</Height>
             <Width>9.84555in</Width>
-            <ZIndex>15</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -2912,6 +2837,81 @@
               <BackgroundGradientType>None</BackgroundGradientType>
             </Style>
           </Chart>
+          <Textbox Name="Textbox3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Loan to Date</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <ActionInfo>
+              <Actions>
+                <Action>
+                  <Drillthrough>
+                    <ReportName>LoanDashboardToDATE</ReportName>
+                    <Parameters>
+                      <Parameter Name="ReportDate">
+                        <Value>=Parameters!ReportDate.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanAmount">
+                        <Value>=Parameters!LoanAmount.Value</Value>
+                      </Parameter>
+                      <Parameter Name="PropertyUsage">
+                        <Value>=Parameters!PropertyUsage.Value</Value>
+                      </Parameter>
+                      <Parameter Name="LoanPurpose">
+                        <Value>=Parameters!LoanPurpose.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics1">
+                        <Value>=Parameters!Demographics1.Value</Value>
+                      </Parameter>
+                      <Parameter Name="Demographics2">
+                        <Value>=Parameters!Demographics2.Value</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Drillthrough>
+                </Action>
+              </Actions>
+            </ActionInfo>
+            <Top>0.52444in</Top>
+            <Left>1.31945in</Left>
+            <Height>0.25in</Height>
+            <Width>1.29167in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <TopBorder>
+                <Style>Solid</Style>
+              </TopBorder>
+              <LeftBorder>
+                <Style>Solid</Style>
+              </LeftBorder>
+              <RightBorder>
+                <Style>Solid</Style>
+              </RightBorder>
+              <BackgroundColor>LightGrey</BackgroundColor>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>9.7025in</Height>
         <Style />

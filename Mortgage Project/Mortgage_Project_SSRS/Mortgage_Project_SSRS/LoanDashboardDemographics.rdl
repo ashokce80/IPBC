@@ -262,7 +262,7 @@
               <Actions>
                 <Action>
                   <Drillthrough>
-                    <ReportName>LoanDashboardToDemographics</ReportName>
+                    <ReportName>LoanDashboardDemographics</ReportName>
                     <Parameters>
                       <Parameter Name="ReportDate">
                         <Value>=Parameters!ReportDate.Value</Value>
@@ -1923,7 +1923,7 @@
               <Actions>
                 <Action>
                   <Drillthrough>
-                    <ReportName>LoanDashboardToDemographics</ReportName>
+                    <ReportName>LoanDashboardLoanOverview</ReportName>
                     <Parameters>
                       <Parameter Name="ReportDate">
                         <Value>=Parameters!ReportDate.Value</Value>
