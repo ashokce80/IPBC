@@ -44,7 +44,13 @@ Begin
 	--Select	@BiginOfYear
 	
 	Select		L.*,P.[Property Usage],B.[Marital Status],B.[Sex],B.[Race]
-				,DATEDIFF(YY,[Date of Birth],@ReportDate) As Age 
+				,[Borrower FirstName]+' '+[Borrower LastName] as BorrwerName
+				,[MonthlyIncome],[LoanAmount],[Purchase Price]
+				--,DateName(Month,[Loan Date])+' '+ Convert(varchar(10),DATEPART(YYYY,[Loan Date])) as FormattedReportMonth
+				,DATEDIFF(YY,[Date of Birth],@ReportDate) As Age
+				,Case When DatePart(YYYY,[Loan Date]) = DatePart(YYYY,@ReportDate) 
+						Then DateName(Month,[Loan Date])+' '+ Convert(varchar(10),DATEPART(YYYY,[Loan Date]))
+						End FormattedReportMonth
 				,CASE when [Loan Date] >= @BiginOfWeek AND 
 								[Loan Date] <= @ReportDate
 							Then	'WeekToDate'
@@ -102,13 +108,15 @@ Begin
 	On			F.[PropertyKey] = P.[PropertyKey]
 	Left join	[dbo].[Dim_Borrower] as B
 	On			F.BorrowerKey = B.BorrowerKey
-	Where		[Loan Date] <= @ReportDate
+	Where		DatePart(YYYY,[Loan Date]) = DatePart(YYYY,@ReportDate)
+				And  [Loan Date] <= @ReportDate
 
 
 
 	Select		*
 	From		#Financials 
-	Where		LoanAmountGroup in (
+	Where		DatePart(YYYY,[Loan Date]) = DatePart(YYYY,@ReportDate)				  And
+				LoanAmountGroup in (
 				Select items From dbo.Split(@LoanAmount,',')) 
 				AND	
 				[Purpose of Loan] in (
@@ -174,4 +182,13 @@ Select			*, DemographicGroup+'-'+Lable as RealLable
 From			#demoTbl
 Where			DemographicGroup in (@DemographicGroups)
 
+Select	DateName(Month,getdate())
+Select DateName(Month,getdate())+' '+ Convert(varchar(10),DATEPART(YYYY,getdate()))
+
+
+--- indicator for detail report
+=Switch((Fields!MonthlyIncome.Value/Fields!LoanAmount.Value)*100 > 10, "Arrow_Green_15"
+,(Fields!MonthlyIncome.Value/Fields!LoanAmount.Value)*100 >= 7
+And (Fields!MonthlyIncome.Value/Fields!LoanAmount.Value)*100 <= 10, "Arrow_Yellow_15"
+,(Fields!MonthlyIncome.Value/Fields!LoanAmount.Value)*100 < 7, "Arrow_Red_15")
 */

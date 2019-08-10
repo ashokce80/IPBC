@@ -12,7 +12,7 @@
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://localhost/reportserver</TargetServerURL>
+    <TargetServerURL>http://laptop-pf3dbqtq/ReportServer_CB2016SQLSERVER</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
     <FullPath>DebugLocal</FullPath>
@@ -61,10 +61,10 @@
     <DataSource Include="MortgageDSource.rds" />
   </ItemGroup>
   <ItemGroup>
-    <Report Include="LoanDashboardDemographics.rdl" />
-    <Report Include="LoanDashboardLoanOverview.rdl" />
-    <Report Include="LoanDashboardToDATE.rdl" />
-    <Report Include="Report1.rdl" />
+    <Report Include="00 LoanDashboardLoanOverview.rdl" />
+    <Report Include="01 LoanDashboardToDATE.rdl" />
+    <Report Include="02 LoanDashboardDemographics.rdl" />
+    <Report Include="LoanDashboardDetail.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

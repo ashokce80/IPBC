@@ -188,4 +188,10 @@ Select			*, DemographicGroup+'-'+Lable as RealLable
 From			#demoTbl
 Where			DemographicGroup in (@DemographicGroups)
 
+
+Update	[dbo].[Fact_Financials]
+Set		[Purchase Price] = 105000
+Where	[FinancialKey] in (15,30,12)
+
+
 */

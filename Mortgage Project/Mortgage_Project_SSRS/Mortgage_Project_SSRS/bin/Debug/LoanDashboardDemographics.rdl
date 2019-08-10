@@ -173,7 +173,7 @@
         </Field>
       </Fields>
     </DataSet>
-    <DataSet Name="ToDateP">
+    <DataSet Name="ToDatePar">
       <SharedDataSet>
         <SharedDataSetReference>ToDate</SharedDataSetReference>
       </SharedDataSet>
@@ -463,6 +463,35 @@
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Drillthrough>
+                              <ReportName>LoanDashboardDetail</ReportName>
+                              <Parameters>
+                                <Parameter Name="ReportDate">
+                                  <Value>=Parameters!ReportDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanAmount">
+                                  <Value>=Parameters!LoanAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="PropertyUsage">
+                                  <Value>=Parameters!PropertyUsage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanPurpose">
+                                  <Value>=Parameters!LoanPurpose.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics1">
+                                  <Value>=Parameters!Demographics1.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics2">
+                                  <Value>=Parameters!Demographics2.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Drillthrough>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
                       <Style />
                       <ChartMarker>
                         <Style />
@@ -836,6 +865,35 @@
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Drillthrough>
+                              <ReportName>LoanDashboardDetail</ReportName>
+                              <Parameters>
+                                <Parameter Name="ReportDate">
+                                  <Value>=Parameters!ReportDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanAmount">
+                                  <Value>=Parameters!LoanAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="PropertyUsage">
+                                  <Value>=Parameters!PropertyUsage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanPurpose">
+                                  <Value>=Parameters!LoanPurpose.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics1">
+                                  <Value>=Parameters!Demographics1.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics2">
+                                  <Value>=Parameters!Demographics2.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Drillthrough>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
                       <Style />
                       <ChartMarker>
                         <Style />
@@ -1205,6 +1263,35 @@
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Drillthrough>
+                              <ReportName>LoanDashboardDetail</ReportName>
+                              <Parameters>
+                                <Parameter Name="ReportDate">
+                                  <Value>=Parameters!ReportDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanAmount">
+                                  <Value>=Parameters!LoanAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="PropertyUsage">
+                                  <Value>=Parameters!PropertyUsage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanPurpose">
+                                  <Value>=Parameters!LoanPurpose.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics1">
+                                  <Value>=Parameters!Demographics1.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics2">
+                                  <Value>=Parameters!Demographics2.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Drillthrough>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
                       <Style />
                       <ChartMarker>
                         <Style />
@@ -1573,6 +1660,35 @@
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
+                      <ActionInfo>
+                        <Actions>
+                          <Action>
+                            <Drillthrough>
+                              <ReportName>LoanDashboardDetail</ReportName>
+                              <Parameters>
+                                <Parameter Name="ReportDate">
+                                  <Value>=Parameters!ReportDate.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanAmount">
+                                  <Value>=Parameters!LoanAmount.Value</Value>
+                                </Parameter>
+                                <Parameter Name="PropertyUsage">
+                                  <Value>=Parameters!PropertyUsage.Value</Value>
+                                </Parameter>
+                                <Parameter Name="LoanPurpose">
+                                  <Value>=Parameters!LoanPurpose.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics1">
+                                  <Value>=Parameters!Demographics1.Value</Value>
+                                </Parameter>
+                                <Parameter Name="Demographics2">
+                                  <Value>=Parameters!Demographics2.Value</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Drillthrough>
+                          </Action>
+                        </Actions>
+                      </ActionInfo>
                       <Style />
                       <ChartMarker>
                         <Style />
