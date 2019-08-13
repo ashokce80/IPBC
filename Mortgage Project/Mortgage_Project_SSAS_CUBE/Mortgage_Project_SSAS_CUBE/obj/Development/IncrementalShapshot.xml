@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Mortgage_Project_SSAS_CUBE</Database>
+    <Server>LAPTOP-PF3DBQTQ\CB2016SQLSERVER</Server>
+    <ConnectionString>Data Source=LAPTOP-PF3DBQTQ\CB2016SQLSERVER;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>yJZ9QQZvrgjQtMDt64erH72qDrg=8/12/2019 11:00:07 AM8/12/2019 11:00:07 AM</TimeStamp>
+        <ID>
+          <String>Mortgage DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>HrPnCo0wVpVr1DixlzX82nlzssk=8/12/2019 5:09:23 PM8/12/2019 11:00:23 AM</TimeStamp>
+        <ID>
+          <String>Mortgage DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rCfU8pTGSRhw4uUWT32DaxuvlRg=8/12/2019 1:03:20 PM8/12/2019 11:03:20 AM</TimeStamp>
+        <ID>
+          <String>Dim Borrower</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>in2O/HJP7nFHDhqrCvShTY1l6Gs=8/12/2019 1:03:30 PM8/12/2019 12:18:53 PM</TimeStamp>
+        <ID>
+          <String>Dim Property</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>JdDEpT/jKU3hr9QSIWRb+oIT+HU=8/12/2019 4:28:44 PM8/12/2019 1:00:08 PM</TimeStamp>
+        <ID>
+          <String>Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>vNDyj01o9pm+pAfFr53IDQIzCRU=8/12/2019 4:24:04 PM8/12/2019 4:10:09 PM</TimeStamp>
+        <ID>
+          <String>Dim Loan</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Rzfr1Y4t3dmu2dl+CRvbIO1v8TA=8/12/2019 4:28:45 PM8/12/2019 4:25:11 PMd/twam6V14L05zKsIMZEFD13P1M=8/12/2019 4:25:11 PM8/12/2019 4:25:11 PM</TimeStamp>
+        <ID>
+          <String>Mortgage DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>e7WXfXzWV0CNbTcF9jFcjz00fp4=8/12/2019 1:01:19 PM8/11/2019 12:42:12 PM</TimeStamp>
+      <ID>
+        <String>Mortgage_Project_SSAS_CUBE</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-08-12T22:38:07.06Z</LastDeployed>
+</DeploymentSnapshot>
